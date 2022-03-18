@@ -1,21 +1,20 @@
 @def title = "Franklin Example"
 @def tags = ["syntax", "code"]
 
-# How to use Franklin
+# Rihito Sakurai's website
 
 \tableofcontents <!-- you can use \toc as well -->
 
-This section is meant as a refresher if you're new to Franklin.
-Have a look at both how the website renders and the corresponding markdown (`index.md`).
-Modify at will to get a feeling for how things work!
+
 
 Ps: if you want to modify the header or footer or the general look of the website, adjust the files in
 * `src/_css/` and
 * `src/_html_parts/`.
 
-## The base with Markdown
+## About this website
 
-The [standard markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used such as titles using `#`, lists:
+自分のための健忘録。
+本ページで紹介しているツールやスクリプトは自己責任で使ってください。
 
 * element with **bold**
 * element with _emph_
@@ -50,20 +49,20 @@ or have tables:
 
 Note that you may have to do a bit of CSS-styling to get these elements to look the way you want them (the same holds for the whole page in fact).
 
-### Symbols and html entities
+## Social media
 
-If you want a dollar sign you have to escape it like so: \$, you can also use html entities like so: &rarr; or &pi; or, if you're using Juno for instance, you can use `\pi[TAB]` to insert the symbol as is: π (it will be converted to a html entity).[^1]
+- Email: sakurairihito@gmail.com
 
-If you want to show a backslash, just use it like so: \ ; if you want to force a line break, use a ` \\ ` like \\ so (this is on a new line).[^blah]
+- Github: https://github.com/sakurairihito
 
-If you want to show a backtick, escape it like so: \` and if you want to show a tick in inline code use double backticks like ``so ` ...``.
+- Qiita: https://qiita.com/RhT
 
-Footnotes are nice too:
+- Zenn: https://zenn.dev/rihitosakurai
 
-[^1]: this is the text for the first footnote, you can style all this looking at `.fndef` elements; note that the whole footnote definition is _expected to be on the same line_.
-[^blah]: and this is a longer footnote with some blah from veggie ipsum: turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.
 
-## Basic Franklin extensions
+## Domain of experience
+
+## Skills
 
 ### Divs
 
