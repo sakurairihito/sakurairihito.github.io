@@ -2,32 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/index.html</loc>
-    <lastmod>2022-03-17</lastmod>
+    <loc>https://sakurairihito.github.io/src/profile/index.html</loc>
+    <lastmod>2022-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/404/index.html</loc>
-    <lastmod>2022-03-17</lastmod>
+    <loc>https://sakurairihito.github.io/index.html</loc>
+    <lastmod>2022-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/menu1/index.html</loc>
-    <lastmod>2022-03-17</lastmod>
+    <loc>https://sakurairihito.github.io/404/index.html</loc>
+    <lastmod>2022-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/menu3/index.html</loc>
-    <lastmod>2022-03-17</lastmod>
+    <loc>https://sakurairihito.github.io/src/github_project/index.html</loc>
+    <lastmod>2022-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://tlienart.github.io/FranklinTemplates.jl/menu2/index.html</loc>
-    <lastmod>2022-03-17</lastmod>
+    <loc>https://sakurairihito.github.io/menu1/index.html</loc>
+    <lastmod>2022-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://sakurairihito.github.io/menu3/index.html</loc>
+    <lastmod>2022-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://sakurairihito.github.io/menu2/index.html</loc>
+    <lastmod>2022-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
