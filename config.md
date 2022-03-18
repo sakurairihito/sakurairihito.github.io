@@ -1,4 +1,6 @@
-@def website_title = "Rihito Sakurai's website" @def website_descr = "website" @def website_url = "https://sakurairihito.github.io"
+@def website_title = "Rihito Sakurai's website" 
+@def website_descr = "website" 
+@def website_url = "https://sakurairihito.github.io"
 
 @def author = "Rihito Sakurai"
 
