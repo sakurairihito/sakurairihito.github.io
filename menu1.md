@@ -18,3 +18,50 @@ part‐time researcher of Saitama University
 - Mar 2021 Master's degree, Tokyo University of Science
 
 - Mar 2019 Bachelor's degree, Tokyo University of Science
+
+## Skills
+
+### Keywords
+- Quantum Circuit Simulator
+    - qulacs/Pennylane//Yao.jl
+
+- Docker
+
+- Python Programming
+    - Pytest/Poetry
+    - Jupyter Notebook/Jupyter lab
+
+- Visualization Programming
+    - Dash.jl
+
+- Literate Programming
+    - Documenter.jl/Franklin.jl
+
+- Physics
+    - Quantum Computation (NISQ Algorithms)
+    - Strongly Correlated Physics (Quantum Embedding Theory)
+
+### Programming languages
+
+- Julia
+
+- Python
+
+
+#### Learning
+- Rust
+
+- C/C++
+
+## Certifications
+- TOEIC 910 2017
+
+- TOEFL 73 2017
+
+- 運転免許 普通自動車
+
+## Hobbies
+
+- Playing the bass
+
+- 
