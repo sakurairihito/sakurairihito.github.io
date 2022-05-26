@@ -27,6 +27,8 @@ part‐time researcher of Saitama University
 
 - Docker
 
+- Github Actions
+
 - Python Programming
     - Pytest/Poetry
     - Jupyter Notebook/Jupyter lab
@@ -54,14 +56,12 @@ part‐time researcher of Saitama University
 - C/C++
 
 ## Certifications
-- TOEIC 910 2017
+- TOEIC IP test 910 (2017)
 
-- TOEFL 73 2017
+- TOEFL ibt 73 (2017)
 
 - 運転免許 普通自動車
 
 ## Hobbies
 
-- Playing the bass
-
-- 
+- drinking beer
