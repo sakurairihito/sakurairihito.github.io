@@ -26,7 +26,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Docker
 
-- Github Actions
+- CI (Github Actions)
 
 - Python Programming
     - Pytest/Poetry
@@ -39,8 +39,8 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
     - Documenter.jl/Franklin.jl
 
 - Physics
-    - Quantum Computation (NISQ Algorithms)
-    - Strongly Correlated Physics (Quantum Embedding Theory)
+    - Quantum Computation (NISQ/Post NISQ Algorithms)
+    - Strongly Correlated Physics (Dynamical mean-field theory)
 
 ### Programming languages
 
@@ -59,16 +59,18 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Dec 2016 TOEFL ibt 73 
 
-- 普通自動車第一種取得
+- May 2017 普通自動車第一種取得
 
 - Mar 2021 高等学校教論一種免許状(理科）
 
 ## Hobbies
+
+- sauna
 
 - Drinking beer
 
 ## Others
 
 - 第65回物性若手夏の学校 ゼミF世話人（2019/12-2020/09）
-- [第66回物性若手夏の学校]() ゼミF世話人（2020/12-2021/09）
+- 第66回物性若手夏の学校 ゼミF世話人（2020/12-2021/09）
 - [Stat&QuantPhys Autumn School 2022](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html) 運営委員 (2022/4-2022/10)
