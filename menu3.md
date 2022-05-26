@@ -2,33 +2,31 @@
 
 # Presentations
 
-**Example**:
-
-* page with tag [`syntax`](/tag/syntax/)
-* page with tag [`image`](/tag/image/)
-* page with tag [`code`](/tag/code/)
-
 \toc
 
-## Indicating tags
+## International conference
 
-To mark a page with tags, add:
+1. R. Sakurai, W. Mizukami, and H. Shinaoka, 
+“Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, 
+International Conference on Strongly Correlated Electron Systems 2020, 
+ブラジル, 2021年9月(ポスター発表)
 
-```markdown
-@def tags = ["tag1", "tag2"]
-```
+2. R. Sakurai, W. Mizukami, and H. Shinaoka, 
+“Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, 
+American Physical Society, シカゴ, 2022年3月(ポスター発表)
 
-then that page, along with all others that have the tag `tag1` will be listed at `/tag/tag1/`.
+3. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, 
+29 th International Conference on Low Temperature Physics, 
+Sapporo, 2022年8月, ポスター発表予定
 
-## Customising tag pages
 
-You can change how a `/tag/...` page looks like by modifying the `_layout/tag.html`. An important note is that you can **only** use **global** page variables (defined in `config.md`).
 
-There are three "exceptions":
+## Domestic conference
 
-1. you can still use `{{ispage /tag/tagname/}} ... {{end}}` (or `{{isnotpage ...}}`) to have a different layout depending on the tag,
-1. you can use the `fd_tag` variable which contains the  name of the tag so `{{fill fd_tag}}` will input the tag string as is,
-1. you can use `{{fill varname path/to/page}}` to exploit a page variable defined in a specific page.
+4. 櫻井理人, 福元好志, 
+相互作用を拡張した古典フラクタルコードに信頼して埋め込める情報量,
+[日本物理学会第75回年次大会](https://w4.gakkai-web.net/jps_search/2020sp/index.html),名古屋大学, 19aPS-21, 2020年3月, (ポスター発表)
+
 
 ## Customising tag lists
 
