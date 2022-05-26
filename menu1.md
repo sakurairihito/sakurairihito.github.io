@@ -15,6 +15,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 part‐time researcher of Saitama University
 
 ## Education
-- Mar 2021 Master's degree, Tokyo University of science
+- Mar 2021 Master's degree, Tokyo University of Science
 
-- Mar 2019 Bachelor's degree, Tokyo University of science
+- Mar 2019 Bachelor's degree, Tokyo University of Science
