@@ -8,16 +8,16 @@
 
 1. R. Sakurai, W. Mizukami, and H. Shinaoka,  
 “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,  
-International Conference on Strongly Correlated Electron Systems 2020,   
+[International Conference on Strongly Correlated Electron Systems 2020International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020),   
 ブラジル, 2021年9月(ポスター発表)  
 
 2. R. Sakurai, W. Mizukami, and H. Shinaoka,   
 “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,  
-American Physical Society, シカゴ, 2022年3月(ポスター発表)
+[American Physical Society March Meeting](https://meetings.aps.org/Meeting/MAR22/Session/D08), シカゴ, 2022年3月(ポスター発表)
 
 3. R. Sakurai, W. Mizukami, and H. Shinaoka,   
 “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,  
-29 th International Conference on Low Temperature Physics,   
+[29 th International Conference on Low Temperature Physics](https://www.lt29.jp),   
 Sapporo, 2022年8月, (ポスター発表予定)
 
 
@@ -52,7 +52,7 @@ Sapporo, 2022年8月, (ポスター発表予定)
 
 櫻井理人, 水上渉, 品岡寛,  
 “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”,   
-物性研究所スパコン共同利用・CCMS合同研究会「計算物質科学の新展開」,   
+[物性研究所スパコン共同利用・CCMS合同研究会「計算物質科学の新展開」](https://ccms.issp.u-tokyo.ac.jp/event/5105),   
 2022年5月, (ポスター発表)
 
 
@@ -70,10 +70,10 @@ Sapporo, 2022年8月, (ポスター発表予定)
 ## Others 
 
 櫻井理人,    
-“julia言語と量子回路シミュレータ”,   
-julia tokai（オンライン勉強会）, 2022年3月, (口頭発表)
+“julia言語と量子回路シミュレータ]”,   
+[julia tokai 勉強会12](https://juliatokai.connpass.com/event/241113/), 2022年3月, (口頭発表)
 
 櫻井理人 （グループメンバー含む）, 
 "量子アルゴリズムの性能評価の指標の重要性",  
-未来に向けての合宿「量子ソフトウェアの研究方向性を探る」,  
+[未来に向けての合宿「量子ソフトウェアの研究方向性を探る](https://www.jst.go.jp/stpp/q-leap/joho/pdf/qsw_camp0221.pdf)」,  
 金沢八景 横浜テクノタワーホテル, 2020年2月，ポスター発表

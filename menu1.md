@@ -64,3 +64,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 ## Hobbies
 
 - Drinking beer
+
+## Others
+
+- 第65回物性若手夏の学校 ゼミF世話人（2019/12-2020/09）
+- [第66回物性若手夏の学校]() ゼミF世話人（2020/12-2021/09）
+- [Stat&QuantPhys Autumn School 2022](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html) 運営委員 (2022/4-2022/10)
