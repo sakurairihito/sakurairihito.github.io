@@ -6,18 +6,18 @@
 
 ## International conference
 
-1. R. Sakurai, W. Mizukami, and H. Shinaoka,    
+1. R. Sakurai, W. Mizukami, and H. Shinaoka,  
 “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,  
-[International Conference on Strongly Correlated Electron Systems 2020International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020),   
+[International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020),  
 ブラジル, 2021年9月(ポスター発表)  
 
-2. R. Sakurai, W. Mizukami, and H. Shinaoka,     
+2. R. Sakurai, W. Mizukami, and H. Shinaoka,  
 “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,  
 [American Physical Society March Meeting](https://meetings.aps.org/Meeting/MAR22/Session/D08), シカゴ, 2022年3月(ポスター発表)
 
-3. R. Sakurai, W. Mizukami, and H. Shinaoka,     
-“Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,  
-[29 th International Conference on Low Temperature Physics](https://www.lt29.jp),   
+3. R. Sakurai, W. Mizukami, and H. Shinaoka,  
+“Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,
+[29 th International Conference on Low Temperature Physics](https://www.lt29.jp),  
 Sapporo, 2022年8月, (ポスター発表予定)
 
 
@@ -26,15 +26,15 @@ Sapporo, 2022年8月, (ポスター発表予定)
 
 ### Talks
 
-4. 櫻井理人, 水上渉, 品岡寛,    
-“量子古典融合アルゴリズムを用いた虚時間相関関数の計算”,    
+4. 櫻井理人, 水上渉, 品岡寛,  
+“量子古典融合アルゴリズムを用いた虚時間相関関数の計算”,  
 [日本物理学会第77回年次大会](https://onsite.gakkai-web.net/jps/jps_search/2022sp/index.html), 16aE11-13, 2022年3月, (口頭発表)
 
 
 ### Posters
 
-4. 櫻井理人, 福元好志,    
-相互作用を拡張した古典フラクタルコードに信頼して埋め込める情報量,    
+4. 櫻井理人, 福元好志,  
+相互作用を拡張した古典フラクタルコードに信頼して埋め込める情報量,  
 [日本物理学会第75回年次大会](https://w4.gakkai-web.net/jps_search/2020sp/index.html),  
 名古屋大学, 19aPS-21, 2020年3月, (ポスター発表)
 
