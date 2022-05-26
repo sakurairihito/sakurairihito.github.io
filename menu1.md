@@ -22,7 +22,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ### Keywords
 - Quantum Circuit Simulator
-    - qulacs/Pennylane//Yao.jl
+    - Qulacs/Pennylane/Yao.jl
 
 - Docker
 
