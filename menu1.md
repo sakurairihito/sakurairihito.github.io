@@ -61,6 +61,8 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - 普通自動車第一種取得
 
+- Mar 2021 高等学校教論一種免許状(理科）
+
 ## Hobbies
 
 - Drinking beer
