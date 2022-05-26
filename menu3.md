@@ -41,6 +41,6 @@ Sapporo, 2022年8月, (ポスター発表予定)
 
 ## Others 
 
-1. 櫻井理人, “julia言語と量子回路シミュレータ]”, [julia tokai 勉強会12](https://juliatokai.connpass.com/event/241113/), 2022年3月, (口頭発表)
+1. 櫻井理人, “julia言語と量子回路シミュレータ”, [julia tokai 勉強会12](https://juliatokai.connpass.com/event/241113/), 2022年3月, (口頭発表)
 
 2. 櫻井理人 (グループで発表), "量子アルゴリズムの性能評価の指標の重要性", [未来に向けての合宿「量子ソフトウェアの研究方向性を探る](https://www.jst.go.jp/stpp/q-leap/joho/pdf/qsw_camp0221.pdf)」, 金沢八景 横浜テクノタワーホテル, 2020年2月，ポスター発表
