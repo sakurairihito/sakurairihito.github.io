@@ -15,7 +15,9 @@
 
 
 ## Journal Article
-1. R. Sakurai, W. Mizukami, and H. Shinaoka, 
-“Hybrid quantum-classical algorithm for computing imaginary-time correlation functionHybrid quantum-classical algorithm for computing imaginary-time correlation function”, 
+1. R. Sakurai, W. Mizukami, and H. Shinaoka,
+<br>
+“Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,
+<br> 
 [arXiv:2112.02764 (2022)](https://arxiv.org/abs/2112.02764)
 (5月13日Physical Review Researchに掲載決定)
