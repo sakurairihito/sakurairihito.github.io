@@ -11,8 +11,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 \toc
 
 ## Career
-- Apr 2021-present  
-part‐time researcher of Saitama University
+- Apr 2021-present  Part‐time researcher of Saitama University
 
 ## Education
 - Mar 2021 Master's degree, Tokyo University of Science
