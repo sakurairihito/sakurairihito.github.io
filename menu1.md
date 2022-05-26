@@ -56,12 +56,12 @@ part‐time researcher of Saitama University
 - C/C++
 
 ## Certifications
-- TOEIC IP test 910 (2017)
+- Nov 2016 TOEIC IPtest 910 
 
-- TOEFL ibt 73 (2017)
+- Dec 2016 TOEFL ibt 73 
 
-- 運転免許 普通自動車
+- 普通自動車第一種取得
 
 ## Hobbies
 
-- drinking beer
+- Drinking beer
