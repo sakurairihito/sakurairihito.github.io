@@ -6,7 +6,7 @@
 
 ## International conference
 
-1. R. Sakurai, W. Mizukami, and H. Shinaoka,  
+[1] R. Sakurai, W. Mizukami, and H. Shinaoka,  
 “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,  
 [International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020),  
 ブラジル, 2021年9月(ポスター発表)  
