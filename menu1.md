@@ -1,16 +1,16 @@
 +++
-title = "CV"
+title = "Code blocks"
 hascode = true
 date = Date(2019, 3, 22)
 rss = "A short description of the page which would serve as **blurb** in a `RSS` feed; you can use basic markdown here but the whole description string must be a single line (not a multiline string). Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don't expect maths or fancy styling to work; images should be ok though: ![](https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg)"
 +++
 @def tags = ["syntax", "code"]
 
-# CV
+# Working with code blocks
 
 \toc
 
-## Career
+## Live evaluation of code blocks
 
 If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.
 
@@ -63,7 +63,7 @@ Random.seed!(1) # hide
 \output{./code/ex3}
 
 
-## Education
+## Including scripts
 
 Another approach is to include the content of a script that has already been executed.
 This can be an alternative to the description above if you'd like to only run the code once because it's particularly slow or because it's not Julia code.
@@ -82,5 +82,3 @@ which is convenient if you're presenting code.
 **Note**: paths specification matters, see [the docs](https://tlienart.github.io/franklindocs/code/index.html#more_on_paths) for details.
 
 Using this approach with the `generate_results.jl` file also makes sure that all the code on your website works and that all results match the code which makes maintenance easier.
-
-## Award
