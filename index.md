@@ -9,14 +9,15 @@ Department of physics, Saitama University, Japan
 
 Email:sakurairihito(at)gmail.com
 
+[Github](https://github.com/sakurairihito)
+
 [Qiita](https://qiita.com/RhT)
 
 [Zenn](https://zenn.dev/rihitosakurai)
 
-[Github](https://github.com/sakurairihito)
+[Twitter](https://twitter.com/mf5akxNYmS5sqbT)
 
 Open Source Software Project
 
-- [Dynamical Mean-field theory calculations by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/ipt_jl.html)
+- [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/ipt_jl.html)
 
-[Twitter](https://twitter.com/mf5akxNYmS5sqbT)
