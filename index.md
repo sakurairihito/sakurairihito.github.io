@@ -1,7 +1,7 @@
 @def title = "Franklin Example"
 @def tags = ["syntax", "code"]
 
-# Rihito Sakurai's website
+# Welcome to Rihito Sakurai's Homepage
 
 - 2nd year PhD student ([Hiroshi Shinaoka group](https://shinaoka.sakura.ne.jp))
 

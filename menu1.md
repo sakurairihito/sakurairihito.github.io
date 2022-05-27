@@ -22,11 +22,16 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ### Keywords
 - Quantum Circuit Simulator
-    - Qulacs/Pennylane/Yao.jl
+    - Qulacs/Pennylane
 
 - Docker
 
 - CI (Github Actions)
+
+- VSCode (Remote connection via SSH, Pair programming)
+
+- parallel computing
+    - MPI.jl
 
 - Python Programming
     - Pytest/Poetry
