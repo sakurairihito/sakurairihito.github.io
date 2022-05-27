@@ -10,8 +10,7 @@
 
 2. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [American Physical Society March Meeting](https://meetings.aps.org/Meeting/MAR22/Session/D08), シカゴ, 2022年3月(ポスター発表)
 
-3. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [29 th International Conference on Low Temperature Physics](https://www.lt29.jp),
-Sapporo, 2022年8月, (ポスター発表予定)
+3. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [29 th International Conference on Low Temperature Physics](https://www.lt29.jp), Sapporo, 2022年8月, (ポスター発表予定)
 
 
 
