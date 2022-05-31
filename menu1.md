@@ -70,7 +70,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ## Hobbies
 
-- sauna
+- visualizing math / physics
+
+- Walking 
 
 - Drinking beer
 
