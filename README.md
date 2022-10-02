@@ -12,7 +12,7 @@ julia> using Pkg; Pkg.instantiate()
 julia> using Franklin; serve()
 ```
 
-You can see the website via http://localhost:8000/
+You can see the website via https://sakurairihito.github.io/
 
 
 
