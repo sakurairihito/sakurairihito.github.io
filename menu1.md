@@ -55,7 +55,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 
 #### Learning
-- Rust
 
 - C/C++
 

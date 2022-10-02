@@ -20,6 +20,8 @@
 
 1. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, [日本物理学会第77回年次大会](https://onsite.gakkai-web.net/jps/jps_search/2022sp/index.html), 16aE11-13, 2022年3月, (口頭発表)
 
+2. 櫻井理人, 水上渉, 品岡寛, “量子不純物問題に特化した変分量子固有値法の量子回路”, [日本物理学会2022年秋季大会](https://onsite.gakkai-web.net/jps/jps_search/2022au/data2/html/program01.html), 12pW934-3, 2022年9月, (口頭発表)
+
 
 ### Posters
 
@@ -31,12 +33,18 @@
 
 4. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, [物性研究所スパコン共同利用・CCMS合同研究会「計算物質科学の新展開」](https://ccms.issp.u-tokyo.ac.jp/event/5105), 2022年5月, (ポスター発表)
 
+5. 櫻井理人, 水上渉, 品岡寛, “Hybrid quantum-classical algorithm for computing imaginary-time correlation functions”, [29th International Conference on LOW TEMPERATURE PHYSICS](https://www.lt29.jp), 2022年8月, (ポスター発表) 
+
+6. 櫻井理人, 水上渉, 品岡寛, “Compact quantum circuits of variational quantum eigensolver for quantum impurity models ”, [Stat&QuantPhys Autumn School 2022 (SQP 2022)](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/presentation.html), 2022年9月, (ポスター発表)
+ 
+
 
 ### Seminor
 1. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 産業技術総合研究所新原理量子コンピューティングセンター, 2021年12月, (口頭発表), [slide](https://sakurairihito.github.io/presentation_at_lab_20211221/)
 
-2. 櫻井理人, 水上渉, 品岡寛,“量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 大阪大学量子情報・量子生命研究センター 水上グループ, 2022年4月, (口頭発表)
+2. 櫻井理人, 水上渉, 品岡寛,“量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 大阪大学量子情報・量子生命研究センタ-, Dr. 水上渉グループ, 2022年4月, (口頭発表)
 
+3. 櫻井理人, 水上渉, 品岡寛,“Hybrid quantum-classical algorithm for computing imaginary-time correlation functions”, TU Wien, Institute of Solid State Physics, Dr. Karsten Held group, 2022年7月, (口頭発表) 
 
 ## Others 
 
