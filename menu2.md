@@ -11,12 +11,13 @@
 \toc
 
 ## Preprint
-
+1. M. Wallerberger, S. Badr, S. Hoshino, F. Kakizawa, T. Koretsune, Y. Nagai, K. Nogaki, T. Nomoto, H. Mori, J. Otsuki, S. Ozaki, R. Sakurai, C. Vogel, N. Witt, K. Yoshimi, H. Shinaoka, "sparse-ir: optimal compression and sparse sampling of many-body propagators",
+[arXiv:2206.11762v1](https://arxiv.org/pdf/2206.11762.pdf)
 
 
 ## Journal Article
-R. Sakurai, W. Mizukami, and H. Shinaoka,  
+1. R. Sakurai, W. Mizukami, and H. Shinaoka,  
 “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,  
-[arXiv:2112.02764 (2022)](https://arxiv.org/abs/2112.02764) (5月13日Physical Review Researchに掲載決定)
+[Phys. Rev. Research 4, 023219 (2022)](https://doi.org/10.1103/PhysRevResearch.4.023219)
 
 

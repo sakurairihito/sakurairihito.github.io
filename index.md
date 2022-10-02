@@ -20,5 +20,5 @@
     - [Twitter](https://twitter.com/mf5akxNYmS5sqbT)
 
 - Open Source Software Project
-    - [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/ipt_jl.html)
+    - [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_py.html)
 
