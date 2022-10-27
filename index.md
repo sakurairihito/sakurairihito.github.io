@@ -19,6 +19,6 @@
 - SNS
     - [Twitter](https://twitter.com/mf5akxNYmS5sqbT)
 
-- Open Source Software Project
+- Open Source Software
     - [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_py.html)
 
