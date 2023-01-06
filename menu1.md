@@ -11,7 +11,10 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 \toc
 
 ## Career
-- Apr 2021-present  Part‐time researcher of Saitama University
+- Apr 2021-2024  Research assistant (part-time)
+
+- Apr 2023-2025 JSPS Research Fellowship for Young Scientist DC2
+
 
 ## Education
 - Mar 2021 Master's degree, Tokyo University of Science

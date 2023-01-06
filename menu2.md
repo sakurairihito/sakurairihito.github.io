@@ -16,6 +16,7 @@
 [arXiv:2206.11762v1](https://arxiv.org/pdf/2206.11762.pdf)
 
 2. H. Shinaoka, M. Wallerberger, Y. Murakami, K. Nogaki, R. Sakurai, P. Werner, A. Kauch
+"Multi-scale space-time ansatz for correlation functions of quantum systems",
 [arXiv:2210.12984](https://arxiv.org/abs/2210.12984)
 
 
