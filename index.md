@@ -15,5 +15,5 @@
     - [Zenn](https://zenn.dev/rihitosakurai)
 
 - Open Source Software
-    - [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_py.html)
+    - [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
 
