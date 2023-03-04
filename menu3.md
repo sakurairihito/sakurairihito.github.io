@@ -6,13 +6,13 @@
 
 ## International conference
 
-1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020), ブラジル, 2021年9月(ポスター発表)  
+1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020), Brazil, 2021年9月(poster)  
 
-2. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [American Physical Society March Meeting 2022](https://meetings.aps.org/Meeting/MAR22/Session/D08), シカゴ, 2022年3月(ポスター発表)
+2. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [American Physical Society March Meeting 2022](https://meetings.aps.org/Meeting/MAR22/Session/D08), Chicago, 2022年3月(poster)
 
-3. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [29 th International Conference on Low Temperature Physics](https://www.lt29.jp), Sapporo, 2022年8月, (ポスター発表予定)
+3. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [29 th International Conference on Low Temperature Physics](https://www.lt29.jp), Sapporo, 2022年8月, (poster scheduled)
 
-4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Phycal Society Match Meeting 2023](https://march.aps.org), ラスベガス、2023年3月(ポスター発表予定)
+4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Phycal Society Match Meeting 2023](https://march.aps.org), LasVegas、2023年3月(poster )
 
 ## Domestic conference
 
