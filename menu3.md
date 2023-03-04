@@ -8,11 +8,11 @@
 
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020), ブラジル, 2021年9月(ポスター発表)  
 
-2. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [American Physical Society March Meeting](https://meetings.aps.org/Meeting/MAR22/Session/D08), シカゴ, 2022年3月(ポスター発表)
+2. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [American Physical Society March Meeting 2022](https://meetings.aps.org/Meeting/MAR22/Session/D08), シカゴ, 2022年3月(ポスター発表)
 
 3. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [29 th International Conference on Low Temperature Physics](https://www.lt29.jp), Sapporo, 2022年8月, (ポスター発表予定)
 
-
+4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Phycal Society Match Meeting 2023](https://march.aps.org), ラスベガス、2023年3月(ポスター発表予定)
 
 ## Domestic conference
 
@@ -22,6 +22,11 @@
 
 2. 櫻井理人, 水上渉, 品岡寛, “量子不純物問題に特化した変分量子固有値法の量子回路”, [日本物理学会2022年秋季大会](https://onsite.gakkai-web.net/jps/jps_search/2022au/data2/html/program01.html), 12pW934-3, 2022年9月, (口頭発表)
 
+
+3. 櫻井理人, 水上渉, 品岡寛, “クラスター型量子不純物問題に対するコンパクトな変分量子回路”, [日本物理学会2023年春期大会](https://onsite.gakkai-web.net/jps/jps_search/2023sp/data/html/download.html), 22pA1-12, 2023年3月, (口頭発表予定)
+
+
+4. 櫻井理人,水上渉, 品岡寛, "量子不純物問題のための量子古典融合アルゴリズム", [物性研究のための量子アルゴリズム最前線](https://qiqb.osaka-u.ac.jp/labs/ueda/fqacmp/), 2023年3月, (口頭発表予定)
 
 ### Posters
 
@@ -38,8 +43,11 @@
 6. 櫻井理人, 水上渉, 品岡寛, “Compact quantum circuits of variational quantum eigensolver for quantum impurity models ”, [Stat&QuantPhys Autumn School 2022 (SQP 2022)](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/presentation.html), 2022年9月, (ポスター発表)
  
 
+7. 櫻井理人, 水上渉, 品岡寛, “クラスター型量子不純物問題に対するコンパクトな変分量子回路”, [計算物理春の学校2023](https://hohno0223.github.io/comp_phys_spring_school2023/index.html), 2022年9月, (ポスター発表予定)
+ 
 
-### Seminor
+
+### informal Seminor
 1. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 産業技術総合研究所新原理量子コンピューティングセンター, 2021年12月, (口頭発表), [slide](https://sakurairihito.github.io/presentation_at_lab_20211221/)
 
 2. 櫻井理人, 水上渉, 品岡寛,“量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 大阪大学量子情報・量子生命研究センタ-, Dr. 水上渉グループ, 2022年4月, (口頭発表)
