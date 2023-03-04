@@ -15,6 +15,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Apr 2023-2025 JSPS Research Fellowship for Young Scientist DC2
 
+## Internship Experience
+
+- 2023年度量子ソフトウェア勉強会, "テンソルネットワークを利用したデリバティブプライシング", [A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)の実装と発表資料作成
 
 ## Education
 - Mar 2021 Master's degree, Tokyo University of Science
@@ -26,6 +29,8 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 ### Keywords
 - Quantum Circuit Simulator
     - Qulacs/Pennylane
+
+- ITensor
 
 - Docker
 
