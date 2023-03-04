@@ -12,12 +12,7 @@
 - [Github](https://github.com/sakurairihito)
 
 - Tech blog
-    - [Qiita](https://qiita.com/RhT)
-
     - [Zenn](https://zenn.dev/rihitosakurai)
-
-- SNS
-    - [Twitter](https://twitter.com/mf5akxNYmS5sqbT)
 
 - Open Source Software
     - [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_py.html)
