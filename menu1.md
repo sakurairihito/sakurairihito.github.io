@@ -15,11 +15,11 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Apr 2023-2025 JSPS Research Fellowship for Young Scientist DC2
 
-## Internship Experience
-
-- 2023年度量子ソフトウェア勉強会, "テンソルネットワークを利用したデリバティブプライシング", [A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)の実装と発表資料作成
+- Oct 2022-Feb 2023 Internship at 量子ソフトウェア勉強会グループワーク, [A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)の実装と発表
 
 ## Education
+- Mar 2022 ~ present A student in a Doctoral course, Saitama University
+
 - Mar 2021 Master's degree, Tokyo University of Science
 
 - Mar 2019 Bachelor's degree, Tokyo University of Science
@@ -80,8 +80,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - visualizing math / physics
 
 - Walking 
-
-- Drinking beer
 
 ## Others
 
