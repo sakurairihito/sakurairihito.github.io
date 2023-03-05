@@ -15,7 +15,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Apr 2023-2025 JSPS Research Fellowship for Young Scientist DC2
 
-- Oct 2022-Feb 2023 Internship at 量子ソフトウェア勉強会グループワーク, [A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)の実装と発表
+- Oct 2022-Feb 2023 Internship at Osaka University. [量子ソフトウェア勉強会グループワーク](https://qsrh.jp/seminar/), "テンソルネットワークを利用したデリバティブプライシング【講師宮本幸一先生】", [A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)の実装と論文発表
 
 ## Education
 - Mar 2022 ~ present A student in a Doctoral course, Saitama University
