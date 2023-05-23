@@ -23,10 +23,10 @@
 2. 櫻井理人, 水上渉, 品岡寛, “量子不純物問題に特化した変分量子固有値法の量子回路”, [日本物理学会2022年秋季大会](https://onsite.gakkai-web.net/jps/jps_search/2022au/data2/html/program01.html), 12pW934-3, 2022年9月
 
 
-3. 櫻井理人, 水上渉, 品岡寛, “クラスター型量子不純物問題に対するコンパクトな変分量子回路”, [日本物理学会2023年春期大会](https://onsite.gakkai-web.net/jps/jps_search/2023sp/data/html/download.html), 22pA1-12, 2023年3月, (口頭発表予定)
+3. 櫻井理人, 水上渉, 品岡寛, “クラスター型量子不純物問題に対するコンパクトな変分量子回路”, [日本物理学会2023年春期大会](https://onsite.gakkai-web.net/jps/jps_search/2023sp/data/html/download.html), 22pA1-12, 2023年3月, (口頭発表)
 
 
-4. 櫻井理人,水上渉, 品岡寛, "量子不純物問題のための量子古典融合アルゴリズム", [物性研究のための量子アルゴリズム最前線](https://qiqb.osaka-u.ac.jp/labs/ueda/fqacmp/), 2023年3月, (口頭発表予定)
+4. 櫻井理人,水上渉, 品岡寛, "量子不純物問題のための量子古典融合アルゴリズム", [物性研究のための量子アルゴリズム最前線](https://qiqb.osaka-u.ac.jp/labs/ueda/fqacmp/), 2023年3月, (招待講演)
 
 ### Posters
 

@@ -15,7 +15,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Apr 2023-2025 JSPS Research Fellowship for Young Scientist DC2
 
-- Oct 2022-Feb 2023 Internship at Osaka University. [量子ソフトウェア勉強会グループワーク](https://qsrh.jp/seminar/), "テンソルネットワークを利用したデリバティブプライシング【講師宮本幸一先生】", [A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)の実装と論文発表
+- Oct 2022-Feb 2023 Internship at Osaka University. [量子ソフトウェア勉強会グループワーク](https://qsrh.jp/seminar/)
 
 ## Education
 - Mar 2022 ~ present A student in a Doctoral course, Saitama University
@@ -26,11 +26,20 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ## Skills
 
+### Software 
+
+1. "研究で開発したもの", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
+
+2. "大阪大学のインターンで実装したもの", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)
+実装論文[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
+
+
 ### Keywords
 - Quantum Circuit Simulator
     - Qulacs/Pennylane
 
-- ITensor
+- Tensor Network
+    - ITensor/tntorch
 
 - Docker
 
@@ -80,6 +89,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - visualizing math / physics
 
 - Walking 
+
 
 ## Others
 
