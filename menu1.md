@@ -11,7 +11,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 \toc
 
 ## Career
-- Apr 2021-2024  Research assistant at Saitama University.
 
 - Apr 2023-2025 JSPS Research Fellowship for Young Scientist DC2
 
@@ -28,9 +27,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ### Software 
 
-1. "研究で開発したもの", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
+1. "不純物問題向けの量子古典融合アルゴリズム", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
 
-2. "大阪大学のインターンで実装したもの", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)
+2. "金融のデリバティブオプションプライシングの計算@大阪大学量子ソフトウェア勉強会グループワーク", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)
 実装論文[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
 
 
@@ -39,7 +38,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
     - Qulacs/Pennylane
 
 - Tensor Network
-    - ITensor/tntorch
+    - ITensor/Quantics/TensorCrossInterpolation
 
 - Docker
 
@@ -73,7 +72,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 #### Learning
 
-- C/C++
+- Rust
 
 ## Certifications
 - Nov 2016 TOEIC IPtest 910 
@@ -91,8 +90,11 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Walking 
 
 
+
+
 ## Others
 
 - 第65回物性若手夏の学校 ゼミF世話人（2019/12-2020/09）
 - 第66回物性若手夏の学校 ゼミF世話人（2020/12-2021/09）
 - [Stat&QuantPhys Autumn School 2022](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html) 運営委員 (2022/4-2022/10)
+- 

@@ -45,15 +45,20 @@
 
 7. 櫻井理人, 水上渉, 品岡寛, “クラスター型量子不純物問題に対するコンパクトな変分量子回路”, [計算物理春の学校2023](https://hohno0223.github.io/comp_phys_spring_school2023/index.html), 2022年9月
  
+8. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving Reaction Kinetics Equations Using Quantics Tensor Train", [TTQM2023(Japan-Swiss workshop)](), 2023年10月
+
+9. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [Computational Approaches to Quantum Many-Body Systems](https://qc-hybrid.github.io/omiya_workshop/), 2023年10月 
 
 
-## informal Seminor
+## formal/informal Seminor
 
 1. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 産業技術総合研究所新原理量子コンピューティングセンター, 2021年12月, (口頭発表), [slide](https://sakurairihito.github.io/presentation_at_lab_20211221/)
 
 2. 櫻井理人, 水上渉, 品岡寛,“量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 大阪大学量子情報・量子生命研究センタ-, Dr. 水上渉グループ, 2022年4月, (口頭発表)
 
 3. 櫻井理人, 水上渉, 品岡寛,“Hybrid quantum-classical algorithm for computing imaginary-time correlation functions”, TU Wien, Institute of Solid State Physics, Dr. Karsten Held group, 2022年7月, (口頭発表) 
+
+4.  櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [東京大学生産技術研究所　羽田野研究室　セミナー](http://hatano-lab.iis.u-tokyo.ac.jp/seminar-j.html), 2023年10月  
 
 ## Others 
 
