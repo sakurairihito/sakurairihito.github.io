@@ -35,19 +35,14 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ### Keywords
 - Quantum Circuit Simulator
-    - Qulacs/Pennylane
+    - Qulacs
 
 - Tensor Network
     - ITensor/Quantics/TensorCrossInterpolation
 
-- Docker
-
 - CI (Github Actions)
 
 - VSCode (Remote connection via SSH, Pair programming)
-
-- parallel computing
-    - MPI.jl
 
 - Python Programming
     - Pytest/Poetry
@@ -59,9 +54,12 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Literate Programming
     - Documenter.jl/Franklin.jl
 
-- Physics
+- Computational Physics
     - Quantum Computation (NISQ/Post NISQ Algorithms)
+    - Tensor Learning 
+    - Quantics tensor train
     - Strongly Correlated Physics (Dynamical mean-field theory)
+    - Differential equations
 
 ### Programming languages
 
@@ -89,12 +87,12 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Walking 
 
-
-
+- Weight training
 
 ## Others
 
 - 第65回物性若手夏の学校 ゼミF世話人（2019/12-2020/09）
 - 第66回物性若手夏の学校 ゼミF世話人（2020/12-2021/09）
 - [Stat&QuantPhys Autumn School 2022](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html) 運営委員 (2022/4-2022/10)
-- 
+- [Stat&QuantPhys Winter School 2024 (SQP2024)](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html) 運営委員 (2023/4-2024/2)
+-  
