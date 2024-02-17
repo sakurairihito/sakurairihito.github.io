@@ -14,7 +14,7 @@
 
 4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Physical Society March Meeting 2023](https://march.aps.org), LasVegas、2023年3月 (poster)
 
-5. R. Sakurai, Y. Mizuno, Y. Himeoka, W. Mizukami and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, 2024年3月 (oral) (予定)
+5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, 2024年3月 (oral) (予定)
 
 
 ## International workshop
@@ -34,7 +34,7 @@
 4. 櫻井理人,水上渉, 品岡寛, "量子不純物問題のための量子古典融合アルゴリズム", [物性研究のための量子アルゴリズム最前線](https://qiqb.osaka-u.ac.jp/labs/ueda/fqacmp/), 2023年3月, (招待講演)
 
 
-5. 櫻井理人, 水野雄太、姫岡優介, 水上渉, 品岡寛, "Quanticsテンソルトレインを用いた反応速度論の非線形常微分方程式の解法", [日本物理学会2024年春期大会](https://www.jps.or.jp/activities/meetings/spring/spring_index.php), 18aL1-9, 2024年2月, (口頭発表) (予定)
+5. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quanticsテンソルトレインを用いた反応速度論の非線形常微分方程式の解法", [日本物理学会2024年春期大会](https://www.jps.or.jp/activities/meetings/spring/spring_index.php), 18aL1-9, 2024年2月, (口頭発表) (予定)
 
 ### Posters
 
@@ -55,7 +55,7 @@
 
 8. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [Computational Approaches to Quantum Many-Body Systems](https://qc-hybrid.github.io/omiya_workshop/), 2023年10月 
 
-9. 櫻井理人, 水野雄太、姫岡優介, 水上渉, 品岡寛, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [Stat&QuantPhys Winter School 2024 (SQP2024)](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html), 2024年2月 
+9. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [Stat&QuantPhys Winter School 2024 (SQP2024)](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html), 2024年2月 
 
 ## formal/informal Seminor
 
