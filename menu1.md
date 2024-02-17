@@ -17,11 +17,13 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Oct 2022-Feb 2023 Internship at Osaka University. [量子ソフトウェア勉強会グループワーク](https://qsrh.jp/seminar/)
 
 ## Education
-- Mar 2022 ~ present A student in a Doctoral course, Saitama University
+- Aipril 2024 博士研究員
 
-- Mar 2021 Master's degree, Tokyo University of Science
+- March 2024 Doctoral degree, Saitama University
 
-- Mar 2019 Bachelor's degree, Tokyo University of Science
+- March 2021 Master's degree, Tokyo University of Science
+
+- March 2019 Bachelor's degree, Tokyo University of Science
 
 ## Skills
 
