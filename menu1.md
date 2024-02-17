@@ -32,6 +32,8 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 2. "金融のデリバティブオプションプライシングの計算@大阪大学量子ソフトウェア勉強会グループワーク", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)
 実装論文[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
 
+3. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
+
 
 ### Keywords
 - Quantum Circuit Simulator
@@ -79,15 +81,15 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - May 2017 普通自動車第一種取得
 
-- Mar 2021 高等学校教論一種免許状(理科）
+- Mar 2021 高等学校教論一種免許状 (理科)
 
 ## Hobbies
+- Weight training
+
+- Cafe / Walking 
 
 - visualizing math / physics
 
-- Walking 
-
-- Weight training
 
 ## Others
 

@@ -17,11 +17,10 @@
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,[Phys. Rev. Research 4, 023219 (2022)](https://doi.org/10.1103/PhysRevResearch.4.023219)
 
 
-2. M. Wallerberger, S. Badr, S. Hoshino, F. Kakizawa, T. Koretsune, Y. Nagai, K. Nogaki, T. Nomoto, H. Mori, J. Otsuki, S. Ozaki, R. Sakurai, C. Vogel, N. Witt, K. Yoshimi, H. Shinaoka,"sparse-ir: optimal compression and sparse sampling of many-body propagators", [SoftwareX
-Volume 21, February 2023, 1012661](https://doi.org/10.1016/j.softx.2022.101266)
+2. M. Wallerberger, S. Badr, S. Hoshino, F. Kakizawa, T. Koretsune, Y. Nagai, K. Nogaki, T. Nomoto, H. Mori, J. Otsuki, S. Ozaki, R. Sakurai, C. Vogel, N. Witt, K. Yoshimi, H. Shinaoka,"sparse-ir: optimal compression and sparse sampling of many-body propagators", [SoftwareX Volume 21, February 2023, 1012661](https://doi.org/10.1016/j.softx.2022.101266)
 
 3. H. Shinaoka, M. Wallerberger, Y. Murakami, K. Nogaki, R. Sakurai, P. Werner, A. Kauch, "Multi-scale space-time ansatz for correlation functions of quantum systems", [Phys. Rev. X 13, 021015](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.13.021015)
 
 
 ## Others
-5. 品岡寛, 村上雄太, 野垣康介, 櫻井理人, "Quantics tensor trainに基づく多スケール時空仮説と場の量子論",  物理学会誌「最近の研究から」覧, 2024年2月号(招待あり)
+5. 品岡寛, 村上雄太, 野垣康介, 櫻井理人, "Quantics tensor trainに基づく多スケール時空仮説と場の量子論",  [物理学会誌「最近の研究から」覧](https://www.jps.or.jp/books/gakkaishi/2024/02/79-2.php), 2024年2月号(招待あり)
