@@ -23,5 +23,5 @@ Volume 21, February 2023, 1012661](https://doi.org/10.1016/j.softx.2022.101266)
 3. H. Shinaoka, M. Wallerberger, Y. Murakami, K. Nogaki, R. Sakurai, P. Werner, A. Kauch, "Multi-scale space-time ansatz for correlation functions of quantum systems", [Phys. Rev. X 13, 021015](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.13.021015)
 
 
-## Explainable article
-5. Quantics tensor trainに基づく多スケール時空仮説と場の量子論, 品岡寛, 村上雄太, 野垣康介, 櫻井理人,  物理学会誌「最近の研究から」覧, 2024年2月号に掲載予定(招待あり)
+## Others
+5. 品岡寛, 村上雄太, 野垣康介, 櫻井理人, "Quantics tensor trainに基づく多スケール時空仮説と場の量子論",  物理学会誌「最近の研究から」覧, 2024年2月号(招待あり)
