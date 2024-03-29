@@ -10,8 +10,15 @@
 
 \toc
 
+## In Preparation
+1. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning tensor networks with parameter dependency for Fourier-based option pricing", in preparation
+
+2. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor networks from noisey functions", in preparation
+
 ## Preprint
-1. R. Sakurai, O. J. Backhouse, G. H. Booth, W. Mizukami, H. Shinaoka, Comparative study on compact quantum circuits of quantum-classical hybrid algorithms for quantum impurity models, [arXiv:2312.04105](https://arxiv.org/abs/2312.04105).
+1.  H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [arXiv:2403.09161](https://arxiv.org/abs/2403.09161)
+
+
 
 ## Journal Article
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,[Phys. Rev. Research 4, 023219 (2022)](https://doi.org/10.1103/PhysRevResearch.4.023219)
@@ -20,6 +27,8 @@
 2. M. Wallerberger, S. Badr, S. Hoshino, F. Kakizawa, T. Koretsune, Y. Nagai, K. Nogaki, T. Nomoto, H. Mori, J. Otsuki, S. Ozaki, R. Sakurai, C. Vogel, N. Witt, K. Yoshimi, H. Shinaoka,"sparse-ir: optimal compression and sparse sampling of many-body propagators", [SoftwareX Volume 21, February 2023, 1012661](https://doi.org/10.1016/j.softx.2022.101266)
 
 3. H. Shinaoka, M. Wallerberger, Y. Murakami, K. Nogaki, R. Sakurai, P. Werner, A. Kauch, "Multi-scale space-time ansatz for correlation functions of quantum systems", [Phys. Rev. X 13, 021015](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.13.021015)
+
+4. R. Sakurai, O. J. Backhouse, G. H. Booth, W. Mizukami, H. Shinaoka, Comparative study on compact quantum circuits of quantum-classical hybrid algorithms for quantum impurity models, [arXiv:2312.04105](https://arxiv.org/abs/2312.04105) to be published in PRR.
 
 
 ## Others

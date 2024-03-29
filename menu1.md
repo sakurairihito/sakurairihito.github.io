@@ -11,14 +11,13 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 \toc
 
 ## Career
+- April 2024-2025 JSPS Research Fellowship for Young Scientist PD (University of Tokyo)
 
-- Apr 2023-2025 JSPS Research Fellowship for Young Scientist DC2
+- April 2023-2024 JSPS Research Fellowship for Young Scientist DC2
 
-- Oct 2022-Feb 2023 Internship at Osaka University. [量子ソフトウェア勉強会グループワーク](https://qsrh.jp/seminar/)
+- October 2022-Feb 2023 Internship at Osaka University. [量子ソフトウェア勉強会グループワーク](https://qsrh.jp/seminar/)
 
 ## Education
-- Aipril 2024 博士研究員
-
 - March 2024 Doctoral degree, Saitama University
 
 - March 2021 Master's degree, Tokyo University of Science
@@ -31,8 +30,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 1. "不純物問題向けの量子古典融合アルゴリズム", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
 
-2. "金融のデリバティブオプションプライシングの計算@大阪大学量子ソフトウェア勉強会グループワーク", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)
-実装論文[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
+2. "金融のデリバティブオプションプライシングの計算@大阪大学量子ソフトウェア勉強会グループワーク", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)実装論文[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
 
 3. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
 
@@ -99,4 +97,3 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - 第66回物性若手夏の学校 ゼミF世話人（2020/12-2021/09）
 - [Stat&QuantPhys Autumn School 2022](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html) 運営委員 (2022/4-2022/10)
 - [Stat&QuantPhys Winter School 2024 (SQP2024)](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html) 運営委員 (2023/4-2024/2)
--  

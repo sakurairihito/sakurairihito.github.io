@@ -14,11 +14,11 @@
 
 4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Physical Society March Meeting 2023](https://march.aps.org), LasVegas、2023年3月 (poster)
 
-5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, 2024年3月 (oral) (予定)
+5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, 2024年3月 (oral)
 
 
 ## International workshop
-1. R. Sakurai, H. Takahashi and K. Miyamoto, "Fourier-based option pricing with parameter dependencies embedded in tensor learning", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Tokyo, 2024年3月 (poster) (予定)
+1. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning tensor networks with parameter dependencies for Fourier-based option pricing", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Tokyo, 2024年3月 (poster)
 
 ## Domestic conference
 
@@ -34,7 +34,7 @@
 4. 櫻井理人,水上渉, 品岡寛, "量子不純物問題のための量子古典融合アルゴリズム", [物性研究のための量子アルゴリズム最前線](https://qiqb.osaka-u.ac.jp/labs/ueda/fqacmp/), 2023年3月, (招待講演)
 
 
-5. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quanticsテンソルトレインを用いた反応速度論の非線形常微分方程式の解法", [日本物理学会2024年春期大会](https://www.jps.or.jp/activities/meetings/spring/spring_index.php), 18aL1-9, 2024年2月, (口頭発表) (予定)
+5. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quanticsテンソルトレインを用いた反応速度論の非線形常微分方程式の解法", [日本物理学会2024年春期大会](https://www.jps.or.jp/activities/meetings/spring/spring_index.php), 18aL1-9, 2024年2月, (口頭発表) 
 
 ### Posters
 
@@ -57,6 +57,9 @@
 
 9. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [Stat&QuantPhys Winter School 2024 (SQP2024)](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html), 2024年2月 
 
+
+10. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quantics tensor train を⽤いた化学反応動⼒学の⾮線形常微分⽅程式の解法", [物性研究所スパコン共同利用・CCMS合同研究会「計算物質科学の現在と未来](https://mdcl.issp.u-tokyo.ac.jp/scc/news/5770), 2024年4月  
+
 ## formal/informal Seminor
 
 1. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 産業技術総合研究所新原理量子コンピューティングセンター, 2021年12月, (口頭発表), [slide](https://sakurairihito.github.io/presentation_at_lab_20211221/)
@@ -66,6 +69,8 @@
 3. 櫻井理人, 水上渉, 品岡寛,“Hybrid quantum-classical algorithm for computing imaginary-time correlation functions”, TU Wien, Institute of Solid State Physics, Dr. Karsten Held group, 2022年7月, (口頭発表) 
 
 4.  櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [東京大学生産技術研究所　羽田野研究室　セミナー](http://hatano-lab.iis.u-tokyo.ac.jp/seminar-j.html), 2023年10月  
+
+5. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/), 2024年2月   
 
 ## Others 
 
