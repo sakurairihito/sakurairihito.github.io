@@ -5,7 +5,6 @@
 \toc
 
 ## International conference
-
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020), Brazil, 2021年9月(poster)  
 
 2. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [American Physical Society March Meeting 2022](https://meetings.aps.org/Meeting/MAR22/Session/D08), Chicago, 2022年3月(poster)
@@ -15,7 +14,6 @@
 4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Physical Society March Meeting 2023](https://march.aps.org), LasVegas、2023年3月 (poster)
 
 5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, 2024年3月 (oral)
-
 
 ## International workshop
 1. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning tensor networks with parameter dependencies for Fourier-based option pricing", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Tokyo, 2024年3月 (poster)
@@ -58,7 +56,7 @@
 9. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [Stat&QuantPhys Winter School 2024 (SQP2024)](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html), 2024年2月 
 
 
-10. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quantics tensor train を⽤いた化学反応動⼒学の⾮線形常微分⽅程式の解法", [物性研究所スパコン共同利用・CCMS合同研究会「計算物質科学の現在と未来](https://mdcl.issp.u-tokyo.ac.jp/scc/news/5770), 2024年4月  
+10. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quantics tensor train を⽤いた化学反応動⼒学の⾮線形常微分⽅程式の解法", [物性研究所スパコン共同利用・CCMS合同研究会 「計算物質科学の現在と未来」](https://mdcl.issp.u-tokyo.ac.jp/scc/news/5770), 2024年4月  
 
 ## formal/informal Seminor
 

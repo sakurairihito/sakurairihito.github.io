@@ -28,9 +28,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ### Software 
 
-1. "不純物問題向けの量子古典融合アルゴリズム", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
+1. "Quantum-classical hybrid algorithms for quantum impurity problems", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
 
-2. "金融のデリバティブオプションプライシングの計算@大阪大学量子ソフトウェア勉強会グループワーク", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)実装論文[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
+2. "Tensor learning algorithms for derivative option pricing@Quantum Software Research Hub", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)実装論文[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
 
 3. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
 
