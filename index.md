@@ -3,9 +3,7 @@
 
 # Welcome to Rihito Sakurai's Homepage
 
-- 3rd year PhD student ([Hiroshi Shinaoka group](https://shinaoka.sakura.ne.jp))
-
-- Department of physics, Saitama University, Japan
+- 日本学術振興会特別研究員PD 受け入れ先 東京大学大学院理学系研究科藤堂研究室
 
 - Email:sakurairihito(at)gmail.com
 
