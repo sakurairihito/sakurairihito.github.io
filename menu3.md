@@ -1,10 +1,9 @@
 @def title = "Menu 3"
-@def tags = ["syntax", "code"]
+@def tags = ["syntax", "code", "image"]
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
 ~~~
-
 
 # Presentations
 
