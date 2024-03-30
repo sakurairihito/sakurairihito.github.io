@@ -1,7 +1,9 @@
 @def title = "Franklin Example"
 @def tags = ["syntax", "code"]
 
+~~~
 <img src="frog.jpg" alt="frog">
+~~~
 
 # Welcome to Rihito Sakurai's Homepage
 
@@ -12,5 +14,4 @@
 - Email:sakurairihito(at)gmail.com
 
 - Tech blog
-    - [Zenn](https://zenn.dev/rihitosakurai)
- 
+    - [Zenn](https://zenn.dev/rihitosakurai) 

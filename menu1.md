@@ -69,7 +69,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Python
 
-
 #### Learning
 
 - Rust
