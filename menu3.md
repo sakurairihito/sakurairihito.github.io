@@ -1,5 +1,9 @@
 @def title = "Menu 3"
 
+~~~
+<img src="cafe.jpg" alt="cafe">
+~~~
+
 # Presentations
 
 \toc
