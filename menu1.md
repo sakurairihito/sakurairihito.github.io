@@ -24,9 +24,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - March 2019 Bachelor's degree, Tokyo University of Science
 
-## Skills
-
-### Software 
+## Software 
 
 1. "Quantum-classical hybrid algorithms for quantum impurity problems", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
 
@@ -35,64 +33,27 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 3. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
 
 
-### Keywords
-- Quantum Circuit Simulator
-    - Qulacs
-
-- Tensor Network
-    - ITensor/Quantics/TensorCrossInterpolation
-
-- CI (Github Actions)
-
-- VSCode (Remote connection via SSH, Pair programming)
-
-- Python Programming
-    - Pytest/Poetry
-    - Jupyter Notebook/Jupyter lab
-
-- Visualization Programming
-    - Dash.jl
-
-- Literate Programming
-    - Documenter.jl/Franklin.jl
-
-- Computational Physics
-    - Quantum Computation (NISQ/Post NISQ Algorithms)
-    - Tensor Learning 
-    - Quantics tensor train
-    - Strongly Correlated Physics (Dynamical mean-field theory)
-    - Differential equations
-
-### Programming languages
-
-- Julia
-
-- Python
-
-#### Learning
-
-- Rust
-
 ## Certifications
+
 - Nov 2016 TOEIC IPtest 910 
 
 - Dec 2016 TOEFL ibt 73 
 
-- May 2017 普通自動車第一種取得
-
-- Mar 2021 高等学校教論一種免許状 (理科)
+- Mar 2021 Secondary School Teaching Certificate (Science)
 
 ## Hobbies
-- Weight training
+- Reading comic books 
 
-- Cafe / Walking 
+- Riding bicycle
+
+- Weight training
 
 - visualizing math / physics
 
-
-## Others
+## Other activities
 
 - 第65回物性若手夏の学校 ゼミF世話人（2019/12-2020/09）
 - 第66回物性若手夏の学校 ゼミF世話人（2020/12-2021/09）
 - [Stat&QuantPhys Autumn School 2022](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html) 運営委員 (2022/4-2022/10)
 - [Stat&QuantPhys Winter School 2024 (SQP2024)](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html) 運営委員 (2023/4-2024/2)
+
