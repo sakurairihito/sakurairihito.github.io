@@ -14,4 +14,10 @@
 - Email:sakurairihito(at)gmail.com
 
 - Tech blog
-    - [Zenn](https://zenn.dev/rihitosakurai) 
+    - [Zenn](https://zenn.dev/rihitosakurai)
+
+
+
+~~~
+<img src="cafe.jpg" alt="cafe">
+~~~ 
