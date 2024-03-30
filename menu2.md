@@ -15,7 +15,7 @@
 
 2. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor networks from noisy functions", in preparation
 
-## Preprint
+## Preprint 
 1.  H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [arXiv:2403.09161](https://arxiv.org/abs/2403.09161)
 
 
