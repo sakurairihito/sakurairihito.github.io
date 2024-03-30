@@ -3,7 +3,12 @@
 
 # Welcome to Rihito Sakurai's Homepage
 
-- JSPS PD Fellow, University of Tokyo
+
+- JSPS PD Fellow, University of Tokyo 
+
+- Mainly focusing on various applications of near-term quantum algorithms and tensor network method. 
+
+- TENSOR4ALL
 
 - Email:sakurairihito(at)gmail.com
 
