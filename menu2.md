@@ -19,7 +19,6 @@
 1.  H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [arXiv:2403.09161](https://arxiv.org/abs/2403.09161)
 
 
-
 ## Journal Article
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,[Phys. Rev. Research 4, 023219 (2022)](https://doi.org/10.1103/PhysRevResearch.4.023219)
 
@@ -31,5 +30,5 @@
 4. R. Sakurai, O. J. Backhouse, G. H. Booth, W. Mizukami, H. Shinaoka, Comparative study on compact quantum circuits of quantum-classical hybrid algorithms for quantum impurity models, [arXiv:2312.04105](https://arxiv.org/abs/2312.04105) to be published in PRR.
 
 
-## Others
+## Japanese articles
 5. 品岡寛, 村上雄太, 野垣康介, 櫻井理人, "Quantics tensor trainに基づく多スケール時空仮説と場の量子論",  [物理学会誌「最近の研究から」覧](https://www.jps.or.jp/books/gakkaishi/2024/02/79-2.php), 2024年2月号(招待あり)

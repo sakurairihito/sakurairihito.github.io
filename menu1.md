@@ -1,17 +1,17 @@
-+++
++++ 
 title = "CV"
 hascode = true
 date = Date(2019, 3, 22)
 rss = "A short description of the page which would serve as **blurb** in a `RSS` feed; you can use basic markdown here but the whole description string must be a single line (not a multiline string). Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don't expect maths or fancy styling to work; images should be ok though: ![](https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg)"
-+++
++++ 
 @def tags = ["syntax", "code"]
 
-# CV
+# CV 
 
-\toc
+\toc 
 
-## Career
-- April 2024-2025 JSPS Research Fellowship for Young Scientist PD (University of Tokyo)
+## Career 
+- April 2024-2025 JSPS Research Fellowship for Young Scientist PD (Department of Physics, University of Tokyo) 
 
 - April 2023-2024 JSPS Research Fellowship for Young Scientist DC2
 
@@ -34,7 +34,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 
 ## Certifications
-
 - Nov 2016 TOEIC IPtest 910 
 
 - Dec 2016 TOEFL ibt 73 
@@ -42,9 +41,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Mar 2021 Secondary School Teaching Certificate (Science)
 
 ## Hobbies
-- Reading comic books 
+- Reading comic books on SF such as EDEN, GHOST IN THE SHELL
 
-- Riding bicycle
+- Riding bicycle 
 
 - Weight training
 

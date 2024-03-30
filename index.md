@@ -9,7 +9,7 @@
 
 - I am Rihito Sakurai (櫻井 理人), JSPS PD Fellow, University of Tokyo 
 
-- Tensors Networks, Everywhere for Everyone
+- Tensors Network, Everywhere for Everyone
 
 - Email:sakurairihito(at)gmail.com
 
