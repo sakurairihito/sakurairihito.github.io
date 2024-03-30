@@ -6,7 +6,7 @@
 
 - JSPS PD Fellow, University of Tokyo 
 
-- Mainly focusing on various applications of near-term quantum algorithms and tensor network method. 
+- Focusing on various applications of near-term quantum algorithms and tensor network method
 
 - TENSOR4ALL
 

@@ -13,7 +13,7 @@
 ## In Preparation
 1. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning tensor networks with parameter dependency for Fourier-based option pricing", in preparation
 
-2. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor networks from noisey functions", in preparation
+2. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor networks from noisy functions", in preparation
 
 ## Preprint
 1.  H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [arXiv:2403.09161](https://arxiv.org/abs/2403.09161)
