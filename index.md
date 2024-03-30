@@ -3,6 +3,7 @@
 
 ~~~
 <img src="frog.jpg" alt="frog">
+<p>This photo was taken at TSUKUBA BREWERY</p>
 ~~~
 
 # Welcome to Rihito Sakurai's Homepage
@@ -20,4 +21,5 @@
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
+<p>sssss</p>
 ~~~ 
