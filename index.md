@@ -21,5 +21,5 @@
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
-<p>sssss</p>
+<p>A memorable cafe in Minneapolis</p>
 ~~~ 

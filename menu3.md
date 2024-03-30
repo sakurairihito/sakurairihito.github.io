@@ -1,5 +1,5 @@
 @def title = "Menu 3"
-@def tags = ["syntax", "code", "image"]
+@def tags = ["syntax", "code"]
 
 
 # Presentations
