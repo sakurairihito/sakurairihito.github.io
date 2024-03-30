@@ -21,5 +21,5 @@
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
-<p>A memorable cafe in Minneapolis</p>
+<p>A memorable cafe in Minneapolis where I discussed with Miles</p>
 ~~~ 
