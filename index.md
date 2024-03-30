@@ -5,13 +5,9 @@
 
 # Welcome to Rihito Sakurai's Homepage
 
-- I am Rihito Sakurai (櫻井 理人)
+- I am Rihito Sakurai (櫻井 理人), JSPS PD Fellow, University of Tokyo 
 
-- JSPS PD Fellow, University of Tokyo 
-
-- Research on quantum-classical hybrid algorithms & tensor network method
-
-- TensorsNetworks Everywhere4Everyone
+- Tensors Networks, Everywhere for Everyone
 
 - Email:sakurairihito(at)gmail.com
 
