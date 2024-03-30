@@ -21,5 +21,5 @@
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
-<p>A memorable cafe in Minneapolis where I discussed with Miles</p>
+<p>Memorable Minneapolis cafe during APS 2024</p>
 ~~~ 
