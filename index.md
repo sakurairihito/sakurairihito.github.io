@@ -14,12 +14,11 @@
 
 - Email:sakurairihito(at)gmail.com
 
-- Tech blog
-    - [Zenn](https://zenn.dev/rihitosakurai)
+- Tech blog [Zenn](https://zenn.dev/rihitosakurai)
 
-
+- Diary [しずかなインターネット](https://sizu.me/sakurai)
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
-<p>Memorable Minneapolis cafe during APS 2024</p>
+<p>Memorable Minneapolis cafe where I discussed with a person I respect</p>
 ~~~ 
