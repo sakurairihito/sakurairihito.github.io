@@ -6,11 +6,11 @@
 <p>This photo was taken at TSUKUBA BREWERY</p>
 ~~~
 
-# Welcome to Rihito Sakurai's Homepage
+# Dr. Rihito Sakurai (櫻井 理人)
 
-- I am Rihito Sakurai (櫻井 理人), JSPS PD Fellow, University of Tokyo 
+- JSPS Research Fellow at the University of Tokyo 
 
-- Tensors Network, Everywhere for Everyone
+- Tensor4Fields
 
 - Email:sakurairihito(at)gmail.com
 
@@ -18,7 +18,7 @@
 
 - Diary [しずかなインターネット](https://sizu.me/sakurai)
 
-- Self-introduction at Todo-group [me](https://github.com/sakurairihito/self-intro)
+- Self-introduction [slide](https://github.com/sakurairihito/self-intro)
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
