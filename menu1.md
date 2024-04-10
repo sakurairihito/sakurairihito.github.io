@@ -50,6 +50,10 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - visualizing math / physics
 
+## Research interest
+- Application to tensor network to various fields
+
+
 ## Other activities
 
 - 第65回物性若手夏の学校 ゼミF世話人（2019/12-2020/09）

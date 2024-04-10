@@ -18,6 +18,8 @@
 
 - Diary [しずかなインターネット](https://sizu.me/sakurai)
 
+- Self-introduction at Todo-group [me](https://github.com/sakurairihito/self-intro)
+
 ~~~
 <img src="cafe.jpg" alt="cafe">
 <p>Memorable Minneapolis cafe where I discussed with a person I respect</p>
