@@ -10,6 +10,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 \toc
 
+## Research 
+- Quantum-classical hybrid algorithms
+- Tensor network algorithms 
 
 ## Career 
 - April 2024-2025 JSPS Research Fellowship for Young Scientist PD (Department of Physics, University of Tokyo) 
@@ -34,13 +37,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 3. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
 
 
-## Certifications
-- Nov 2016 TOEIC IPtest 910 
-
-- Dec 2016 TOEFL ibt 73 
-
-- Mar 2021 Secondary School Teaching Certificate (Science)
-
 ## Hobbies
 - Reading comic books on SF such as EDEN, GHOST IN THE SHELL
 
@@ -49,9 +45,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Weight training
 
 - visualizing math / physics
-
-## Research interest
-- Application to tensor network to various fields
 
 
 ## Other activities
