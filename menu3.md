@@ -20,6 +20,8 @@
 ## International workshop
 1. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning tensor networks with parameter dependencies for Fourier-based option pricing", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Tokyo, 2024年3月 (poster)
 
+2. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor networks from noisy functions", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Tokyo, 2024年3月 (poster)
+
 ## Domestic conference
 
 ### Talks

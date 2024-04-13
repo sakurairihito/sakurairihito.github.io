@@ -6,11 +6,9 @@
 <p>This photo was taken at TSUKUBA BREWERY</p>
 ~~~
 
-# Dr. Rihito Sakurai (櫻井 理人)
+# Dr. Rihito Sakurai 
 
 - JSPS Research Fellow at the University of Tokyo 
-
-- Tensor4Fields
 
 - Email:sakurairihito(at)gmail.com
 
@@ -18,7 +16,7 @@
 
 - Diary [しずかなインターネット](https://sizu.me/sakurai)
 
-- Self-introduction [slide](https://github.com/sakurairihito/self-intro)
+- [Me](https://github.com/sakurairihito/self-intro)
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
