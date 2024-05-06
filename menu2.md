@@ -27,7 +27,7 @@
 
 3. H. Shinaoka, M. Wallerberger, Y. Murakami, K. Nogaki, R. Sakurai, P. Werner, A. Kauch, "Multi-scale space-time ansatz for correlation functions of quantum systems", [Phys. Rev. X 13, 021015](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.13.021015)
 
-4. R. Sakurai, O. J. Backhouse, G. H. Booth, W. Mizukami, H. Shinaoka, Comparative study on compact quantum circuits of quantum-classical hybrid algorithms for quantum impurity models, [arXiv:2312.04105](https://arxiv.org/abs/2312.04105) to be published in PRR.
+4. R. Sakurai, O. J. Backhouse, G. H. Booth, W. Mizukami, H. Shinaoka, Comparative study on compact quantum circuits of quantum-classical hybrid algorithms for quantum impurity models, [Phys. Rev. Research 6, 023110](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.023110).
 
 
 ## Japanese articles
