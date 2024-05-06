@@ -15,7 +15,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Tensor network algorithms, for various applications such as finance, chemical reaction dynamics, state tomography, and machine learning.
 
 ## Career 
-- April 2024-2025 JSPS Research Fellowship for Young Scientist PD (Department of Physics, University of Tokyo) 
+- April 2024-2025 JSPS Research Fellowship for Young Scientist PD ([Todo group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo) 
 
 - April 2023-2024 JSPS Research Fellowship for Young Scientist DC2
 
@@ -32,15 +32,13 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 1. "Quantum-classical hybrid algorithms for quantum impurity problems", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
 
-2. "Tensor learning algorithms for derivative option pricing@Quantum Software Research Hub", [tntorch + derivative pricing](https://github.com/sakurairihito/TN-option-pricing)[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
+2. "Tensor learning algorithms for derivative option pricing@Quantum Software Research Hub",[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
 
 3. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
 
 
 ## Hobbies
-- Reading comic books on SF such as EDEN, GHOST IN THE SHELL
-
-- Riding bicycle 
+- Drinking beer
 
 - Weight training
 

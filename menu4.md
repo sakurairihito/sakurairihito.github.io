@@ -6,6 +6,9 @@
 
 Computaional physics ----> Computaional finance 
 
+高次元データの圧縮技術(tensor networks)をデリバティブ計算に応用する
+
+
 # Research keyword
 
 0. Variational quantum algorithms
