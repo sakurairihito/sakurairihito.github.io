@@ -2,19 +2,21 @@
 @def tags = ["syntax", "code"]
 
 
+# Picture (工事中)
+
+Computaional physics ----> Computaional finance 
+
 # Research keyword
 
-1. quantics tensor train
+0. Variational quantum algorithms
 
-2. tensor cross interpolation 
+1. Quantics tensor train
 
-3. Computaional physics / strongly correlated materials
+2. Tensor cross interpolation 
 
-4. Computaional finance / Derivative option pricing
+3. Machine learning 
 
-5. machine learning 
-
-6. differential equations
+4. Partial/Ordinary/Stochastic differential equations
 
 
 # Recent research direction
@@ -23,7 +25,7 @@
 
 2. Solving differential equations
 
-3. Speed-up derivative option pricing by tensor network algorithms
+3. Derivative pricing by tensor network algorithms
 
 
 
