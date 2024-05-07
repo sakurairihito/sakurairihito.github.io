@@ -6,8 +6,7 @@
 
 Computaional physics ----> Computaional finance 
 
-高次元データの圧縮技術(tensor networks)をデリバティブ計算に応用する
-
+Tensor Networks (highly efficient compression and computational method) ----> Derivative pricing (notorious high-dimensional problem)
 
 # Research keyword
 
