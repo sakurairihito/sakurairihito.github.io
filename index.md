@@ -20,5 +20,5 @@
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
-<p>Memorable Minneapolis cafe where I discussed with a person I respect</p>
+<p>My memory during PhD age</p>
 ~~~ 
