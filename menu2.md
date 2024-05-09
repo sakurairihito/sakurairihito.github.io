@@ -15,7 +15,7 @@
 ## Preprint 
 1.  H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [arXiv:2403.09161](https://arxiv.org/abs/2403.09161)
 
-2. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor networks",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v2)
+2. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor networks",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v3)
 
 
 ## Journal Article
