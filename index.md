@@ -8,9 +8,11 @@
 
 # Dr. Rihito Sakurai 
 
-- JSPS Research Fellow at the University of Tokyo 
+- JSPS Research Fellow at the University of Tokyo, [Todo Group](https://exa.phys.s.u-tokyo.ac.jp/ja/index_html)
 
-- Email:sakurairihito(at)gmail.com
+- [Google Scholar](https://scholar.google.com/citations?hl=ja&authuser=1&user=IKqeswsAAAAJ)
+
+- - Email:sakurairihito(at)gmail.com
 
 - Tech blog [Zenn](https://zenn.dev/rihitosakurai)
 
