@@ -10,13 +10,14 @@
 \toc
 
 ## In Preparation
-1. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor networks from noisy functions", in preparation
+
 
 ## Preprint 
 1.  H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [arXiv:2403.09161](https://arxiv.org/abs/2403.09161)
 
 2. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor networks",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v3)
 
+3. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor trains from noisy functions with application to quantum simulation", [arXiv:2405.12730](https://arxiv.org/abs/2405.12730)
 
 ## Journal Article
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,[Phys. Rev. Research 4, 023219 (2022)](https://doi.org/10.1103/PhysRevResearch.4.023219)
