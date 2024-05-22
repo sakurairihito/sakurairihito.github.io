@@ -6,28 +6,9 @@
 
 Computaional physics ----> Computaional finance 
 
-Tensor Networks (highly efficient compression and computational method) ----> Derivative pricing (notorious high-dimensional problem)
-
-# Research keyword
-
-0. Variational quantum algorithms
-
-1. Quantics tensor train
-
-2. Tensor cross interpolation 
-
-3. Machine learning 
-
-4. Partial/Ordinary/Stochastic differential equations
+Recently, I apply tensor network, originating from quantum physics to finance problems, especially derivative option pricing.
 
 
-# Recent research direction
-
-1. Combining machine learning and tensor networks
-
-2. Solving differential equations
-
-3. Derivative pricing by tensor network algorithms
 
 
 
