@@ -4,7 +4,7 @@
 
 # Presentations
 
-\toc
+\toc 
 
 ## International conference
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020), Brazil, 2021年9月(poster)  
@@ -17,26 +17,32 @@
 
 5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, 2024年3月 (oral)
 
-## International workshop
-1. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning tensor networks with parameter dependencies for Fourier-based option pricing", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Tokyo, 2024年3月 (poster)
+## International workshop (Onsite)
+1. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning tensor networks with parameter dependencies for Fourier-based option pricing", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Hongo Campus, Univ. Tokyo, 2024年3月 (poster)
 
-2. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor networks from noisy functions", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Tokyo, 2024年3月 (poster)
+2. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor networks from noisy functions", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Hongo Campus, Univ. Tokyo, 2024年3月 (poster)
+
+3. R. Sakurai, H. Takahashi and K. Miyamoto, "Tensor4Finance: Learning Fourier-based option price with tensor networks", [tensor4all meeting 2024 @ Vienna](https://tensor4all.org/workshop/vienna2024.html), Vienna, 2024年6月 (long talk (1h))
+
+4. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning Fourier-based parametric option price using tensor cross interpolation", [Current and Future Computational Approaches to Quantum Many-Body Systems 2024 (CompQMB2024)](https://qc-hybrid.github.io/CompQMB2024/), ISSP, Kashiwa Campus, Univ. Tokyo, 2024年9月 (poster予定)
 
 ## Domestic conference
 
 ### Talks
 
-1. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, [日本物理学会第77回年次大会](https://onsite.gakkai-web.net/jps/jps_search/2022sp/index.html), 16aE11-13, 2022年3月
+1. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, [日本物理学会第77回年次大会](https://onsite.gakkai-web.net/jps/jps_search/2022sp/index.html), 16aE11-13, 2022年3月 
 
-2. 櫻井理人, 水上渉, 品岡寛, “量子不純物問題に特化した変分量子固有値法の量子回路”, [日本物理学会2022年秋季大会](https://onsite.gakkai-web.net/jps/jps_search/2022au/data2/html/program01.html), 12pW934-3, 2022年9月
+2. 櫻井理人, 水上渉, 品岡寛, “量子不純物問題に特化した変分量子固有値法の量子回路”, [日本物理学会2022年秋季大会](https://onsite.gakkai-web.net/jps/jps_search/2022au/data2/html/program01.html), 12pW934-3, 2022年9月 
 
-3. 櫻井理人, 水上渉, 品岡寛, “クラスター型量子不純物問題に対するコンパクトな変分量子回路”, [日本物理学会2023年春期大会](https://onsite.gakkai-web.net/jps/jps_search/2023sp/data/html/download.html), 22pA1-12, 2023年3月, (口頭発表)
-
-
-4. 櫻井理人,水上渉, 品岡寛, "量子不純物問題のための量子古典融合アルゴリズム", [物性研究のための量子アルゴリズム最前線](https://qiqb.osaka-u.ac.jp/labs/ueda/fqacmp/), 2023年3月, (招待講演)
+3. 櫻井理人, 水上渉, 品岡寛, “クラスター型量子不純物問題に対するコンパクトな変分量子回路”, [日本物理学会2023年春期大会](https://onsite.gakkai-web.net/jps/jps_search/2023sp/data/html/download.html), 22pA1-12, 2023年3月
 
 
-5. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quanticsテンソルトレインを用いた反応速度論の非線形常微分方程式の解法", [日本物理学会2024年春期大会](https://www.jps.or.jp/activities/meetings/spring/spring_index.php), 18aL1-9, 2024年2月, (口頭発表) 
+4. 櫻井理人,水上渉, 品岡寛, "量子不純物問題のための量子古典融合アルゴリズム", [物性研究のための量子アルゴリズム最前線](https://qiqb.osaka-u.ac.jp/labs/ueda/fqacmp/), 2023年3月 (招待あり)
+
+
+5. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quanticsテンソルトレインを用いた反応速度論の非線形常微分方程式の解法", [日本物理学会2024年春期大会](https://www.jps.or.jp/activities/meetings/spring/spring_index.php), 18aL1-9, 2024年2月
+
+6. 櫻井理人, 高橋治利, 宮本幸一, "Learning Parameter Dependence for Fourier-based Option Pricing with Tensor Networks", [第61回（2024年度夏季）ジャフィー大会](http://www.jafee.gr.jp/01rally/conference/pro_61th_2024_0709.pdf), 2024年8月 
 
 ### Posters
 
