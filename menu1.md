@@ -12,7 +12,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ## Research 
 - Quantum-classical hybrid algorithms for strongly correlated materials
-- Tensor network algorithms, for various applications such as finance, chemical reaction dynamics, state tomography, and machine learning.
+- Tensor network algorithms for mathematical finance
 
 ## Career 
 - April 2024-2025 JSPS Research Fellowship for Young Scientist PD ([Todo group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo) 
