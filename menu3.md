@@ -44,7 +44,9 @@
 
 6. 櫻井理人, 高橋治利, 宮本幸一, "Learning Parameter Dependence for Fourier-based Option Pricing with Tensor Networks", [第61回（2024年度夏季）ジャフィー大会](http://www.jafee.gr.jp/01rally/conference/pro_61th_2024_0709.pdf), 2024年8月 
 
-7. 櫻井理人, 高橋治利, 宮本幸一, "Learning parameter dependence for Fourier-based option price with tensor trains", [第13回量子ソフトウェア研究発表会](https://www.ipsj.or.jp/kenkyukai/event/qs13.html), 2024年10月 (予定)
+7. 櫻井理人, 高橋治利, 宮本幸一, "Learning Fourier-based parametric option price with tensor trains", [SIG-FIN](https://sigfin.org), 2024年10月 
+
+8. 櫻井理人, 高橋治利, 宮本幸一, "Learning parameter dependence for Fourier-based option price with tensor trains", [第13回量子ソフトウェア研究発表会](https://www.ipsj.or.jp/kenkyukai/event/qs13.html), 2024年10月 
 
 ### Posters
 
@@ -70,7 +72,7 @@
 
 10. 櫻井理人, 水上渉, 水野雄太、姫岡優介, 品岡寛, "Quantics tensor train を⽤いた化学反応動⼒学の⾮線形常微分⽅程式の解法", [物性研究所スパコン共同利用・CCMS合同研究会 「計算物質科学の現在と未来」](https://mdcl.issp.u-tokyo.ac.jp/scc/news/5770), 2024年4月  
 
-11. 櫻井理人, 高橋治利, 宮本幸一, "テンソルネットワーク学習アルゴリズムを用いたパラメトリックオプション価格の学習", []
+11. 櫻井理人, 高橋治利, 宮本幸一, "テンソルネットワーク学習アルゴリズムを用いたパラメトリックオプション価格の学習", [数学・数理科学専攻若手研究者のための異分野・異業種研究交流会2024](https://jsiam.org/jsiam_archive/kr/career2024/), 2024年10月
 
 ## formal/informal Seminor
 
