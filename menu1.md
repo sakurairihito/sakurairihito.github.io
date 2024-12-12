@@ -38,7 +38,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 
 ## Hobbies
-- Drinking beer
+- Drinking beer (On a diet...)
 
 - Weight training
 

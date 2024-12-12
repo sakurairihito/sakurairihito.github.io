@@ -15,7 +15,9 @@
 
 4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Physical Society March Meeting 2023](https://march.aps.org), LasVegas、2023年3月 (poster)
 
-5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, 2024年3月 (oral)
+5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, March, 2024 (oral)
+
+6. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [2025 IEEE Symposium Series on Computational Intelligence](https://ieee-ssci.org/?ui=home), Trondheim, Norway, March 2025 (oral) (plan)
 
 ## International workshop (Onsite)
 1. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning tensor networks with parameter dependencies for Fourier-based option pricing", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Hongo Campus, Univ. Tokyo, 2024年3月 (poster)
@@ -24,7 +26,7 @@
 
 3. R. Sakurai, H. Takahashi and K. Miyamoto, "Tensor4Finance: Learning Fourier-based option price with tensor networks", [tensor4all meeting 2024 @ Vienna](https://tensor4all.org/workshop/vienna2024.html), Vienna, 2024年6月 (long talk (1h))
 
-4. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning Fourier-based parametric option price using tensor cross interpolation", [Current and Future Computational Approaches to Quantum Many-Body Systems 2024 (CompQMB2024)](https://qc-hybrid.github.io/CompQMB2024/), ISSP, Kashiwa Campus, Univ. Tokyo, 2024年9月 (poster予定)
+4. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning Fourier-based parametric option price using tensor cross interpolation", [Current and Future Computational Approaches to Quantum Many-Body Systems 2024 (CompQMB2024)](https://qc-hybrid.github.io/CompQMB2024/), ISSP, Kashiwa Campus, Univ. Tokyo, 2024年9月 (poster)
 
 ## Domestic conference
 
@@ -47,6 +49,8 @@
 7. 櫻井理人, 高橋治利, 宮本幸一, "Learning Fourier-based parametric option price with tensor trains", [SIG-FIN](https://sigfin.org), 2024年10月 
 
 8. 櫻井理人, 高橋治利, 宮本幸一, "Learning parameter dependence for Fourier-based option price with tensor trains", [第13回量子ソフトウェア研究発表会](https://www.ipsj.or.jp/kenkyukai/event/qs13.html), 2024年10月 
+
+9. 櫻井理人, 宮本幸一, 大久保剛 "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [第62回（2024年度冬季）ジャフィー大会](http://www.jafee.gr.jp/01rally/conference/pro_61th_2024_0709.pdf), 2024年2月 
 
 ### Posters
 
@@ -86,10 +90,13 @@
 
 5. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/), 2024年2月   
 
-## Others 
+## Other activities
 
 1. 櫻井理人, “julia言語と量子回路シミュレータ”, [julia tokai 勉強会12](https://juliatokai.connpass.com/event/241113/), 2022年3月, (口頭発表)
 
 2. 櫻井理人 (グループで発表), "量子アルゴリズムの性能評価の指標の重要性", [未来に向けての合宿「量子ソフトウェアの研究方向性を探る](https://www.jst.go.jp/stpp/q-leap/joho/pdf/qsw_camp0221.pdf)」, 金沢八景 横浜テクノタワーホテル, 2020年2月，ポスター発表
 
+3. 櫻井理人, "関数のテンソルトレイン表現をjuliaで入門", [Julia in physics 2024](https://ohno.github.io/julia_in_physics_2024/), 東京大学本郷キャンパス、2024年12月、口頭発表(招待あり)
 
+
+4. 櫻井理人, 井元隆史, "金融工学と量子技術を基にした事業化の発表(海外選抜チーム採択)" [スタートアップ・エコシステム形成支援事業GTIEプログラム](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html), University of California San Diego, 2025, 2月
