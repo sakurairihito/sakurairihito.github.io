@@ -4,8 +4,7 @@
 
 # Presentations
 
-1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor network representations for Greeks of Fourier-based pricing of multi-assets options" in preparation
-
+\toc 
 ## International conference
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020), Brazil, 2021年9月(poster)  
 
