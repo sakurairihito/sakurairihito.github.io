@@ -11,6 +11,8 @@
 
 ## In Preparation
 
+1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor network representations for Greeks of Fourier-based pricing of multi-assets options" in preparation
+
 
 ## Preprint 
 1.  H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [arXiv:2403.09161](https://arxiv.org/abs/2403.09161)
