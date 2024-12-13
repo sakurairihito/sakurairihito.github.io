@@ -4,8 +4,6 @@
 
 # Presentations
 
-\toc 
-
 1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor network representations for Greeks of Fourier-based pricing of multi-assets options" in preparation
 
 ## International conference
