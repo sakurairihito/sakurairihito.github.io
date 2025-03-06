@@ -3,7 +3,7 @@
 
 ~~~
 <img src="frog.jpg" alt="frog">
-<p>🐸This photo was taken at TSUKUBA BREWERY🐸</p>
+<p>@TSUKUBA🐸 BREWERY</p>
 ~~~
 
 ## Me

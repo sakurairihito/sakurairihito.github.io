@@ -11,9 +11,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 \toc
 
 ## Research 
-- Quantum-classical hybrid algorithms
-- Tensor network algorithms
-- Fault-tolerant quantum algorithm
+- Computational physics, finance, and crypto
 
 ## Career 
 - December 2024-March 2025 [BlocQ](https://www.blocqinc.com/) 
