@@ -15,6 +15,8 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Tensor network algorithms for mathematical finance
 
 ## Career 
+- December 2024-March 2025 [BlocQ](https://www.blocqinc.com/) 
+
 - April 2024-2025 JSPS Research Fellowship for Young Scientist PD ([Todo group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo) 
 
 - April 2023-2024 JSPS Research Fellowship for Young Scientist DC2
@@ -43,6 +45,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Weight training
 
 - visualizing math / physics
+
+## Award
+- 第13回量子ソフトウェア研究発表会 優秀発表賞受賞
 
 
 ## Other activities

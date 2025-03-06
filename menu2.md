@@ -11,15 +11,16 @@
 
 ## In Preparation
 
-1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor network representations for Greeks of Fourier-based pricing of multi-assets options" in preparation
+1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor network representations of Greeks for Fourier-based pricing of multi-asset options" in preparation
 
+2. R. Sakurai, T. Okubo, T. Synge, "Chebyshev tensor cross interpolation for Monte-Carlo-based option pricing" in preparation
+
+3. K. Kinjo, R. Sakurai, T. Kishimoto, and J. Ohkubo, "Permutation of Tensor-Train Cores for Computing moments on Stochastic Differential Equations" in preparation 
 
 ## Preprint 
-1.  H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [arXiv:2403.09161](https://arxiv.org/abs/2403.09161)
+1. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor networks",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v3)
 
-2. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor networks",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v3)
-
-3. K. Sakaue, H. Shinaoka, R. Sakurai, "Learning tensor trains from noisy functions with application to quantum simulation", [arXiv:2405.12730](https://arxiv.org/abs/2405.12730)
+2. K. Sakaue, H. Shinaoka, R. Sakurai, "Optimizing Quantics Tensor Trains with Adaptively Sampled Noisy Functions for Quantum Simulation", [arXiv:2405.12730](https://arxiv.org/abs/2405.12730)
 
 ## Journal Article
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,[Phys. Rev. Research 4, 023219 (2022)](https://doi.org/10.1103/PhysRevResearch.4.023219)
@@ -31,6 +32,7 @@
 
 4. R. Sakurai, O. J. Backhouse, G. H. Booth, W. Mizukami, H. Shinaoka, Comparative study on compact quantum circuits of quantum-classical hybrid algorithms for quantum impurity models, [Phys. Rev. Research 6, 023110](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.023110).
 
+5. H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [SciPost Phys. 18, 007 (2025)](https://arxiv.org/abs/2403.09161)
 
 ## Japanese articles
 5. 品岡寛, 村上雄太, 野垣康介, 櫻井理人, "Quantics tensor trainに基づく多スケール時空仮説と場の量子論",  [物理学会誌「最近の研究から」覧](https://www.jps.or.jp/books/gakkaishi/2024/02/79-2.php), 2024年2月号(招待あり)
