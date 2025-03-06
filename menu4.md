@@ -2,10 +2,9 @@
 @def tags = ["syntax", "code"]
 
 
-## Current interest 
+## My interest 
 ...
 
-physics --> finance ---> ?
 
 ...
 
