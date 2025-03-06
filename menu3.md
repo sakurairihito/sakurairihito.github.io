@@ -4,17 +4,6 @@
 
 # Presentations
 
-## Table of Contents
-1. [International Conference](#international-conference)
-2. [International Workshop (Onsite)](#international-workshop-onsite)
-3. [Domestic Conference](#domestic-conference)
-    - [Talks](#talks)
-    - [Posters](#posters)
-4. [Formal/Informal Seminar](#formalinformal-seminar)
-5. [Other Activities](#other-activities)
-
----
-
 \toc 
 ## International conference
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [International Conference on Strongly Correlated Electron Systems 2020](https://eventos.galoa.com.br/sces-2020), Brazil, 2021年9月(poster)  
