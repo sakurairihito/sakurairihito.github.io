@@ -6,9 +6,9 @@
 <p>🐸This photo was taken at TSUKUBA BREWERY🐸</p>
 ~~~
 
-## Dr. Rihito Sakurai 
+## Me
 
-- Computational physics
+- Topic: Computational physics, finance, and cryptography
 
 - [Google Scholar](https://scholar.google.com/citations?hl=ja&authuser=1&user=IKqeswsAAAAJ)
 
