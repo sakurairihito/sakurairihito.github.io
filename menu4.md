@@ -3,7 +3,10 @@
 
 
 ## Current interest 
+...
 
+physics --> finance ---> ?
 
+...
 
 
