@@ -6,7 +6,7 @@
 <p>🐸This photo was taken at TSUKUBA BREWERY🐸</p>
 ~~~
 
-# Dr. Rihito Sakurai 
+## Dr. Rihito Sakurai 
 
 - Computational physics
 
