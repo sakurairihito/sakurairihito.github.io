@@ -3,7 +3,7 @@
 
 ~~~
 <img src="frog.jpg" alt="frog">
-<p>This photo was taken at TSUKUBA BREWERY</p>
+<p>🐸This photo was taken at TSUKUBA BREWERY🐸</p>
 ~~~
 
 # Dr. Rihito Sakurai 
@@ -22,5 +22,5 @@
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
-<p>My memory during PhD age at APS2024 March Meeting</p>
+<p>Memory</p>
 ~~~ 
