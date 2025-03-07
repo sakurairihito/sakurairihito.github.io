@@ -8,7 +8,7 @@
 
 ## Me
 
-- Topic: Computational physics, finance, and cryptography
+- Topic: Computational physics
 
 - [Google Scholar](https://scholar.google.com/citations?hl=ja&authuser=1&user=IKqeswsAAAAJ)
 
