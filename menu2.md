@@ -11,7 +11,7 @@
 
 ## In Preparation
 
-1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor network representations of Greeks for Fourier-based pricing of multi-asset options" in preparation
+1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations of Greeks for Fourier-based pricing of multi-asset options" in preparation
 
 2. R. Sakurai, T. Okubo, T. Synge, "Chebyshev tensor cross interpolation for Monte Carlo-based option pricing" in preparation
 
