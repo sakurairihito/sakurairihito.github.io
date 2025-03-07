@@ -2,8 +2,15 @@
 @def tags = ["syntax", "code"]
 
 
-## My interest 
+## Recent interests include
 ...
+- xVA (finance)
+
+- Tensor network based PDEs solvers (finance)
+
+- Crypto option pricing
+
+- Tensor cross interpolation and Shor's algorithms
 
 ...
 
