@@ -11,7 +11,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 \toc
 
 ## Research 
-- Computational physics, finance, and crypto
+- Computational physics
 
 ## Career 
 - December 2024-March 2025 [BlocQ](https://www.blocqinc.com/) 

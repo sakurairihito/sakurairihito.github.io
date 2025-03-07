@@ -13,14 +13,14 @@
 
 1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor network representations of Greeks for Fourier-based pricing of multi-asset options" in preparation
 
-2. R. Sakurai, T. Okubo, T. Synge, "Chebyshev tensor cross interpolation for Monte-Carlo-based option pricing" in preparation
+2. R. Sakurai, T. Okubo, T. Synge, "Chebyshev tensor cross interpolation for noisy functions: applications to Monte Carlo-based option pricing" in preparation
 
 3. K. Kinjo, R. Sakurai, T. Kishimoto, and J. Ohkubo, "Permutation of Tensor-Train Cores for Computing moments on Stochastic Differential Equations" in preparation 
 
 ## Preprint 
 1. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor networks",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v3)
 
-2. K. Sakaue, H. Shinaoka, R. Sakurai, "Optimizing Quantics Tensor Trains with Adaptively Sampled Noisy Functions for Quantum Simulation", [arXiv:2405.12730](https://arxiv.org/abs/2405.12730)
+2. K. Sakaue, H. Shinaoka, R. Sakurai, "Adaptive sampling-based optimization of quantized tensor trains for noisy functions: applications to quantum simulations", [arXiv:2405.12730](https://arxiv.org/abs/2405.12730)
 
 ## Journal Article
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,[Phys. Rev. Research 4, 023219 (2022)](https://doi.org/10.1103/PhysRevResearch.4.023219)
