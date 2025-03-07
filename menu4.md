@@ -8,10 +8,17 @@
 
 - Tensor network based PDEs solvers (finance)
 
-- Crypto option pricing
+- Crypto currency option pricing
 
-- Tensor cross interpolation and Shor's algorithms
+- Shor's algorithms 
 
+- Tensor network and hash function
 ...
 
+
+## General ideas
+
+- offline-online decompositions
+
+- Save now, decrypt later
 
