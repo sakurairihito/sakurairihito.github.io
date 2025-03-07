@@ -16,7 +16,7 @@
 ...
 
 
-## General ideas
+## Computational ideas ++
 
 - offline-online decompositions
 
