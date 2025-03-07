@@ -6,9 +6,9 @@
 ...
 - xVA (finance)
 
-- Tensor network based PDEs solvers (finance)
+- Tensor network based PDEs solvers (fluid dynamics, finance)
 
-- Crypto currency option pricing
+- Crypto currency option pricing (Once quantum computer news happens, buy put options)
 
 - Shor's algorithms 
 
