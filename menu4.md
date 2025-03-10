@@ -16,9 +16,15 @@
 ...
 
 
-## Computational ideas ++
+## Computational ideas 
 
 - offline-online decompositions
 
 - Save now, decrypt later
 
+
+## 
+
+- stay at abroad
+
+- Communicate someone

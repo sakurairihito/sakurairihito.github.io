@@ -22,5 +22,5 @@
 
 ~~~
 <img src="cafe.jpg" alt="cafe">
-<p>Memory</p>
+<p>Memory.</p>
 ~~~ 

@@ -16,7 +16,7 @@
 
 5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, March, 2024 (oral)
 
-6. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [2025 IEEE Symposium Series on Computational Intelligence](https://ieee-ssci.org/?ui=home), Trondheim, Norway, March 2025 (oral) (plan)
+6. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [2025 IEEE Symposium Series on Computational Intelligence](https://ieee-ssci.org/?ui=home), Trondheim, Norway, March 2025 (poster) 
 
 ## International workshop (Onsite)
 1. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning tensor networks with parameter dependencies for Fourier-based option pricing", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Hongo Campus, Univ. Tokyo, 2024年3月 (poster)
@@ -89,6 +89,8 @@
 
 5. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/), 2024年2月   
 
+6. "Learning parameter dependence for Fourier-based option pricing with tensor trains", [TU Delft](https://map.tudelftcampus.nl/poi/elektrotechniek-wiskunde-en-informatica-ewi/), March 12-14, 2025
+
 ## Other activities
 
 1. 櫻井理人, “julia言語と量子回路シミュレータ”, [julia tokai 勉強会12](https://juliatokai.connpass.com/event/241113/), 2022年3月, (口頭発表)
@@ -97,5 +99,4 @@
 
 3. 櫻井理人, "関数のテンソルトレイン表現をjuliaで入門", [Julia in physics 2024](https://ohno.github.io/julia_in_physics_2024/), 東京大学本郷キャンパス、2024年12月、口頭発表(招待あり)
 
-
-4. 櫻井理人, 井元隆史, "金融工学と量子技術を基にした事業化の発表(海外選抜チーム採択)" [スタートアップ・エコシステム形成支援事業GTIEプログラム](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html), University of California San Diego, 2025, 2月
+4. 櫻井理人, 井元隆史, "Quantum-inspired option pricing engine with uncertanity(海外選抜チーム採択)" [スタートアップ・エコシステム形成支援事業GTIEプログラム](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html), University of California San Diego, 2025, 2月
