@@ -11,7 +11,6 @@
 3. [Tensor train learning for derivative option pricing](https://arxiv.org/abs/2203.02804)　
 
 
-
 ## Useful computational ideas
 
 - Quantum-classical hybrid algorithms
@@ -23,6 +22,10 @@
 - Save now, decrypt later!
 
 
-## Developing now...
+## Under Development...
 
 - Quantum-inspired option pricing engine (C++/julia)
+
+## Future works
+
+- Tensor network based Quantum Circuit Simulator
