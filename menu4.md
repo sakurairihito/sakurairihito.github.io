@@ -12,12 +12,12 @@
 
 
 
-## Computational ideas that I like
+## Computational ideas
 
-- Do heavy tasks on quantum and easy task on classical!
+- Quantum and classical hybrid algorithm
 
 - Compression based on scale separation
 
-- Offline-online decompositions
+- Offline-online algorithm decompositions for fast computations
 
-- Save now, decrypt later
+- Save now, decrypt later!
