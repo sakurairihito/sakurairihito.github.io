@@ -43,6 +43,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 ## Award
 - Award for [13th Quantum Software Research Meeting](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)
 
+## Grants
+- FY 2023-FY 2024: JSPS Grant-in-Aid for JSPS Fellows (23KJ0295)
+
 ## Research stay (with my presentation)
 - [Dr. Antonis Papapantoleon group]((https://fa.ewi.tudelft.nl/~apapapantoleon/index.html)), Mathematical Finance at the Delft Institute of Applied Mathematics: 12-14 March 2025
 
@@ -64,7 +67,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
   April 2022 – October 2022  
   [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html)
 
-- Stat & QuantPhys Winter School 2024 (SQP2024) (Organizing Committee Member)**  *
+- Stat & QuantPhys Winter School 2024 (SQP2024) (Organizing Committee Member)
   April 2023 – February 2024  
   [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html)
 
