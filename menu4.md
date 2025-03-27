@@ -3,16 +3,15 @@
 
 
 ## Recent interests include
+
 ...
-- xVA (finance)
+- xVA 
 
 - Tensor network based PDEs solvers (fluid dynamics, finance)
 
-- Crypto currency option pricing (Once quantum computer news happens, buy put options)
+- Crypto currency(hash function and bitcoin and so on)
 
-- Shor's algorithms 
-
-- Tensor network and hash function
+- Tensor network-based quantum circuit simulation
 ...
 
 
@@ -21,10 +20,3 @@
 - offline-online decompositions
 
 - Save now, decrypt later
-
-
-## 
-
-- stay at abroad
-
-- Communicate someone
