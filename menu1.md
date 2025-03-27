@@ -37,7 +37,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 ## Award
 - Award for [13th Quantum Software Research Meeting](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)
 
-## Research stay
+## Research stay (with my presentation)
 - [Dr. Antonis Papapantoleon group]((https://fa.ewi.tudelft.nl/~apapapantoleon/index.html)), Mathematical Finance at the Delft Institute of Applied Mathematics: 12-14 March 2025
 
 - [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/): 27 Februrary-2 Match 2024
