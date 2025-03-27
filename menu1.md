@@ -30,9 +30,8 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Internship at [Quantum Software Research Hub](https://qsrh.jp/seminar/), Osaka University
   October 2022 – February 2023  
   
-- Researcher at Saitama University
- April 2021 - March 2024
-
+- Part-time Research Assistant at Saitama University
+  April 2021 - March 2024
 
 ## Education
 
@@ -79,15 +78,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
   [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html)
 
 ## Other strength
-- 
+- 高校の理科の免許をとった
 
 - 
-
-- 
-
-## Hobbies
-- Drinking beer (On a diet...)
-
-- Weight training
-
-- visualizing math / physics

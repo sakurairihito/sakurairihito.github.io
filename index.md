@@ -20,10 +20,17 @@ I also enjoy software development, technical writing.
 
 - [Zenn](https://zenn.dev/rihitosakurai)
 
-# News
+# News 
 - 第13回量子ソフトウェア研究会優秀発表賞を授賞しました
 
 - 
+
+# Hobbies
+- Drinking beer (On a diet...)
+
+- Weight training
+
+- Eating Ramen (On a diet...)
 
 ~~~ 
 <p>Photo taken at TSUKUBA BREWERY🐸🍺</p>
