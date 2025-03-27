@@ -20,6 +20,10 @@ I also enjoy software development, technical writing.
 
 - [Zenn](https://zenn.dev/rihitosakurai)
 
+# News
+- 第13回量子ソフトウェア研究会優秀発表賞を授賞しました
+
+- 
 
 ~~~ 
 <p>Photo taken at TSUKUBA BREWERY🐸🍺</p>

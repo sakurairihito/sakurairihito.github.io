@@ -13,7 +13,7 @@
 
 1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations of Greeks for Fourier-based pricing of multi-asset options" in preparation
 
-2.  "Chebyshev interpolation and tensor cross interpolation
+2. R. Sakurai, T. Okuho, S. Todo, "Chebyshev interpolation and tensor cross interpolation"
 
 3. K. Kinjo, R. Sakurai, T. Kishimoto, and J. Ohkubo, "Permutation of Tensor-Train Cores for Computing moments on Stochastic Differential Equations" in preparation 
 
