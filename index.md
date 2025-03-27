@@ -16,6 +16,6 @@
 
 
 ~~~ 
-<p>Pic@TSUKUBA BREWERY🐸🍺</p>
+<p>Photo taken at TSUKUBA BREWERY🐸🍺</p>
 ~~~
 
