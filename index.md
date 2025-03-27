@@ -3,7 +3,6 @@
 
 ~~~
 <img src="frog.jpg" alt="frog">
-<p>@TSUKUBA BREWERY🐸🍺</p>
 ~~~
 ## Rihito Sakurai (櫻井 理人)
 
@@ -15,7 +14,8 @@
 
 - [Zenn](https://zenn.dev/rihitosakurai)
 
-~~~
-<img src="cafe.jpg" alt="cafe">
-<p>Memory.</p>
+
 ~~~ 
+<p>Pic@TSUKUBA BREWERY🐸🍺</p>
+~~~
+
