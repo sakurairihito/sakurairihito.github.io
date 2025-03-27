@@ -11,32 +11,35 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 \toc
 
 ## Career 
-- **December 2024 – March 2025**  
+- ***December 2024 – March 2025***  
   Internship at [BlocQ](https://www.blocqinc.com/)
 
-- **April 2024 – March 2025**  
+- ***April 2024 – March 2025***  
   JSPS Research Fellowship for Young Scientists (PD), [Todo Group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo
 
-- **April 2023 – March 2024**  
+- ***April 2023 – March 2024***  
   JSPS Research Fellowship for Young Scientists (DC2)
 
-- **October 2022 – February 2023**  
+- ***October 2022 – February 2023***  
   Internship at [Quantum Software Research Hub](https://qsrh.jp/seminar/), Osaka University
-
 
 ## Education
 
-- **March 2024**  
+- ***March 2024***  
   Doctoral Degree, Saitama University ([Hiroshi Shinaoka group](https://shinaoka.sakura.ne.jp))
 
-- **March 2021**  
+- ***March 2021***  
   Master’s Degree, Tokyo University of Science
 
-- **March 2019**  
+- ***March 2019***  
   Bachelor’s Degree, Tokyo University of Science
 
 ## Award
-- Outstanding Presentation Award at the [13th Quantum Software Research Meeting](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)
+- Award for [13th Quantum Software Research Meeting](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)
+
+## Research stay (including short stay with presentation...)
+- "Learning parameter dependence for Fourier-based option pricing with tensor trains", [TU Delft](https://map.tudelftcampus.nl/poi/elektrotechniek-wiskunde-en-informatica-ewi/), March 12-14, 2025
+
 
 ## Hobbies
 - Drinking beer (On a diet...)
@@ -46,17 +49,17 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - visualizing math / physics
 
 ## Organizer
-- **The 65th Summer School for Young Researchers in Condensed Matter Physics (Seminar F Coordinator)**  
+- ***The 65th Summer School for Young Researchers in Condensed Matter Physics (Seminar F Coordinator)***  
   December 2019 – September 2020
 
-- **The 66th Summer School for Young Researchers in Condensed Matter Physics (Seminar F Coordinator)**  
+- ***The 66th Summer School for Young Researchers in Condensed Matter Physics (Seminar F Coordinator)***  
   December 2020 – September 2021
 
-- **Stat & QuantPhys Autumn School 2022 (Organizing Committee Member)**  
+- ***Stat & QuantPhys Autumn School 2022 (Organizing Committee Member)***  
   April 2022 – October 2022  
   [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html)
 
-- **Stat & QuantPhys Winter School 2024 (SQP2024) (Organizing Committee Member)**  
+- ***Stat & QuantPhys Winter School 2024 (SQP2024) (Organizing Committee Member)**  *
   April 2023 – February 2024  
   [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html)
 

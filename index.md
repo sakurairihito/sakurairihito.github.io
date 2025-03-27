@@ -4,9 +4,9 @@
 ~~~
 <img src="frog.jpg" alt="frog">
 ~~~
-## Rihito Sakurai (櫻井 理人)
+## Rihito Sakurai 
 
-- Email:sakurairihito(at)gmail.com
+- e-mail:sakurairihito(at)gmail.com
 
 - [Google Scholar](https://scholar.google.com/citations?hl=ja&authuser=1&user=IKqeswsAAAAJ)
 
