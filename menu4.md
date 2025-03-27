@@ -14,7 +14,7 @@
 
 ## Useful computational ideas
 
-- Quantum and classical hybrid algorithm
+- Quantum-classical hybrid algorithms
 
 - Compression based on scale separation
 
