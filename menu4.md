@@ -21,3 +21,8 @@
 - Offline-online algorithm decompositions for fast computations
 
 - Save now, decrypt later!
+
+
+## Developing now...
+
+- Quantum-inspired option pricing engine (C++/julia)
