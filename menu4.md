@@ -2,17 +2,15 @@
 @def tags = ["syntax", "code"]
 
 
-## Recent interests include
+## Software
 
-...
-- xVA 
+1. "Quantum-classical hybrid algorithms for quantum impurity problems", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
 
-- Tensor network based PDEs solvers (fluid dynamics, finance)
+2. "Tensor learning algorithms for derivative option pricing@Quantum Software Research Hub",[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
 
-- Crypto currency(hash function and bitcoin and so on)
+3. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
 
-- Tensor network-based quantum circuit simulation
-...
+
 
 
 ## Computational ideas 

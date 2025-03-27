@@ -10,33 +10,33 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 \toc
 
-## Research 
-- Computational physics
-
 ## Career 
-- December 2024-March 2025 [BlocQ](https://www.blocqinc.com/) 
+- **December 2024 – March 2025**  
+  Internship at [BlocQ](https://www.blocqinc.com/)
 
-- April 2024-2025 JSPS Research Fellowship for Young Scientist PD ([Todo group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo) 
+- **April 2024 – March 2025**  
+  JSPS Research Fellowship for Young Scientists (PD), [Todo Group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo
 
-- April 2023-2024 JSPS Research Fellowship for Young Scientist DC2
+- **April 2023 – March 2024**  
+  JSPS Research Fellowship for Young Scientists (DC2)
 
-- October 2022-Feb 2023 Internship at Osaka University. [Quantum Software Research Hub](https://qsrh.jp/seminar/)
+- **October 2022 – February 2023**  
+  Internship at [Quantum Software Research Hub](https://qsrh.jp/seminar/), Osaka University
+
 
 ## Education
-- March 2024 Doctoral degree, Saitama University ([Hiroshi Shinaoka group](https://shinaoka.sakura.ne.jp))
 
-- March 2021 Master's degree, Tokyo University of Science
+- **March 2024**  
+  Doctoral Degree, Saitama University ([Hiroshi Shinaoka group](https://shinaoka.sakura.ne.jp))
 
-- March 2019 Bachelor's degree, Tokyo University of Science
+- **March 2021**  
+  Master’s Degree, Tokyo University of Science
 
-## Software 
+- **March 2019**  
+  Bachelor’s Degree, Tokyo University of Science
 
-1. "Quantum-classical hybrid algorithms for quantum impurity problems", [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew)
-
-2. "Tensor learning algorithms for derivative option pricing@Quantum Software Research Hub",[A highly efficient tensor network algorithm for multi-asset Fourier options pricing](https://arxiv.org/abs/2203.02804)　
-
-3. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
-
+## Award
+- Outstanding Presentation Award at the [13th Quantum Software Research Meeting](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)
 
 ## Hobbies
 - Drinking beer (On a diet...)
@@ -45,14 +45,19 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - visualizing math / physics
 
-## Award
-- 第13回量子ソフトウェア研究発表会 優秀発表賞受賞
+## Organizer
+- **The 65th Summer School for Young Researchers in Condensed Matter Physics (Seminar F Coordinator)**  
+  December 2019 – September 2020
 
+- **The 66th Summer School for Young Researchers in Condensed Matter Physics (Seminar F Coordinator)**  
+  December 2020 – September 2021
 
-## Other activities
+- **Stat & QuantPhys Autumn School 2022 (Organizing Committee Member)**  
+  April 2022 – October 2022  
+  [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html)
 
-- 第65回物性若手夏の学校 ゼミF世話人（2019/12-2020/09）
-- 第66回物性若手夏の学校 ゼミF世話人（2020/12-2021/09）
-- [Stat&QuantPhys Autumn School 2022](http://hatano-lab.iis.u-tokyo.ac.jp/manami/SQP2022/index_jp.html) 運営委員 (2022/4-2022/10)
-- [Stat&QuantPhys Winter School 2024 (SQP2024)](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html) 運営委員 (2023/4-2024/2)
+- **Stat & QuantPhys Winter School 2024 (SQP2024) (Organizing Committee Member)**  
+  April 2023 – February 2024  
+  [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html)
+
 
