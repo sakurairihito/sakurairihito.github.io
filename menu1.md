@@ -11,18 +11,22 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 \toc
 
 ## Career 
+
+- Project Researcher at The University of Tokyo
+  April 2025 - 
+
+- A member of Sustainable Quantum AI 
+  April 2024 -
+
 - Internship at [BlocQ](https://www.blocqinc.com/)
   December 2024 – March 2025  
   
-
 - JSPS Research Fellowship for Young Scientists (PD), [Todo Group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo
   April 2024 – March 2025  
   
-
 - JSPS Research Fellowship for Young Scientists (DC2)
   April 2023 – March 2024  
   
-
 - Internship at [Quantum Software Research Hub](https://qsrh.jp/seminar/), Osaka University
   October 2022 – February 2023  
   
