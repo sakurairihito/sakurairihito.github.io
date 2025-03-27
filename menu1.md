@@ -48,9 +48,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/): 27 Februrary-2 Match 2024
 
-- [Dr. Karsten Held group](https://www.tuwien.at/en/phy/ifp/theory), TU Wien, Institute of Solid State Physics, ? July, 2022
+- [Dr. Karsten Held group](https://www.tuwien.at/en/phy/ifp/theory), TU Wien, Institute of Solid State Physics, July, 2022
 
-- [Dr. George Booth group](https://www.boothgroupresearch.com/index.html), King's College London in Computational Electronic Structure, ?, July, 2022
+- [Dr. George Booth group](https://www.boothgroupresearch.com/index.html), King's College London in Computational Electronic Structure, July, 2022
 
 
 ## Organizer
