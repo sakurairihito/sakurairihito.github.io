@@ -37,16 +37,15 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 ## Award
 - Award for [13th Quantum Software Research Meeting](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)
 
-## Research stay (including short stay with presentation...)
-- "Learning parameter dependence for Fourier-based option pricing with tensor trains", [TU Delft](https://map.tudelftcampus.nl/poi/elektrotechniek-wiskunde-en-informatica-ewi/), March 12-14, 2025
+## Research stay
+- [Dr. Antonis Papapantoleon group]((https://fa.ewi.tudelft.nl/~apapapantoleon/index.html)), Mathematical Finance at the Delft Institute of Applied Mathematics: 12-14 March 2025
 
+- [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/): 27 Februrary-2 Match 2024
 
-## Hobbies
-- Drinking beer (On a diet...)
+- [Dr. Karsten Held group](https://www.tuwien.at/en/phy/ifp/theory), TU Wien, Institute of Solid State Physics, ? July, 2022
 
-- Weight training
+- [Dr. George Booth group](https://www.boothgroupresearch.com/index.html), King's College London in Computational Electronic Structure, ?, July, 2022
 
-- visualizing math / physics
 
 ## Organizer
 - ***The 65th Summer School for Young Researchers in Condensed Matter Physics (Seminar F Coordinator)***  
@@ -64,3 +63,9 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
   [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html)
 
 
+## Hobbies
+- Drinking beer (On a diet...)
+
+- Weight training
+
+- visualizing math / physics
