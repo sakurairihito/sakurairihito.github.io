@@ -12,7 +12,7 @@
 
 
 
-## Interesting computational ideas
+## Useful computational ideas
 
 - Quantum and classical hybrid algorithm
 
