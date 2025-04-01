@@ -21,7 +21,7 @@ Project Researcher at the University of Tokyo
 Computational Physics, Financial Engineering, & Cryptography
 
 # News 
-- 2025.3. Awarded the Excellent Presentation Award at the 13th Quantum Software Research Meeting (第13回量子ソフトウェア研究会優秀発表賞授賞). 
+- 2025.3. Awarded the Excellent Presentation Award at the 13th Quantum Software Research Meeting ([第13回量子ソフトウェア研究会優秀発表賞授賞](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)). 
 
 - 2025.2. Presented an international business plan leveraging my cutting-edge technology at University of California San Diego via [GITE program](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html).
 
