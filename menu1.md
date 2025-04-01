@@ -15,12 +15,12 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Project Researcher at The University of Tokyo
   April 2025 - 
 
+- Internship at [BlocQ](https://www.blocqinc.com/)
+  December 2024 – March 2025  
+
 - A member of Sustainable Quantum AI 
   April 2024 -
 
-- Internship at [BlocQ](https://www.blocqinc.com/)
-  December 2024 – March 2025  
-  
 - JSPS Research Fellowship for Young Scientists (PD), [Todo Group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo
   April 2024 – March 2025  
   
@@ -40,7 +40,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 - Master’s Degree, Tokyo University of Science
   March 2021  
-  
 
 - Bachelor’s Degree, Tokyo University of Science
   March 2019  
