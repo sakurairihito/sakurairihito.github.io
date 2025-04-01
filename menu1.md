@@ -76,7 +76,3 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
   April 2023 – February 2024  
   [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html)
 
-## Other strength
-- 高校の理科の免許をとった
-
-- 
