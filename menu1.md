@@ -18,7 +18,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Internship at [BlocQ](https://www.blocqinc.com/)
   December 2024 – March 2025  
 
-- A member of Sustainable Quantum AI 
+- A member of [Sustainable Quantum AI](https://sqai.jp) 
   April 2024 -
 
 - JSPS Research Fellowship for Young Scientists (PD), [Todo Group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo
@@ -30,7 +30,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Internship at [Quantum Software Research Hub](https://qsrh.jp/seminar/), Osaka University
   October 2022 – February 2023  
   
-- Part-time Research Assistant at Saitama University
+- Research Assistant (Part-time) at Saitama University
   April 2021 - March 2024
 
 ## Education
