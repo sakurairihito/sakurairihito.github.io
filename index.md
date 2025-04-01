@@ -12,10 +12,13 @@ Project Researcher at the University of Tokyo
 
 - [Google Scholar](https://scholar.google.com/citations?hl=ja&authuser=1&user=IKqeswsAAAAJ)
 
+- [ORCiD](https://orcid.org/0000-0002-2287-7730)
+
+- [arXiv](https://arxiv.org/search/?query=rihito+sakurai&searchtype=all&source=header)
+
 - [GiHub](https://github.com/sakurairihito)
 
 - [Zenn](https://zenn.dev/rihitosakurai)
-
 
 # Research
 Computational Physics, Financial Engineering, & Cryptography
