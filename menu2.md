@@ -13,10 +13,8 @@
 
 1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations of Greeks for Fourier-based pricing of multi-asset options" in preparation
 
-2. R. Sakurai, T. Okuho, S. Todo, "Chebyshev interpolation and tensor cross interpolation"
-
 ## Preprint 
-1. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor networks",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v3)
+1. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor trains",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v7)
 
 2. K. Sakaue, H. Shinaoka, R. Sakurai, "Adaptive sampling-based optimization of quantized tensor trains for noisy functions: applications to quantum simulations", [arXiv:2405.12730](https://arxiv.org/abs/2405.12730)
 
