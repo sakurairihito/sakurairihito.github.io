@@ -89,7 +89,6 @@
 
 5. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/), 2024年2月   
 
-6. "Learning parameter dependence for Fourier-based option pricing with tensor trains", [TU Delft](https://map.tudelftcampus.nl/poi/elektrotechniek-wiskunde-en-informatica-ewi/), March 12-14, 2025
 
 ## Other activities
 
@@ -99,4 +98,4 @@
 
 3. 櫻井理人, "関数のテンソルトレイン表現をjuliaで入門", [Julia in physics 2024](https://ohno.github.io/julia_in_physics_2024/), 東京大学本郷キャンパス、2024年12月、口頭発表(招待あり)
 
-4. 櫻井理人, 井元隆史, "Quantum-inspired option pricing engine with uncertanity(海外選抜チーム採択)" [スタートアップ・エコシステム形成支援事業GTIEプログラム](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html), University of California San Diego, 2025, 2月
+4. 櫻井理人, 井元隆史, [スタートアップ・エコシステム形成支援事業GTIEプログラム](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html), 海外選抜チーム採択・表彰, Presentation at University of California San Diego, 2025, 2月

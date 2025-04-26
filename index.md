@@ -6,7 +6,6 @@
 ~~~
 
 # RIHITO SAKURAI
-Project Researcher at the University of Tokyo
 
 - e-mail:sakurairihito(at)gmail.com
 
@@ -14,21 +13,25 @@ Project Researcher at the University of Tokyo
 
 - [ORCiD](https://orcid.org/0000-0002-2287-7730)
 
-- [arXiv](https://arxiv.org/search/?query=rihito+sakurai&searchtype=all&source=header)
-
 - [GiHub](https://github.com/sakurairihito)
 
 - [Zenn](https://zenn.dev/rihitosakurai)
 
 # Research interests
-Computational Physics, Financial Engineering, & Computational Cryptography
+Computational Physics, Financial Engineering
 
-# News 
-- 2025.3. Awarded at the 13th Quantum Software Research Meeting ([第13回量子ソフトウェア研究会優秀発表賞授賞](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)). 
+# News (日本語で勘弁してください)
+- 2025.4. 論文の
 
-- 2025.2. Presented a business plan leveraging the quantum-inspired technology for high-speed option pricing at University of California San Diego via [GITE program](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html).
+- 2025.4. FinRL Online Meeting, AI for Financeにて招待講演しました
 
-- 2024.2. Japanese review article to the Journal of Physical Society Japan ([物理学会誌「最近の研究から」覧](https://shinaoka.github.io/assets/qtt_jps_202402.pdf))
+- 2025.4. 東京大学の特任研究員になりました
+
+- 2025.3. 量子ソフトウェア研究会優秀発表賞の授賞式がありました[第13回量子ソフトウェア研究会優秀発表賞授賞](https://www.ipsj.or.jp/award/qs-award1.html). 
+
+- 2025.2. 東大GITEプログラムの海外選抜チームに選出、カリフォルニア大学サンディエゴ校で研究成果を使ったビジネスプランを発表してきました [GITE program](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html).
+
+- 2024.2. 日本物理学会誌に解説記事(招待あり)を寄稿しました。櫻井は前半のテンソルネットワークを担当しました。 ([物理学会誌「最近の研究から」覧](https://shinaoka.github.io/assets/qtt_jps_202402.pdf))
 
 # Hobbies
 - Beer (Go on a diet...)

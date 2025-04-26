@@ -46,7 +46,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
   
 
 ## Award
-- Award for [13th Quantum Software Research Meeting](https://www.ipsj.or.jp/kenkyukai/event/qs13.html)
+- Award for [第13回量子ソフトウェア研究会](https://www.ipsj.or.jp/award/qs-award1.html)
 
 ## Grants
 - FY 2023-FY 2024: JSPS Grant-in-Aid for JSPS Fellows (23KJ0295)
