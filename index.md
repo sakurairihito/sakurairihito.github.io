@@ -17,11 +17,12 @@
 
 - [Zenn](https://zenn.dev/rihitosakurai)
 
+- [DEV](https://dev.to/sakurairihito)
+
 # Research interests
 Computational Physics, Financial Engineering
 
-# News (日本語で勘弁してください)
-- 2025.4. 論文の
+# News 
 
 - 2025.4. FinRL Online Meeting, AI for Financeにて招待講演しました
 
