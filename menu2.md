@@ -12,6 +12,8 @@
 ## In Preparation
 1. R. Sakurai, T. Okubo, S. Todo, Monte Carlo-based option Greeks aided by Chebyshev tensor cross interpolation, in preparation
 
+2. Credit risk management ...
+
 ## Preprint 
 1. R. Sakurai, K. Miyamoto, T. Okubo, [Tensor train representations of Greeks for Fourier-based pricing of multi-asset options](https://arxiv.org/html/2507.08482v1)
 
