@@ -10,15 +10,11 @@
 \toc
 
 ## In Preparation
-
-1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations of Greeks for Fourier-based pricing of multi-asset options" in preparation
+1. R. Sakurai, T. Okubo, S. Todo, "Chebyshev tensor cross interpolation for Monte Carlo-based option pricing and Greeks", in preparation
 
 ## Preprint 
-1. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor trains",[arXiv:2405.00701](https://arxiv.org/abs/2405.00701v7)
+1. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations of Greeks for Fourier-based pricing of multi-asset options", [arXiv:2507.08482v1](https://arxiv.org/html/2507.08482v1)
 
-2. K. Sakaue, H. Shinaoka, R. Sakurai, "Adaptive sampling-based optimization of quantized tensor trains for noisy functions: applications to quantum simulations", [arXiv:2405.12730](https://arxiv.org/abs/2405.12730)
-
-3. K. Kinjo, R. Sakurai, T. Kishimoto, and J. Ohkubo, "Permutation of Tensor-Train Cores for Computing moments on Stochastic Differential Equations" in preparation 
 
 ## Journal Article
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”,[Phys. Rev. Research 4, 023219 (2022)](https://doi.org/10.1103/PhysRevResearch.4.023219)
@@ -31,6 +27,12 @@
 4. R. Sakurai, O. J. Backhouse, G. H. Booth, W. Mizukami, H. Shinaoka, Comparative study on compact quantum circuits of quantum-classical hybrid algorithms for quantum impurity models, [Phys. Rev. Research 6, 023110](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.023110).
 
 5. H. Takahashi, R. Sakurai, and H. Shinaoka, "Compactness of quantics tensor train representations of local imaginary-time propagators", [SciPost Phys. 18, 007 (2025)](https://arxiv.org/abs/2403.09161)
+
+6. R. Sakurai, H. Takahashi, K. Miyamoto, "Learning parameter dependence for Fourier-based option pricing with tensor trains",[Mathematics 2025, 13(11), 1828](https://www.mdpi.com/2227-7390/13/11/1828)
+
+7. K. Kinjo, R. Sakurai, T. Kishimoto, and J. Ohkubo, "Permutation of Tensor-Train Cores for Computing moments on Stochastic Differential Equations", [J. Phys. Soc. Jpn. 94, 084001 (2025)](https://journals.jps.jp/doi/full/10.7566/JPSJ.94.084001?mobileUi=0)
+
+8. K. Sakaue, H. Shinaoka, R. Sakurai, "Adaptive sampling-based optimization of quantized tensor trains for noisy functions: applications to quantum simulations", accepted by SciPost Physics
 
 ## Japanese articles
 5. 品岡寛, 村上雄太, 野垣康介, 櫻井理人, "Quantics tensor trainに基づく多スケール時空仮説と場の量子論",  [物理学会誌「最近の研究から」覧](https://shinaoka.github.io/assets/qtt_jps_202402.pdf), 2024年2月号(招待あり)

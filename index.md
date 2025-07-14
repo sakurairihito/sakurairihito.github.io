@@ -15,24 +15,6 @@
 
 - [GiHub](https://github.com/sakurairihito)
 
-- [Zenn](https://zenn.dev/rihitosakurai)
-
-- [DEV](https://dev.to/sakurairihito)
-
-# Research interests
-Computational Physics, Financial Engineering
-
-# News 
-
-- 2025.4. FinRL Online Meeting, AI for Financeにて招待講演しました
-
-- 2025.4. 東京大学の特任研究員になりました
-
-- 2025.3. 量子ソフトウェア研究会優秀発表賞の授賞式がありました[第13回量子ソフトウェア研究会優秀発表賞授賞](https://www.ipsj.or.jp/award/qs-award1.html). 
-
-- 2025.2. 東大GITEプログラムの海外選抜チームに選出、カリフォルニア大学サンディエゴ校で研究成果を使ったビジネスプランを発表してきました [GITE program](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html).
-
-- 2024.2. 日本物理学会誌に解説記事(招待あり)を寄稿しました。櫻井は前半のテンソルネットワークを担当しました。 ([物理学会誌「最近の研究から」覧](https://shinaoka.github.io/assets/qtt_jps_202402.pdf))
 
 # Hobbies
 - Beer (Go on a diet...)
