@@ -12,4 +12,3 @@
 
 
 ## Under Development...
-- "Quantum-inspired" option pricing engine (C++/julia)

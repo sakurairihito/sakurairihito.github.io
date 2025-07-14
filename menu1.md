@@ -12,7 +12,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ## Career 
 
-- Project Researcher at The University of Tokyo
+- Postdoc at The University of Tokyo
   April 2025 - 
 
 - Internship at [BlocQ](https://www.blocqinc.com/)
