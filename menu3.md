@@ -27,6 +27,11 @@
 
 4. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning Fourier-based parametric option price using tensor cross interpolation", [Current and Future Computational Approaches to Quantum Many-Body Systems 2024 (CompQMB2024)](https://qc-hybrid.github.io/CompQMB2024/), ISSP, Kashiwa Campus, Univ. Tokyo, 2024年9月 (poster)
 
+5. 
+
+
+6. 
+
 ## Domestic conference
 
 ### Talks
@@ -49,7 +54,12 @@
 
 8. 櫻井理人, 高橋治利, 宮本幸一, "Learning parameter dependence for Fourier-based option price with tensor trains", [第13回量子ソフトウェア研究発表会](https://www.ipsj.or.jp/kenkyukai/event/qs13.html), 2024年10月 
 
-9. 櫻井理人, 宮本幸一, 大久保剛 "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [第62回（2024年度冬季）ジャフィー大会](http://www.jafee.gr.jp/01rally/conference/pro_61th_2024_0709.pdf), 2024年2月 
+9. 櫻井理人, 宮本幸一, 大久保毅 "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [第62回（2024年度冬季）ジャフィー大会](http://www.jafee.gr.jp/01rally/conference/pro_61th_2024_0709.pdf), 2024年2月 
+
+
+10. 櫻井理人、宮本幸一, 大久保毅 "Tensor train representations for Greeks of Fourier-based pricing of multi-asset options", [第15回量子ソフトウェア研究会](https://www.ipsj.or.jp/kenkyukai/event/qs15.html), 2025年6月
+
+
 
 ### Posters
 
@@ -77,6 +87,15 @@
 
 11. 櫻井理人, 高橋治利, 宮本幸一, "テンソルネットワーク学習アルゴリズムを用いたパラメトリックオプション価格の学習", [数学・数理科学専攻若手研究者のための異分野・異業種研究交流会2024](https://jsiam.org/jsiam_archive/kr/career2024/), 2024年10月
 
+12. 坂上洸太郎, 品岡寛, 櫻井理人, "Adaptive sampling-based optimization of quantized tensor trains for noisy functions: applications to quantum simulations", [第52回量子情報技術研究会](https://www.ieice.org/es/qit/qit52/), 2025年5月
+
+
+13. 櫻井理人, 大久保毅, 藤堂眞治, "Chebyshev tensor cross interpolation for Monte Carlo-based option pricing", [第6回量子ソフトウェアワークショップ:
+最先端の量子技術 ー量子センサーから量子アルゴリズムまでー](https://qsw.phys.s.u-tokyo.ac.jp/workshop202506), 2025年6月
+
+14. 櫻井理人, 大久保毅, 藤堂眞治, "Adaptive sampling-based construction of Chebyshev tensor trains for fixed-seed Monte Carlo-based option Greeks", [Quantum Innovation 2025](https://quantum-innovation.riken.jp), 2025年7月-8月
+
+
 ## formal/informal Seminor
 
 1. 櫻井理人, 水上渉, 品岡寛, “量子古典融合アルゴリズムを用いた虚時間相関関数の計算”, 産業技術総合研究所新原理量子コンピューティングセンター, 2021年12月, (口頭発表), [slide](https://sakurairihito.github.io/presentation_at_lab_20211221/)
@@ -88,6 +107,9 @@
 4.  櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [東京大学生産技術研究所　羽田野研究室　セミナー](http://hatano-lab.iis.u-tokyo.ac.jp/seminar-j.html), 2023年10月  
 
 5. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/), 2024年2月   
+
+6. 櫻井理人, 大久保毅, 藤堂眞治, "チェビシェフテンソルトレインの微分とその応用", [SQAI夏の合宿], 2025年8月
+
 
 
 ## Other activities
