@@ -17,11 +17,13 @@
 
 
 # Hobbies
-- Beer (Go on a diet...)
+- Beer (always)
 
-- Weight training
+- Ramen soup (often)
 
-- Ramen soup (Go on a diet...)
+- Weight training (sometimes)
+
+
 
 
 ~~~ 
