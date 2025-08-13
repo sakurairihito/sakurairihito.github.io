@@ -45,13 +45,16 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
   March 2019  
   
 
-## Award
-- Award for [第13回量子ソフトウェア研究会](https://www.ipsj.or.jp/award/qs-award1.html)
+## Award & Selection
+- Award for [13th Quantum Software Research Session](https://www.ipsj.or.jp/award/qs-award1.html)
 
+- Presentation award for [SQAI Summer Camp2025](https://sqai.jp/event/5396/)
+
+- [NEDO Quantum Challenge Screening selection passed](https://qc-challenge.nedo.go.jp)
 ## Grants
 - FY 2023-FY 2024: JSPS Grant-in-Aid for JSPS Fellows (23KJ0295)
 
-## Research stay (with my presentation)
+## Research stay (with presentation)
 - [Dr. Antonis Papapantoleon group]((https://fa.ewi.tudelft.nl/~apapapantoleon/index.html)), Mathematical Finance at the Delft Institute of Applied Mathematics: 12-14 March 2025
 
 - [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/): 27 Februrary-2 Match 2024
