@@ -5,7 +5,7 @@
 <img src="frog.jpg" alt="frog">
 ~~~
 
-# RIHITO SAKURAI
+# SAKURAI Rihito
 
 - e-mail:sakurairihito(at)gmail.com
 
@@ -15,6 +15,14 @@
 
 - [GiHub](https://github.com/sakurairihito)
 
+# Research keywords
+
+- Quantum-classical hybrid algorithms for 
+    - quantum many-body systems
+
+- Tensor networks for
+    - mathematical finance
+    - quanutm circuit simulations
 
 # Hobbies
 - Beer (always)

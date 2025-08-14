@@ -12,14 +12,15 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 
 ## Career 
 
-- Postdoc at The University of Tokyo
+- Project associate researcher at The University of Tokyo
   April 2025 - 
+
+  - A member of [Sustainable Quantum AI](https://sqai.jp) 
+  April 2024 -
 
 - Internship at [BlocQ](https://www.blocqinc.com/)
   December 2024 – March 2025  
 
-- A member of [Sustainable Quantum AI](https://sqai.jp) 
-  April 2024 -
 
 - JSPS Research Fellowship for Young Scientists (PD), [Todo Group](https://exa.phys.s.u-tokyo.ac.jp/ja), Department of Physics, University of Tokyo
   April 2024 – March 2025  
@@ -30,27 +31,28 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Internship at [Quantum Software Research Hub](https://qsrh.jp/seminar/), Osaka University
   October 2022 – February 2023  
   
-- Research Assistant (Part-time) at Saitama University
+- Research Assistant at Saitama University
   April 2021 - March 2024
 
 ## Education
 
-- Doctoral Degree, Saitama University ([Hiroshi Shinaoka group](https://shinaoka.sakura.ne.jp))
+- Saitama University ([Hiroshi Shinaoka group](https://shinaoka.sakura.ne.jp)) 
   March 2024  
 
-- Master’s Degree, Tokyo University of Science
+- Tokyo University of Science (Master’s Degree)
   March 2021  
 
-- Bachelor’s Degree, Tokyo University of Science
+- Tokyo University of Science (Bachelor’s Degree)
   March 2019  
   
 
 ## Award & Selection
-- Award for [13th Quantum Software Research Session](https://www.ipsj.or.jp/award/qs-award1.html)
+- Presentation award for [13th Quantum Software Research Session](https://www.ipsj.or.jp/award/qs-award1.html)
 
 - Presentation award for [SQAI Summer Camp2025](https://sqai.jp/event/5396/)
 
-- [NEDO Quantum Challenge Screening selection passed](https://qc-challenge.nedo.go.jp)
+- Screening selection for [NEDO Quantum Challenge](https://qc-challenge.nedo.go.jp)
+
 ## Grants
 - FY 2023-FY 2024: JSPS Grant-in-Aid for JSPS Fellows (23KJ0295)
 
@@ -64,7 +66,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - [Dr. George Booth group](https://www.boothgroupresearch.com/index.html), King's College London in Computational Electronic Structure, July, 2022
 
 
-## Organizer
+## Organizer of workshops
 - The 65th Summer School for Young Researchers in Condensed Matter Physics (Seminar F Coordinator)  
   December 2019 – September 2020
 

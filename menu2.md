@@ -18,7 +18,7 @@
 1. R. Sakurai, K. Miyamoto, T. Okubo, [Tensor train representations of Greeks for Fourier-based pricing of multi-asset options](https://arxiv.org/html/2507.08482v1)
 
 
-## Journal Article
+## Journal Article 
 1. R. Sakurai, W. Mizukami, and H. Shinaoka, [Hybrid quantum-classical algorithm for computing imaginary-time correlation function](https://doi.org/10.1103/PhysRevResearch.4.023219), Phys. Rev. Research 4, 023219 (2022)
 
 

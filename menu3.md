@@ -1,7 +1,6 @@
 @def title = "Menu 3"
 @def tags = ["syntax", "code"]
 
-
 # Presentations
 
 \toc 
@@ -12,9 +11,9 @@
 
 3. R. Sakurai, W. Mizukami, and H. Shinaoka, “Hybrid quantum-classical algorithm for computing imaginary-time correlation function”, [29 th International Conference on Low Temperature Physics](https://www.lt29.jp), Sapporo, 2022年8月, (poster)
 
-4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Physical Society March Meeting 2023](https://march.aps.org), LasVegas、2023年3月 (poster)
+4. R. Sakurai, W. Mizukami, and H. Shinaoka, "Compact quantum circuit of variational quantum eigensolver for quantum impurity models", [American Physical Society March Meeting 2023](https://march.aps.org), LasVegas、2023年3月 (poster) 
 
-5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, March, 2024 (oral)
+5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, March, 2024 (oral) 
 
 6. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [2025 IEEE Symposium Series on Computational Intelligence](https://ieee-ssci.org/?ui=home), Trondheim, Norway, March 2025 (poster) 
 
@@ -27,10 +26,9 @@
 
 4. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning Fourier-based parametric option price using tensor cross interpolation", [Current and Future Computational Approaches to Quantum Many-Body Systems 2024 (CompQMB2024)](https://qc-hybrid.github.io/CompQMB2024/), ISSP, Kashiwa Campus, Univ. Tokyo, 2024年9月 (poster)
 
-5. 
+5. R. Sakurai, T. Okubo, S. Todo "", [SQAI-NCTS Workshop on Quantum Technologies and Machine Learning](https://indico.phys.nthu.edu.tw/event/116/), NCTS-Phys Lecture Hall, 4F, Chee-Chun Leung Cosmology Hall, NTU, August, 2025
 
-
-6. 
+6. R. Sakurai "Chebyshev Interpolation Meets Tensor Cross Interpolation and its Application to Mathematical Finance", [THE MACHINE LEARNING TENSOR NETWORK WORKSHOP](https://tensornetworks.sciencesconf.org/?lang=en), The House of Quantum Alps, Grenoble, October, 2025
 
 ## Domestic conference
 
@@ -59,7 +57,7 @@
 
 10. 櫻井理人、宮本幸一, 大久保毅 "Tensor train representations for Greeks of Fourier-based pricing of multi-asset options", [第15回量子ソフトウェア研究会](https://www.ipsj.or.jp/kenkyukai/event/qs15.html), 2025年6月
 
-
+11. 櫻井理人, 大久保毅, 藤堂眞治 "モンテカルロ法によるオプション感応度計算のためのチェビシェフ・テンソルクロス補間", [日本物理学会第80回年次大会](https://www.jps.or.jp/activities/meetings/annual/annual-index.php), 2025年9月
 
 ### Posters
 
@@ -89,9 +87,7 @@
 
 12. 坂上洸太郎, 品岡寛, 櫻井理人, "Adaptive sampling-based optimization of quantized tensor trains for noisy functions: applications to quantum simulations", [第52回量子情報技術研究会](https://www.ieice.org/es/qit/qit52/), 2025年5月
 
-
-13. 櫻井理人, 大久保毅, 藤堂眞治, "Chebyshev tensor cross interpolation for Monte Carlo-based option pricing", [第6回量子ソフトウェアワークショップ:
-最先端の量子技術 ー量子センサーから量子アルゴリズムまでー](https://qsw.phys.s.u-tokyo.ac.jp/workshop202506), 2025年6月
+13. 櫻井理人, 大久保毅, 藤堂眞治, "Chebyshev tensor cross interpolation for Monte Carlo-based option pricing", [第6回量子ソフトウェアワークショップ: 最先端の量子技術 ー量子センサーから量子アルゴリズムまでー](https://qsw.phys.s.u-tokyo.ac.jp/workshop202506), 2025年6月
 
 14. 櫻井理人, 大久保毅, 藤堂眞治, "Adaptive sampling-based construction of Chebyshev tensor trains for fixed-seed Monte Carlo-based option Greeks", [Quantum Innovation 2025](https://quantum-innovation.riken.jp), 2025年7月-8月
 
@@ -109,8 +105,6 @@
 5. 櫻井理人, 水上渉, 水野雄太, 姫岡優介, 品岡寛, "Solving differential equations for chemical kinetics using quantics tensor train", [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/), 2024年2月   
 
 6. 櫻井理人, 大久保毅, 藤堂眞治, "チェビシェフテンソルトレインの微分とその応用", [SQAI夏の合宿], 2025年8月
-
-
 
 ## Other activities
 
