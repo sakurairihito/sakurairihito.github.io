@@ -16,7 +16,6 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
   April 2025 - 
 
   - A member of [Sustainable Quantum AI](https://sqai.jp) 
-  April 2024 -
 
 - Internship at [BlocQ](https://www.blocqinc.com/)
   December 2024 – March 2025  
