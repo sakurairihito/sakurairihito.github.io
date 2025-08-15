@@ -46,11 +46,14 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
   
 
 ## Award & Selection
-- Presentation award for [13th Quantum Software Research Session](https://www.ipsj.or.jp/award/qs-award1.html)
+- Presentation award at [13th Quantum Software Research Session](https://www.ipsj.or.jp/award/qs-award1.html), October, 2024
 
-- Presentation award for [SQAI Summer Camp2025](https://sqai.jp/event/5396/)
+- Selected as an overseas team in [the GTIE Program under the Startup Ecosystem Development Project](https://www.ducr.u-tokyo.ac.jp/activity/venture/gtie.html) and presentation at the University of California, San Diego, February, 2025
 
-- Screening selection for [NEDO Quantum Challenge](https://qc-challenge.nedo.go.jp)
+- Presentation award at [SQAI Summer Camp2025](https://sqai.jp/event/5396/), August, 2025
+
+- Seleceted as a team "Quantum Flash boy" in [NEDO Quantum Challenge](https://qc-challenge.nedo.go.jp), August, 2025
+
 
 ## Grants
 - FY 2023-FY 2024: JSPS Grant-in-Aid for JSPS Fellows (23KJ0295)

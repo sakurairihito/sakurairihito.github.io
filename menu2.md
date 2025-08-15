@@ -34,7 +34,7 @@
 
 7. K. Kinjo, R. Sakurai, T. Kishimoto, and J. Ohkubo, [Permutation of Tensor-Train Cores for Computing moments on Stochastic Differential Equations](https://journals.jps.jp/doi/full/10.7566/JPSJ.94.084001?mobileUi=0), J. Phys. Soc. Jpn. 94, 084001 (2025)
 
-8. K. Sakaue, H. Shinaoka, R. Sakurai, [Adaptive sampling-based optimization of quantized tensor trains for noisy functions: applications to quantum simulations](https://arxiv.org/abs/2405.12730), accepted by SciPost Physics
+8. K. Sakaue, H. Shinaoka, R. Sakurai, [Adaptive sampling-based optimization of quantized tensor trains for noisy functions: applications to quantum simulations](https://scipost.org/10.21468/SciPostPhys.19.2.038), SciPost Phys. 19, 038 (2025)
 
 ## Japanese articles
 5. 品岡寛, 村上雄太, 野垣康介, 櫻井理人, "[Quantics tensor trainに基づく多スケール時空仮説と場の量子論](https://shinaoka.github.io/assets/qtt_jps_202402.pdf)",  物理学会誌「最近の研究から」覧, 2024年2月号(招待あり)
