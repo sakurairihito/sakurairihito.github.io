@@ -15,7 +15,9 @@
 
 5. R. Sakurai, W. Mizukami, Y. Mizuno, Y. Himeoka, and H. Shinaoka, "Solving non-linear ordinary differential equations for chemical kinetics using quantics tensor train", [American Physical Society March Meeting 2024](https://www.aps.org/), Minneapolis, March, 2024 (oral) 
 
-6. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [2025 IEEE Symposium Series on Computational Intelligence](https://ieee-ssci.org/?ui=home), Trondheim, Norway, March 2025 (poster) 
+6. R. Sakurai, K. Miyamoto, T. Okubo, "Tensor train representations for Greeks of Fourier-based pricing of multi-assets options", [2025 IEEE Symposium Series on Computational Intelligence](https://ieee-ssci.org/?ui=home), Trondheim, Norway, March 2025 (poster)
+
+7. APS2026 (plan)
 
 ## International workshop (Onsite)
 1. R. Sakurai, H. Takahashi and K. Miyamoto, "Learning tensor networks with parameter dependencies for Fourier-based option pricing", [Tensor Network and Quantum Embedding Workshop](https://coi-sqai.github.io/SQAI_NCTS_workshop/), Hongo Campus, Univ. Tokyo, 2024年3月 (poster)
@@ -29,6 +31,8 @@
 5. R. Sakurai, T. Okubo, S. Todo "", [SQAI-NCTS Workshop on Quantum Technologies and Machine Learning](https://indico.phys.nthu.edu.tw/event/116/), NCTS-Phys Lecture Hall, 4F, Chee-Chun Leung Cosmology Hall, NTU, August, 2025
 
 6. R. Sakurai "Chebyshev Interpolation Meets Tensor Cross Interpolation and its Application to Mathematical Finance", [THE MACHINE LEARNING TENSOR NETWORK WORKSHOP](https://tensornetworks.sciencesconf.org/?lang=en), The House of Quantum Alps, Grenoble, October, 2025
+
+7. ASPIRE Todai-Chicago workshops
 
 ## Domestic conference
 
