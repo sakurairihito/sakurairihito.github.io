@@ -7,13 +7,9 @@
 
 # SAKURAI Rihito
 
-- e-mail:sakurairihito(at)gmail.com
+I am Rihito Sakurai
 
 - [Google Scholar](https://scholar.google.com/citations?hl=ja&authuser=1&user=IKqeswsAAAAJ)
-
-- [ORCiD](https://orcid.org/0000-0002-2287-7730)
-
-- [GiHub](https://github.com/sakurairihito)
 
 # Research keywords
 
@@ -23,16 +19,6 @@
 - Tensor networks for
     - mathematical finance
     - quanutm circuit simulations
-
-# Hobbies
-- Beer (always)
-
-- Ramen soup (often)
-
-- Weight training (sometimes)
-
-
-
 
 ~~~ 
 <p>Photo taken at TSUKUBA BREWERY🐸🍺</p>
