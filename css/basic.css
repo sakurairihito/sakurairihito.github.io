@@ -28,7 +28,7 @@ header {
   margin-bottom: 48px;
 }
 
-.blog-name a { color: var(--text-color); font-size: 20px; font-weight: 700; text-decoration: none; }
+.blog-name a { color: var(--text-color); font-size: 17px; font-weight: 600; text-decoration: none; }
 .blog-name span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; font-weight: 400; }
 nav ul { display: flex; flex-wrap: wrap; gap: 4px 12px; list-style: none; margin: 0; padding: 0; }
 nav a { display: inline-block; padding: 12px 4px; color: var(--muted); text-decoration: none; font-size: 15px; border-bottom: 2px solid transparent; }
@@ -54,7 +54,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-
 .profile { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: start; gap: 48px; }
 .profile > div { min-width: 0; }
 .profile .eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 14px; }
-.profile h1 { font-size: clamp(36px, 5vw, 52px); margin-bottom: 20px; }
+.profile h1 { font-size: 28px; font-weight: 600; margin-bottom: 18px; letter-spacing: 0; }
 .profile .affiliations { line-height: 1.9; }
 .since { color: var(--muted); font-size: 13px; }
 .profile-photo { margin: 0; }
@@ -71,6 +71,20 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-
 .franklin-toc li { margin-bottom: 4px; }
 .page-foot { border-color: var(--line); color: var(--muted); font-size: 12px; line-height: 1.7; margin: 64px 0 24px; }
 .franklin-content .page-foot a { color: var(--muted); }
+
+.explainer { max-width: 820px; margin: 0 auto; }
+.explainer .article-lead { color: var(--muted); font-size: 20px; margin-bottom: 28px; }
+.explainer figure { margin: 28px 0; }
+.franklin-content .explainer figure img { display: block; width: 100%; padding: 0; height: auto; }
+.explainer figcaption { font-size: 14px; line-height: 1.7; color: var(--muted); margin-top: 12px; }
+.explainer .katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.5em 0; }
+.explainer .katex-display .katex { white-space: nowrap; }
+.explainer blockquote { margin: 24px 0; border-left: 3px solid var(--accent); padding: 16px 20px; background: var(--surface); font-style: normal; }
+.explainer blockquote p { display: block; }
+.explainer blockquote p:last-child { margin-bottom: 0; }
+.explainer table { width: 100%; font-size: 15px; }
+.franklin-content .explainer th,
+.franklin-content .explainer td { padding: 10px; border: 1px solid var(--line); text-align: left; }
 
 table { border-collapse: collapse; max-width: 100%; }
 th, td { padding: 10px; border: 1px solid var(--line); }

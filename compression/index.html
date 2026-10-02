@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="少数のフーリエ成分で表せる関数を行列に並べ直し、matrix cross interpolationで再構成するまでを、数式と数値実験の図で解説します。">
+  <meta name="author" content="Rihito Sakurai">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <title>関数を圧縮する：フーリエ展開からクロス補間へ | Rihito Sakurai</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+  <div class="blog-name"><a href="/">Rihito Sakurai<span>Quantum computing &amp; tensor networks</span></a></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/compression/" aria-current="page">Research</a></li>
+      <li><a href="/menu1/" >CV</a></li>
+      <li><a href="/menu2/" >Publications</a></li>
+      <li><a href="/menu3/" >Presentations</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main id="main-content">
+
+<!-- Content appended here -->
+<div class="franklin-content"><div class="explainer"><h1 id="関数を圧縮する"><a href="#関数を圧縮する" class="header-anchor">関数を圧縮する</a></h1>
+<div class="article-lead">フーリエ展開から matrix cross interpolation へ</div>
+<p>関数を細かい格子上で計算すると、保存する数値も計算する点の数も増えていきます。しかし、その数値の一つひとつが独立した情報を持っているとは限りません。<strong>少数の成分で関数を表せるなら、その構造を使ってデータを圧縮できます。</strong></p>
+<p>ここでは、フーリエ展開を入口に「なぜ圧縮できるのか」を考え、同じ関数を行列に並べ直して、少数の行・列から再構成してみます。フーリエ展開と行列に少し触れたことがある方を想定した、研究紹介のための小さな数値実験です。</p>
+<div class="franklin-toc"><ol><li><a href="#少数の波で関数を表す">少数の波で関数を表す</a></li><li><a href="#関数を行列に並べ直す">関数を行列に並べ直す</a></li><li><a href="#少数の行列から再構成する">少数の行・列から再構成する</a></li><li><a href="#同じ関数をmciで圧縮してみる">同じ関数をMCIで圧縮してみる</a></li><li><a href="#どの関数でも圧縮できる">どの関数でも圧縮できる？</a></li><li><a href="#金融の問題へ">金融の問題へ</a></li><li><a href="#参考文献">参考文献</a></li></ol></div>
+<h2 id="少数の波で関数を表す"><a href="#少数の波で関数を表す" class="header-anchor">少数の波で関数を表す</a></h2>
+<p>たとえば、区間 \(0 \leq t < 1\) で次の関数を考えます。</p>
+\[
+\begin{aligned}
+f(t) ={}& \cos(2\pi\cdot 2t) \\
+        &+ 0.35\sin(2\pi\cdot 11t) \\
+        &+ 0.15\cos(2\pi\cdot 23t).
+\end{aligned}
+\]
+<p>この関数を4,096点でサンプリングすれば、4,096個の値が得られます。一方、式を見ると、関数全体は<strong>3つの正弦・余弦成分</strong>で表されています。周波数・振幅・位相と基底の約束が分かっていれば、格子点の値をすべて保存しなくても再現できます。</p>
+
+<figure>
+  <a href="/assets/compression/fourier-components.png">
+    <img src="/assets/compression/fourier-components.png" alt="灰色の元の関数に対して、緑色で1成分、2成分、3成分のフーリエ表現を比較。3成分で元の関数と一致する。" width="1820" height="1316" loading="lazy">
+  </a>
+  <figcaption>図1：同じ関数を、残すフーリエ成分を増やしながら表す。灰色が元の関数、緑色が近似。3成分では一致する。各図はクリックすると拡大できます。</figcaption>
+</figure>
+
+<p>一般の関数でも、重要なフーリエ成分だけを残して十分な精度で近似できる場合があります。<strong>必要な精度に対して、保存する成分の数が少なくて済むこと</strong>が、ここでいう圧縮可能性です。フーリエ変換そのものは情報を保った表現の変換であり、圧縮が生じるのは成分を絞れるときです。</p>
+<h2 id="関数を行列に並べ直す"><a href="#関数を行列に並べ直す" class="header-anchor">関数を行列に並べ直す</a></h2>
+<p>次に、4,096個の値を64個ずつ区切り、\(64\times64\) の行列 \(A\) に並べます。これは、1変数関数の同じサンプルを並べ直す操作です。</p>
+\[
+A_{ij}=f\!\left(\frac{64i+j}{4096}\right),
+\qquad i,j=0,\ldots,63.
+\]
+<p>ここで \(x_i=i/64\)、\(y_j=j/4096\) と置くと、サンプル点は \(x_i+y_j\) と書けます。この<strong>足し算の形</strong>が、フーリエ展開と低ランク性をつなぎます。</p>
+<p>複素指数関数で、少数のフーリエ成分による近似を</p>
+\[
+f(t)\approx\sum_{k\in\mathcal K}c_k e^{2\pi\mathrm{i}kt}
+\]
+<p>と書きます。\(\mathrm{i}\) は虚数単位です。この式に \(t=x_i+y_j\) を代入すると、</p>
+\[
+A_{ij}\approx\sum_{k\in\mathcal K}
+\underbrace{c_k e^{2\pi\mathrm{i}k x_i}}_{\text{行だけに依存}}
+\underbrace{e^{2\pi\mathrm{i}k y_j}}_{\text{列だけに依存}}.
+\]
+<p>各項は、列ベクトルと行ベクトルの外積、つまりランク1の行列です。その和で作る近似行列のランクは、高々 \(|\mathcal K|\) になります。<strong>少数のフーリエ成分で表せる関数は、この並べ方では低ランクの行列で近似できます。</strong></p>
+<p>今回の3つの正弦・余弦は、正負の周波数 \(\mathcal K=\{-23,-11,-2,2,11,23\}\) の6成分に対応します。そのため、この例の行列のランクは高々6です。</p>
+
+<figure>
+  <a href="/assets/compression/matrix-and-rank.png">
+    <img src="/assets/compression/matrix-and-rank.png" alt="左は関数の4096点を64行64列に並べたヒートマップ。右は最大値で規格化した特異値で、7番目以降が浮動小数点の丸め誤差程度に落ちる。" width="1830" height="848" loading="lazy">
+  </a>
+  <figcaption>図2：行列への並べ直しと特異値。特異値は行列の独立した成分の大きさを表し、この例では6成分を超えると丸め誤差程度になる。特異値の計算は、低ランク性を確認するために行っています。</figcaption>
+</figure>
+
+<h2 id="少数の行列から再構成する"><a href="#少数の行列から再構成する" class="header-anchor">少数の行・列から再構成する</a></h2>
+<p>低ランク構造があると分かったところで、<strong>matrix cross interpolation（行列クロス補間、MCI）</strong>を使います。行列から \(r\) 行と \(r\) 列を選び、その交差部分をつなぎ目にして全体を近似する方法です。&#91;1&#93;</p>
+<p>選んだ行の添字を \(I\)、列の添字を \(J\) として、</p>
+\[
+C=A_{:,J},\qquad R=A_{I,:},\qquad P=A_{I,J}
+\]
+<p>と置くと、クロス補間は</p>
+\[
+\widehat A=C P^{-1}R
+\]
+<p>と書けます。\(C\) は選んだ列、\(R\) は選んだ行、\(P\) はその交差部分です。\(P\) が正則であることが必要です。元の行列が厳密にランク \(r\) なら、適切な \(r\) 行・\(r\) 列を選ぶことで、厳密演算では元の行列を再現できます。近似的に低ランクな場合には、行・列の選び方と \(P\) の数値的な安定性が精度に関わります。&#91;1&#93;</p>
+<p>ここでのMCIは、関数のフーリエ係数を入力として使いません。<strong>関数を評価して得られる行列要素から、再構成に使う行・列を選びます。</strong> フーリエ展開は圧縮できる理由を説明し、MCIはその構造を行列要素から取り出す役割を担います。</p>
+<h2 id="同じ関数をmciで圧縮してみる"><a href="#同じ関数をmciで圧縮してみる" class="header-anchor">同じ関数をMCIで圧縮してみる</a></h2>
+<p>この例では、近似の残差が最大になる要素を順に選び、その要素を通る行・列を加えました。各段階でクロス補間を作り直し、6行・6列で再構成しています。数値計算では \(P^{-1}\) を直接作らず、線形方程式 \(PX=R\) を解いて \(\widehat A=CX\) を計算します。</p>
+
+<figure>
+  <a href="/assets/compression/cross-reconstruction.png">
+    <img src="/assets/compression/cross-reconstruction.png" alt="元の行列、選んだ6行と6列、そこから再構成した行列、再構成誤差を比較。4096要素のうち732要素を再構成に使い、相対誤差は約10のマイナス15乗。" width="1829" height="1531" loading="lazy">
+  </a>
+  <figcaption>図3：左上が元の行列、右上が再構成に使う行・列、左下がMCIによる再構成、右下が誤差。右上の灰色部分は再構成に使わない要素、点は交差部分。値を示す3枚は同じ色の尺度を使い、誤差だけは絶対誤差の常用対数を示しています。</figcaption>
+</figure>
+
+<p>一般に \(m\times n\) の行列から \(r\) 行・\(r\) 列を選んだとき、重複を除いた要素数は \(r(m+n)-r^2\) です。今回の例では、</p>
+\[
+r(m+n)-r^2=6(64+64)-6^2=732
+\]
+<p>です。元の4,096要素に対し、再構成に使う行列要素は<strong>約18&#37;</strong>になります。添字や数値表現の付加情報は、この要素数には含めていません。</p>
+<p>精度は、行列全体の相対フロベニウス誤差 \(\|A-\widehat A\|_F/\|A\|_F\) で確認しました。これは、全要素の誤差の二乗和の平方根を、元の行列の同じノルムで割ったものです。</p>
+<table><tr><th align="right">選ぶ行・列の数 \(r\)</th><th align="right">保持する要素数</th><th align="right">相対フロベニウス誤差（概数）</th></tr><tr><td align="right">1</td><td align="right">127</td><td align="right">\(1.6\times10^{-1}\)</td></tr><tr><td align="right">2</td><td align="right">252</td><td align="right">\(5.3\times10^{-2}\)</td></tr><tr><td align="right">4</td><td align="right">496</td><td align="right">\(5.0\times10^{-4}\)</td></tr><tr><td align="right">6</td><td align="right">732</td><td align="right">\(1.5\times10^{-15}\)</td></tr></table>
+<p>6行・6列では、倍精度浮動小数点の丸め誤差に近い精度で再構成できています。最後の桁は計算環境によって変わります。</p>
+<blockquote>
+<p><strong>この実験で数えているもの</strong></p>
+<p>732は、選択後の再構成に必要な行列要素の数です。この説明用の実装では、行・列を探すために行列全体の残差を調べ、図と誤差の検証にも全4,096点を使っています。したがって、この実験は「732回の関数評価だけで構築できた」という主張ではありません。全体を調べずに有効な行・列を探すことは、実用的なクロス補間アルゴリズムの課題の一つです。</p>
+</blockquote>
+<p><a href="/assets/scripts/compression_demo.py">図を生成するPythonコード</a>と<a href="/assets/compression/results.json">計算結果の数値データ</a>も公開しています。</p>
+<h2 id="どの関数でも圧縮できる"><a href="#どの関数でも圧縮できる" class="header-anchor">どの関数でも圧縮できる？</a></h2>
+<p>この例は、少数のフーリエ成分で表せるように作った関数です。一般の関数で同じ圧縮率になるわけではありません。必要な精度、関数の構造、サンプルの並べ方によって、必要なランクは変わります。</p>
+<p>また、フーリエ成分が少ないことは、この並べ方で低ランクになる<strong>十分条件の一つ</strong>です。ほかの構造によって低ランクになる場合もあります。実際の問題では、少数の成分で表せる構造を探し、元の関数と比較して近似誤差を確かめることが大切です。</p>
+<h2 id="金融の問題へ"><a href="#金融の問題へ" class="header-anchor">金融の問題へ</a></h2>
+<p>金融では、価格やリスク指標を、条件を変えながら繰り返し計算したい場面があります。もし、その条件への依存性をコンパクトに近似できれば、近似を作る段階と、それを使って何度も評価する段階を分けられます。</p>
+<p>ここで紹介した行列の考え方を、多くの添字を持つテンソルへ広げると、テンソルトレインや tensor cross interpolation につながります。&#91;1&#93; 私の研究でも、フーリエ法に基づくオプション価格や感応度（Greeks）の計算に、テンソルトレインを用いています。&#91;2, 3&#93;</p>
+<p><strong>物理学で使われる関数や多体状態のコンパクトな表現を、金融などの実用的な問題にどう活かせるか。</strong> その入口として、まずはこの小さな「関数の圧縮」を紹介しました。</p>
+<h2 id="参考文献"><a href="#参考文献" class="header-anchor">参考文献</a></h2>
+<ol>
+<li><p>Y. Núñez Fernández et al., <a href="https://scipost.org/10.21468/SciPostPhys.18.3.104">Learning tensor networks with tensor cross interpolation: New algorithms and libraries</a>, SciPost Phys. 18, 104 &#40;2025&#41;. 特に第3節の行列クロス補間、第6節の関数のquantics表現。</p>
+</li>
+<li><p>R. Sakurai, H. Takahashi, K. Miyamoto, <a href="https://www.mdpi.com/2227-7390/13/11/1828">Learning parameter dependence for Fourier-based option pricing with tensor trains</a>, Mathematics 13&#40;11&#41;, 1828 &#40;2025&#41;.</p>
+</li>
+<li><p>R. Sakurai, K. Miyamoto, T. Okubo, <a href="https://arxiv.org/abs/2507.08482">Tensor train representations of Greeks for Fourier-based pricing of multi-asset options</a>, arXiv:2507.08482 &#40;2025&#41;.</p>
+</li>
+</ol>
+<p><a href="/">ホームへ戻る</a></p></div>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 02, 2026.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+  </main>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>
