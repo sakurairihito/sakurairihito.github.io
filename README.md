@@ -20,6 +20,7 @@ Open the local URL printed by Franklin. If Julia 1.13 is already your default, `
 - `menu1.md`: CV and career history.
 - `menu2.md`: complete publication list. Keep each publication on one numbered Markdown line, newest first within each section. On each full build, the home page automatically shows the first four entries from **Preprints**, followed by **Journal articles**. Work in preparation is not included in this summary.
 - `menu3.md`: presentations, newest first within each category; undated entries come last.
+- `compression.md`: Japanese research explainer, from Fourier representations to matrix cross interpolation.
 - `_layout/` and `_css/`: shared page structure and styling.
 
 The existing `menu1_copy.md` and `menu4_copy.md` drafts are excluded from site generation.
@@ -40,3 +41,13 @@ The generated site is written to `__site/`. Pre-rendering and minification are d
 GitHub Actions builds pull requests without deploying. Pushes to `master`, and manual runs on `master`, build the site and publish `__site/` to the existing `gh-pages` branch. GitHub Pages should use that branch's root directory.
 
 The optional GitLab workflow uses the same Julia version and build command.
+
+## Reproducing the research figures
+
+The figures on `/compression/` are pre-generated PNGs, so the website build does not require Python. To regenerate them locally, use Python with NumPy and Matplotlib installed:
+
+```sh
+python3 _assets/scripts/compression_demo.py
+```
+
+The script checks the Fourier support, rank, cross interpolation, and reconstruction error before writing figures and `results.json` under `_assets/compression/`. It uses a full-matrix pivot search for teaching purposes; the retained element count is not an evaluation budget. If you change the numerical example, update the formulas, counts, error table, captions, and alternative text in `compression.md` to match the new results.

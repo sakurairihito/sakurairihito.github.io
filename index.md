@@ -10,6 +10,7 @@
     <span class="since">Both appointments since January 2026</span></p>
     <p>I am interested in applying methods from physics to practical problems, particularly in finance.</p>
     <div class="profile-links">
+      <a href="/compression/">Research note（日本語）</a>
       <a href="/menu1/">CV</a>
       <a href="https://scholar.google.com/citations?hl=ja&amp;authuser=1&amp;user=IKqeswsAAAAJ">Google Scholar</a>
       <a href="https://github.com/sakurairihito">GitHub</a>
