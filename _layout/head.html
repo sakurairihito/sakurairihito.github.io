@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{fill website_descr}}">
+  <meta name="author" content="{{fill author}}">
   {{if hasmath}} {{insert head_katex.html }}     {{end}}
   {{if hascode}} {{insert head_highlight.html }}   {{end}}
   <link rel="stylesheet" href="/css/franklin.css">
   <link rel="stylesheet" href="/css/basic.css">
   <link rel="icon" href="/assets/favicon.png">
-  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+  <title>{{isdef title}}{{fill title}} | {{end}}{{fill author}}</title>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   {{insert header.html}}
+  <main id="main-content">
 
 <!-- Content appended here -->

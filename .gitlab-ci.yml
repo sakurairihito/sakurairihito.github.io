@@ -1,20 +1,14 @@
-image: julia:1.6
+image: julia:1.13
 
-before_script:
-  - apt-get -qq update; apt-get -y install git python3-dev python3-pip
-  - pip3 install css-html-js-minify
-    
 pages:
   stage: deploy
   script:
-    - julia --project=@. -e 'import Pkg; Pkg.instantiate();
-      using NodeJS; run(`$(npm_cmd()) install highlight.js`);
-      using Franklin;
-      optimize()'
+    - julia --project=. -e 'using Pkg; Pkg.instantiate()'
+    - julia --project=. test/runtests.jl
+    - julia --project=. -e 'using Franklin; optimize(minify=false, prerender=false, clear=true, suppress_errors=false, fail_on_warning=true)'
     - mv __site public
   artifacts:
     paths:
       - public
   only:
     - main
-

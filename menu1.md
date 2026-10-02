@@ -1,19 +1,19 @@
-+++
-title = "CV"
-hascode = true
-date = Date(2019, 3, 22)
-rss = "A short description of the page which would serve as **blurb** in a `RSS` feed; you can use basic markdown here but the whole description string must be a single line (not a multiline string). Like this one for instance. Keep in mind that styling is minimal in RSS so for instance don't expect maths or fancy styling to work; images should be ok though: ![](https://upload.wikimedia.org/wikipedia/en/3/32/Rick_and_Morty_opening_credits.jpeg)"
-+++
-@def tags = ["syntax", "code"]
+@def title = "CV"
 
 # CV
 
 \toc
 
-## Career 
+## Career
+
+- Researcher at [BlocQ, Inc.](https://www.blocqinc.com/)
+  January 2026 – present
+
+- Visiting Researcher at the University of Tokyo
+  January 2026 – present
 
 - Project associate researcher at The University of Tokyo
-  April 2025 - 
+  April 2025 – December 2025
 
   - A member of [Sustainable Quantum AI](https://sqai.jp) 
 
@@ -59,7 +59,7 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - FY 2023-FY 2024: JSPS Grant-in-Aid for JSPS Fellows (23KJ0295)
 
 ## Research stay (with presentation)
-- [Dr. Antonis Papapantoleon group]((https://fa.ewi.tudelft.nl/~apapapantoleon/index.html)), Mathematical Finance at the Delft Institute of Applied Mathematics: 12-14 March 2025
+- [Dr. Antonis Papapantoleon group](https://fa.ewi.tudelft.nl/~apapapantoleon/index.html), Mathematical Finance at the Delft Institute of Applied Mathematics: 12-14 March 2025
 
 - [Flatiron Institute, Center for Computational Quantum Physics](https://www.simonsfoundation.org/flatiron/center-for-computational-quantum-physics/): 27 Februrary-2 Match 2024
 
@@ -82,4 +82,3 @@ rss = "A short description of the page which would serve as **blurb** in a `RSS`
 - Stat & QuantPhys Winter School 2024 (SQP2024) (Organizing Committee Member)
   April 2023 – February 2024  
   [Official Website](http://hatano-lab.iis.u-tokyo.ac.jp/norihiro/SQP2024/index.html)
-
