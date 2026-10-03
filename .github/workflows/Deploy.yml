@@ -43,7 +43,7 @@ jobs:
         run: |
           test -f __site/private-notes/index.html
           grep -q 'staticryptEncryptedMsgUniqueVariableName' __site/private-notes/index.html
-          for path in menu1 password research compression fourier-pricing assets/compression assets/fourier-pricing assets/scripts/bs1d_demo.py assets/scripts/bs1d_chebyshev.py assets/scripts/compression_demo.py assets/scripts/fourier_pricing_demo.py; do
+          for path in menu1 menu3 password research compression fourier-pricing assets/compression assets/fourier-pricing assets/scripts/bs1d_demo.py assets/scripts/bs1d_chebyshev.py assets/scripts/compression_demo.py assets/scripts/fourier_pricing_demo.py; do
             if [ -e "__site/$path" ]; then
               echo "Refusing to publish private content: $path"
               exit 1
