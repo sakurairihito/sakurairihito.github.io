@@ -5,6 +5,8 @@
 
 @@explainer
 
+[← Research notes](/research/)
+
 # Can a smooth price surface be compressed?
 
 @@article-lead
@@ -97,6 +99,6 @@ A smooth appearance is a starting point. Here, the spectra and reconstruction er
 </details>
 ~~~
 
-[Back to home](/)
+[Back to research notes](/research/)
 
 @@

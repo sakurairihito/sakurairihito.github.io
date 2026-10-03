@@ -6,7 +6,7 @@
     <p class="eyebrow">Quantum computing · Tensor networks</p>
     <h1 id="profile-name">Rihito Sakurai</h1>
     <div class="profile-links">
-      <a href="/compression/">Research note</a>
+      <a href="/research/">Research notes</a>
       <a href="/menu1/">CV</a>
       <a href="https://scholar.google.com/citations?hl=ja&amp;authuser=1&amp;user=IKqeswsAAAAJ">Google Scholar</a>
       <a href="https://github.com/sakurairihito">GitHub</a>

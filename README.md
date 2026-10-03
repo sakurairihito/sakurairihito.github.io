@@ -20,6 +20,7 @@ Open the local URL printed by Franklin. If Julia 1.13 is already your default, `
 - `menu1.md`: CV and career history.
 - `menu2.md`: complete publication list. Keep each publication on one numbered Markdown line, newest first within each section. On each full build, the home page automatically shows the first four entries from **Preprints**, followed by **Journal articles**. Work in preparation is not included in this summary.
 - `menu3.md`: presentations, newest first within each category; undated entries come last.
+- `research.md`: research-note index. Add a title, article link, and short description here when publishing a new note. The home page and navigation link to this index.
 - `compression.md`: English visual research note, from a 3D Black–Scholes price surface to low-rank approximation, matrix cross interpolation, and Chebyshev degree/rank compression. Short captions lead the page; methods and reproducibility details are collapsed by default.
 - `_layout/` and `_css/`: shared page structure and styling.
 
