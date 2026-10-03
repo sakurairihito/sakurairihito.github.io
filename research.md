@@ -5,5 +5,6 @@
 
 Short visual notes on research ideas and numerical experiments.
 
-- [Can a smooth price surface be compressed?](/compression/)  
-  Exploring low rank and low-degree Chebyshev approximations through a Black–Scholes price surface.
+- [Fourier pricing](/fourier-pricing/) — From a distribution of future prices to option prices in frequency space.
+
+- [Can a smooth price surface be compressed?](/compression/) — Exploring low rank and low-degree Chebyshev approximations through a Black–Scholes price surface.
