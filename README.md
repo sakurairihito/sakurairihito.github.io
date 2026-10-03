@@ -43,7 +43,7 @@ The optional GitLab workflow uses the same Julia version and build command.
 
 ## Private research notes
 
-Research notes and their figures, numerical data, and reproduction scripts have been withdrawn from the public site and current source tree. Their password-encrypted bundle is published at `/private-notes/`, without a link from the public navigation. `private-notes/index.html` is generated with StatiCrypt 3.5.4 and contains encrypted content only. Images, data, and downloadable scripts are bundled inside the encryption; they are not published separately.
+Research notes and their figures, numerical data, and reproduction scripts have been withdrawn from the public site and current source tree. Their password-encrypted bundle is published at `/private-notes/`, linked as **Research notes 🔒** from the home page and public navigation. Visitors must enter the password to read the notes. `private-notes/index.html` is generated with StatiCrypt 3.5.4 and contains encrypted content only. Images, data, and downloadable scripts are bundled inside the encryption; they are not published separately.
 
 Keep the plaintext source, encryption tools, and password outside this public repository. To update the encrypted HTML, use the local private-notes workspace and copy only its encrypted output here. Do not edit the generated ciphertext by hand. The deployment workflow checks that the encrypted page exists and the old plaintext routes and assets are absent before publishing.
 
