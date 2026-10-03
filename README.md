@@ -17,6 +17,7 @@ Open the local URL printed by Franklin. If Julia 1.13 is already your default, `
 ## Editing content
 
 - `index.md`: current affiliations, publication summary, and software/resources.
+- `career.md`: a brief career history beginning with the April 2024 JSPS postdoctoral fellowship at the University of Tokyo. Education and earlier appointments are omitted.
 - `memories.md`: public research memories, with one figure and a short reflection or research introduction per entry. Images live in `_assets/memories/`. Additional entries can repeat the `memory-entry` article structure with unique IDs, descriptive alt text, a short caption, and a paper link with attribution. Dates are optional. Personal recollections should come from the author.
 - `menu2.md`: complete publication list. Keep each publication on one numbered Markdown line, newest first within each section. On each full build, the home page automatically shows the first four entries from **Preprints**, followed by **Journal articles**. Work in preparation is not included in this summary.
 - `_layout/` and `_css/`: shared page structure and styling.

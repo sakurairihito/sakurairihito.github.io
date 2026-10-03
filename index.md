@@ -11,6 +11,7 @@
       Member, <a href="https://sqai.jp">Sustainable Quantum AI</a>
     </p>
     <div class="profile-links">
+      <a href="/career/">Career</a>
       <a href="/memories/">Research memories</a>
       <a href="/private-notes/" title="Password required">Research notes 🔒</a>
       <a href="https://scholar.google.com/citations?hl=ja&amp;authuser=1&amp;user=IKqeswsAAAAJ">Google Scholar</a>
