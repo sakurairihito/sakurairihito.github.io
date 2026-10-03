@@ -24,6 +24,10 @@
 </section>
 ~~~
 
+@@home-intro
+A few things I’ve been working on, and notes along the way.
+@@
+
 ## Recent publications
 
 {{recent_publications}}
