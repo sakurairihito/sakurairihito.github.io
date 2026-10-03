@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A saved tensor-train price surface, Gamma, and Chebyshev coefficient spectra.">
+  <meta name="author" content="Rihito Sakurai">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <title>Asian barrier option: a price surface | Rihito Sakurai</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+  <div class="blog-name"><a href="/">Rihito Sakurai<span>Quantum computing &amp; tensor networks</span></a></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/career/" >Career</a></li>
+      <li><a href="/memories/" >Memories</a></li>
+      <li><a href="/menu2/" >Publications</a></li>
+      <li><a href="/research/" aria-current="page">Research notes</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main id="main-content">
+
+<!-- Content appended here -->
+<div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
+<h1 id="asian_barrier_option_a_price_surface"><a href="#asian_barrier_option_a_price_surface" class="header-anchor">Asian barrier option: a price surface</a></h1>
+<div class="article-lead">A smooth-looking price surface. More structure in its second derivative.</div>
+<p>These plots evaluate a saved tensor train over moneyness \(m=S_0/K\) and volatility \(\sigma\). The degree-truncated approximation &#40;labelled <strong>ME</strong> in the figures&#41; retains degrees <strong>26 and 7</strong>, with <strong>TT bond dimension 3</strong>.</p>
+
+<figure>
+  <a href="/assets/asian-barrier/asian_price_surface.png">
+    <img src="/assets/asian-barrier/asian_price_surface.png" alt="Three-dimensional Asian barrier option price surface over moneyness and volatility, evaluated from the degree-truncated tensor train." width="2106" height="1494" decoding="async">
+  </a>
+  <figcaption>The saved price surface. Click any figure to enlarge it.</figcaption>
+</figure>
+
+<h2 id="price_and_gamma"><a href="#price_and_gamma" class="header-anchor">Price and Gamma</a></h2>
+<p>Truncation changes the price by at most <strong>0.00111 on the plotted grid</strong>. The Gamma surface looks smoother after truncation. A matched reference is still needed to assess accuracy.</p>
+
+<figure>
+  <a href="/assets/asian-barrier/asian_price_gamma_comparison.png">
+    <img src="/assets/asian-barrier/asian_price_gamma_comparison.png" alt="Raw and degree-truncated tensor-train predictions: similar price surfaces above, and a visibly smoother Gamma surface after truncation below. Each row uses the same vertical scale." width="2080" height="1680" loading="lazy" decoding="async">
+  </a>
+  <figcaption>Price above; Gamma below. Each row uses a shared vertical scale.</figcaption>
+</figure>
+
+<h2 id="which_degrees_remain"><a href="#which_degrees_remain" class="header-anchor">Which degrees remain?</a></h2>
+<p>The marginal Chebyshev coefficient amplitudes decay before reaching a small tail. The cutoffs retain degrees through <strong>26 in moneyness</strong> and <strong>7 in volatility</strong>.</p>
+
+<figure>
+  <a href="/assets/asian-barrier/asian_tt_spectra.png">
+    <img src="/assets/asian-barrier/asian_tt_spectra.png" alt="Marginal Chebyshev coefficient spectra for moneyness and volatility, comparing the raw tensor train with truncation at degrees 26 and 7." width="1872" height="1040" loading="lazy" decoding="async">
+  </a>
+  <figcaption>Both spectra come from the saved TT. Isolating how TCI changes Monte Carlo noise would require full-grid MC values using the same samples.</figcaption>
+</figure>
+
+<h2 id="why_so_few_coefficients"><a href="#why_so_few_coefficients" class="header-anchor">Why so few coefficients?</a></h2>
+<p>What I find striking is that a calculation involving <strong>365 path steps and a barrier</strong> can end up with such a compact representation. The paths are complicated, yet their average may have a much simpler shape.</p>
+<p>Averaging over paths can smooth the price&#39;s dependence on its inputs. Smooth variation can make high-degree Chebyshev coefficients small. <strong>Low rank describes something else: a simple coupling between variables.</strong> Smoothness alone does not guarantee low rank. Here, the saved approximation combines modest polynomial degrees with rank 3.</p>
+<p>When does this simplicity break down? Near the barrier, close to maturity, or over a wider parameter range? That is something I&#39;d like to explore.</p>
+
+<details>
+  <summary>Calculation settings and source</summary>
+  <p>Risk-neutral model: μ = r = 0.05, strike K = 110, barrier B = 100, maturity T = 1. There are 365 monitoring steps and 10<sup>6</sup> antithetic pairs, with seed 1.</p>
+  <p>Plotted interior domain: m ∈ [0.93, 1.17], σ ∈ [0.16, 0.24]. These are saved TT evaluations; no new sampling or reference comparison was performed for these plots.</p>
+  <p>Source: the 3 October 2026 report, <i>Asian barrier: saved TT surfaces</i> (final version).</p>
+  <p>Related reading: <a href="https://arxiv.org/abs/1505.04648">Chebyshev Interpolation for Parametric Option Pricing</a> and <a href="https://www.chebfun.org/docs/guide/guide04.html">Chebfun and Approximation Theory</a>.</p>
+</details>
+
+<p><a href="/assets/asian-barrier/asian_barrier_3d.pdf">Download the full PDF</a></p></div>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 03, 2026.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+  </main>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>
