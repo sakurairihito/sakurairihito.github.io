@@ -32,19 +32,6 @@
 <!-- Content appended here -->
 <div class="franklin-content"><h1 id="research_notes"><a href="#research_notes" class="header-anchor">Research notes</a></h1>
 <p>Short visual notes on research ideas and numerical experiments.</p>
-<h2 id="ideas_to_explore"><a href="#ideas_to_explore" class="header-anchor">Ideas to explore</a></h2>
-<h3 id="from_tensor_trains_to_tree_tensor_networks"><a href="#from_tensor_trains_to_tree_tensor_networks" class="header-anchor">From tensor trains to tree tensor networks</a></h3>
-<p>I&#39;d like to explore extending the function-compression approach to tree tensor networks. Could grouping related variables in a tree make multi-asset pricing problems easier to compress?</p>
-<p>A first experiment: compare a tensor train with a few tree structures on the same pricing problem, measuring storage and function evaluations at matched accuracy.</p>
-<p>An open question: how should the tree be chosen, and can cross interpolation build it efficiently from function samples?</p>
-<p>Still an idea to try, rather than a result.</p>
-<p>Related reading: <a href="https://arxiv.org/abs/2410.03572">Compressing multivariate functions with tree tensor networks</a>.</p>
-<h3 id="building_a_tensorpricing_engine"><a href="#building_a_tensorpricing_engine" class="header-anchor">Building a TensorPricing engine</a></h3>
-<p>I&#39;d like to build TensorPricing as a personal research project: a small experimental engine connecting function compression with option pricing.</p>
-<p>Start with one pricing example, then explore how a compressed representation can be reused as parameters change. Use it to try different tensor formats and interpolation methods, and compare accuracy and computational cost.</p>
-<h3 id="tci_with_point-dependent_noise"><a href="#tci_with_point-dependent_noise" class="header-anchor">TCI with point-dependent noise</a></h3>
-<p>What changes when uncertainty varies from one function evaluation point to another? I&#39;d like to explore tensor cross interpolation &#40;TCI&#41; with point-dependent noise levels.</p>
-<p>Could local uncertainty guide pivot selection, repeated sampling, and stopping criteria? A first experiment: introduce known, nonuniform noise levels into a test function and compare reconstruction accuracy and evaluation cost.</p>
 <h2 id="numerical_notes"><a href="#numerical_notes" class="header-anchor">Numerical notes</a></h2>
 <ul>
 <li><p><a href="/asian-barrier/">Asian barrier option: a price surface</a> — Price, Gamma, and Chebyshev spectra before and after degree truncation.</p>
@@ -54,6 +41,8 @@
 <li><p><a href="/compression/">Can a smooth price surface be compressed?</a> — Exploring low rank and low-degree Chebyshev approximations through a Black–Scholes price surface.</p>
 </li>
 </ul>
+<h2 id="ideas"><a href="#ideas" class="header-anchor">Ideas</a></h2>
+<p><a href="/ideas/">Ideas 🔒</a> — Research ideas in progress. Password required.</p>
 <div class="page-foot">
     <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 03, 2026.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
