@@ -6,21 +6,21 @@
   <h1 id="memories-title">Research memories</h1>
   <p class="memories-intro">Figures, small discoveries, and things I remember.</p>
 
-  <article class="memory-entry" aria-labelledby="first-memory-title">
+  <article class="memory-entry" id="quantum-impurity-2022" aria-labelledby="impurity-memory-title">
     <figure class="memory-figure">
-      <div class="memory-figure-placeholder">
-        <svg aria-hidden="true" viewBox="0 0 64 48" width="64" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M16 4H4v12M48 4h12v12M4 32v12h12M60 32v12H48" />
-          <path d="M26 24h12M32 18v12" />
-        </svg>
-        <span>A figure to start with</span>
-      </div>
+      <a href="/assets/memories/quantum-impurity-model-2022.png" aria-label="Open the quantum impurity model figure at full size">
+        <img src="/assets/memories/quantum-impurity-model-2022.png" alt="A strongly correlated material is mapped to impurity sites coupled to bath sites. A solver computes the local Green’s function, which is used to update the bath in a self-consistency loop." width="815" height="329" decoding="async">
+      </a>
+      <figcaption>A quantum impurity model and the DMFT self-consistency loop. Click the figure to enlarge it.</figcaption>
     </figure>
     <div class="memory-story">
-      <p class="memory-status">First entry · not written yet</p>
-      <h2 id="first-memory-title">A story behind a figure</h2>
-      <p class="memory-placeholder-copy">A few words about the work, what surprised me, or what stayed with me.</p>
-      <p class="memory-paper-placeholder">Paper link to come</p>
+      <p class="memory-status">2022</p>
+      <h2 id="impurity-memory-title">From a material to an impurity model</h2>
+      <p>This picture connects a strongly correlated material to a small quantum impurity model and its surrounding bath. In this work, we explored a hybrid quantum–classical approach to computing the impurity model’s imaginary-time Green’s function.</p>
+      <p class="memory-reference">R. Sakurai, W. Mizukami, and H. Shinaoka,<br>
+        <a href="https://doi.org/10.1103/PhysRevResearch.4.023219">Hybrid quantum-classical algorithm for computing imaginary-time correlation functions</a>.<br>
+        <i>Phys. Rev. Research</i> <b>4</b>, 023219 (2022). Figure: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </p>
     </div>
   </article>
 </section>
