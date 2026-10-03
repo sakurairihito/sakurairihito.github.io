@@ -11,7 +11,6 @@
       Member, <a href="https://sqai.jp">Sustainable Quantum AI</a>
     </p>
     <div class="profile-links">
-      <a href="/career/">Career</a>
       <a href="/memories/">Research memories</a>
       <a href="/research/">Research notes</a>
       <a href="https://scholar.google.com/citations?hl=ja&amp;authuser=1&amp;user=IKqeswsAAAAJ">Google Scholar</a>
@@ -31,10 +30,21 @@
 
 [All publications →](/menu2/)
 
-## Software & resources
+## Career
 
-1. [QCMaterialNew](https://github.com/sakurairihito/QCMaterialNew) — Quantum–classical hybrid algorithms for quantum impurity problems.
+~~~
+<ul>
+  <li><strong>JSPS Research Fellow (PD)</strong>, <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">Todo Group, University of Tokyo</a><br>
+    <span class="since">April 2024 – March 2025</span></li>
+  <li><strong>Part-time position</strong>, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
+    <span class="since">December 2024 – March 2025</span></li>
+  <li><strong>Project Associate Researcher</strong>, <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">University of Tokyo</a><br>
+    <span class="since">April 2025 – December 2025</span></li>
+  <li><strong>Researcher</strong>, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
+    <span class="since">January 2026 – present</span></li>
+  <li><strong>Visiting Researcher</strong>, <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">University of Tokyo</a><br>
+    <span class="since">January 2026 – present</span></li>
+</ul>
+~~~
 
-2. [Dynamical Mean-Field Theory Calculation by IPT](https://spm-lab.github.io/sparse-ir-tutorial/src/DMFT_IPT_jl.html)
-
-3. [Tensor train learning for derivative option pricing](https://arxiv.org/abs/2203.02804)
+Also a current member of [Sustainable Quantum AI](https://sqai.jp).
