@@ -51,7 +51,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-
 .franklin-content li p { margin: 0.5em 0; }
 .franklin-content img { max-width: 100%; height: auto; }
 
-.profile { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: start; gap: 48px; }
+.profile { display: grid; grid-template-columns: minmax(0, 1fr) clamp(260px, 32vw, 360px); align-items: start; gap: 48px; }
 .profile > div { min-width: 0; }
 .profile .eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 14px; }
 .profile h1 { font-size: 28px; font-weight: 600; margin-bottom: 18px; letter-spacing: 0; }
@@ -105,13 +105,13 @@ th { background: var(--surface); }
 
 @media (max-width: 760px) {
   header { align-items: flex-start; flex-direction: column; gap: 12px; margin-bottom: 32px; }
-  .profile { grid-template-columns: minmax(0, 1fr) 180px; gap: 24px; }
+  .profile { grid-template-columns: minmax(0, 1fr) 220px; gap: 24px; }
   .research-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
 @media (max-width: 540px) {
   .profile { grid-template-columns: 1fr; }
-  .profile-photo { width: 180px; }
+  .profile-photo { width: min(100%, 360px); }
   nav ul { gap: 4px 10px; }
   nav a { font-size: 14px; }
   .franklin-content h2 { margin-top: 36px; }
