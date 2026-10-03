@@ -12,10 +12,10 @@
 - Visiting Researcher at the University of Tokyo
   January 2026 – present
 
+- Current member of [Sustainable Quantum AI](https://sqai.jp)
+
 - Project associate researcher at The University of Tokyo
   April 2025 – December 2025
-
-  - A member of [Sustainable Quantum AI](https://sqai.jp) 
 
 - Internship at [BlocQ](https://www.blocqinc.com/)
   December 2024 – March 2025  
