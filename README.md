@@ -16,13 +16,12 @@ Open the local URL printed by Franklin. If Julia 1.13 is already your default, `
 
 ## Editing content
 
-- `index.md`: introduction, affiliations, research interests, and software/resources.
-- `menu1.md`: CV and career history.
+- `index.md`: current affiliations, publication summary, and software/resources.
 - `menu2.md`: complete publication list. Keep each publication on one numbered Markdown line, newest first within each section. On each full build, the home page automatically shows the first four entries from **Preprints**, followed by **Journal articles**. Work in preparation is not included in this summary.
 - `menu3.md`: presentations, newest first within each category; undated entries come last.
 - `_layout/` and `_css/`: shared page structure and styling.
 
-The existing `menu1_copy.md` and `menu4_copy.md` drafts are excluded from site generation.
+The existing `menu1_copy.md` and `menu4_copy.md` drafts and the local `password/` directory are excluded from site generation. The full CV is kept outside this public repository; its old `/menu1/` page has been withdrawn. The home page lists current affiliations only. Earlier versions of the CV remain in Git history.
 
 During `serve()`, editing `menu2.md` refreshes Publications only. Save `index.md` as well, or restart the preview, to refresh the home page's summary. Publishing always runs a full build and includes the latest entries.
 

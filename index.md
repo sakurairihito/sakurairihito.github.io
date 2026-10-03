@@ -5,8 +5,12 @@
   <div>
     <p class="eyebrow">Quantum computing · Tensor networks</p>
     <h1 id="profile-name">Rihito Sakurai</h1>
+    <p class="affiliations">
+      Researcher, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
+      Visiting Researcher, University of Tokyo<br>
+      Member, <a href="https://sqai.jp">Sustainable Quantum AI</a>
+    </p>
     <div class="profile-links">
-      <a href="/menu1/">CV</a>
       <a href="/private-notes/" title="Password required">Research notes 🔒</a>
       <a href="https://scholar.google.com/citations?hl=ja&amp;authuser=1&amp;user=IKqeswsAAAAJ">Google Scholar</a>
       <a href="https://github.com/sakurairihito">GitHub</a>
