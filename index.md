@@ -7,7 +7,7 @@
     <h1 id="profile-name">Rihito Sakurai</h1>
     <p class="affiliations">
       Researcher, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
-      Visiting Researcher, University of Tokyo<br>
+      <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">Visiting Researcher, University of Tokyo</a><br>
       Member, <a href="https://sqai.jp">Sustainable Quantum AI</a>
     </p>
     <div class="profile-links">
