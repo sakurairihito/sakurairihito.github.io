@@ -43,8 +43,10 @@ The optional GitLab workflow uses the same Julia version and build command.
 
 ## Research notes
 
-Research notes are public at `/research/`, linked from the home page and navigation without a password. Edit `research.md` for the index and research ideas, and `compression.md`, `fourier-pricing.md`, or `asian-barrier.md` for the numerical notes. Their figures, data, PDF, and reproduction scripts are in the corresponding `_assets/` directories.
+Numerical research notes are public at `/research/`, linked from the home page and navigation without a password. Edit `research.md` for the index and `compression.md`, `fourier-pricing.md`, or `asian-barrier.md` for the numerical notes. Their figures, data, PDF, and reproduction scripts are in the corresponding `_assets/` directories.
 
-The former `/private-notes/` address redirects to the public notes, preserving the old note links. The local private workspace remains an archive; do not run its encryption builder to update this public site. Password files and encryption tools stay outside the repository. Deployment checks that the public notes exist and that the withdrawn CV, presentation list, local drafts, and password directory remain excluded.
+Research ideas are password-encrypted at `/ideas/`, linked as **Ideas 🔒** from the notes index. Only the generated StatiCrypt HTML belongs in this repository. Edit `source/ideas.md` in the external private-notes workspace, build that snapshot, and run its `protect_ideas.py` with the existing password. Deployment checks that the encrypted page exists and no `ideas.md` is present here. Previously published ideas remain in Git history.
+
+The former `/private-notes/` address redirects to the public notes, preserving the old note links. The local private workspace holds the Ideas source and earlier notes as an archive; do not run its old `protect_notes.py` builder. Password files and encryption tools stay outside the repository. Deployment checks that the public notes exist and that the withdrawn CV, presentation list, local drafts, and password directory remain excluded.
 
 Removing files does not remove their earlier versions from Git history.

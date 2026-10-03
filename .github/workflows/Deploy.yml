@@ -44,6 +44,9 @@ jobs:
           for page in research compression fourier-pricing asian-barrier; do
             test -f "__site/$page/index.html"
           done
+          test -f __site/ideas/index.html
+          grep -q 'staticryptEncryptedMsgUniqueVariableName' __site/ideas/index.html
+          test ! -f ideas.md
           for path in menu1 menu3 password menu1_copy menu4_copy; do
             if [ -e "__site/$path" ]; then
               echo "Refusing to publish private content: $path"
