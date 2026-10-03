@@ -41,10 +41,10 @@ GitHub Actions builds pull requests without deploying. Pushes to `master`, and m
 
 The optional GitLab workflow uses the same Julia version and build command.
 
-## Private research notes
+## Research notes
 
-Research notes and their figures, numerical data, and reproduction scripts have been withdrawn from the public site and current source tree. Their password-encrypted bundle is published at `/private-notes/`, linked as **Research notes 🔒** from the home page and public navigation. Visitors must enter the password to read the notes. `private-notes/index.html` is generated with StatiCrypt 3.5.4 and contains encrypted content only. Images, data, and downloadable scripts are bundled inside the encryption; they are not published separately.
+Research notes are public at `/research/`, linked from the home page and navigation without a password. Edit `research.md` for the index and research ideas, and `compression.md`, `fourier-pricing.md`, or `asian-barrier.md` for the numerical notes. Their figures, data, PDF, and reproduction scripts are in the corresponding `_assets/` directories.
 
-Keep the plaintext source, encryption tools, and password outside this public repository. To update the encrypted HTML, use the local private-notes workspace and copy only its encrypted output here. Do not edit the generated ciphertext by hand. The deployment workflow checks that the encrypted page exists and the old plaintext routes and assets are absent before publishing.
+The former `/private-notes/` address redirects to the public notes, preserving the old note links. The local private workspace remains an archive; do not run its encryption builder to update this public site. Password files and encryption tools stay outside the repository. Deployment checks that the public notes exist and that the withdrawn CV, presentation list, local drafts, and password directory remain excluded.
 
 Removing files does not remove their earlier versions from Git history.

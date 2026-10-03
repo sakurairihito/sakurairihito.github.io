@@ -39,11 +39,12 @@ jobs:
       - name: Build website
         run: julia --project=. -e 'using Franklin; optimize(minify=false, prerender=false, clear=true, suppress_errors=false, fail_on_warning=true)'
 
-      - name: Verify private content remains unpublished
+      - name: Verify public notes and excluded content
         run: |
-          test -f __site/private-notes/index.html
-          grep -q 'staticryptEncryptedMsgUniqueVariableName' __site/private-notes/index.html
-          for path in menu1 menu3 password research compression fourier-pricing assets/compression assets/fourier-pricing assets/scripts/bs1d_demo.py assets/scripts/bs1d_chebyshev.py assets/scripts/compression_demo.py assets/scripts/fourier_pricing_demo.py; do
+          for page in research compression fourier-pricing asian-barrier; do
+            test -f "__site/$page/index.html"
+          done
+          for path in menu1 menu3 password menu1_copy menu4_copy; do
             if [ -e "__site/$path" ]; then
               echo "Refusing to publish private content: $path"
               exit 1

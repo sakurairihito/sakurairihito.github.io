@@ -13,7 +13,7 @@
     <div class="profile-links">
       <a href="/career/">Career</a>
       <a href="/memories/">Research memories</a>
-      <a href="/private-notes/" title="Password required">Research notes 🔒</a>
+      <a href="/research/">Research notes</a>
       <a href="https://scholar.google.com/citations?hl=ja&amp;authuser=1&amp;user=IKqeswsAAAAJ">Google Scholar</a>
       <a href="https://github.com/sakurairihito">GitHub</a>
     </div>
