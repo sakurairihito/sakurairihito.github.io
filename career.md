@@ -3,19 +3,19 @@
 
 # Career
 
-- **JSPS Research Fellow (PD)**, [Todo Group, University of Tokyo](https://exa.phys.s.u-tokyo.ac.jp/ja)  
-  April 2024 – March 2025
-
-- **Part-time position**, [BlocQ, Inc.](https://www.blocqinc.com/)  
-  December 2024 – March 2025
-
-- **Project Associate Researcher**, [University of Tokyo](https://exa.phys.s.u-tokyo.ac.jp/ja)  
-  April 2025 – December 2025
-
-- **Researcher**, [BlocQ, Inc.](https://www.blocqinc.com/)  
-  January 2026 – present
-
-- **Visiting Researcher**, [University of Tokyo](https://exa.phys.s.u-tokyo.ac.jp/ja)  
-  January 2026 – present
+~~~
+<ul>
+  <li><strong>JSPS Research Fellow (PD)</strong>, <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">Todo Group, University of Tokyo</a><br>
+    <span class="since">April 2024 – March 2025</span></li>
+  <li><strong>Part-time position</strong>, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
+    <span class="since">December 2024 – March 2025</span></li>
+  <li><strong>Project Associate Researcher</strong>, <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">University of Tokyo</a><br>
+    <span class="since">April 2025 – December 2025</span></li>
+  <li><strong>Researcher</strong>, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
+    <span class="since">January 2026 – present</span></li>
+  <li><strong>Visiting Researcher</strong>, <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">University of Tokyo</a><br>
+    <span class="since">January 2026 – present</span></li>
+</ul>
+~~~
 
 Also a current member of [Sustainable Quantum AI](https://sqai.jp).
