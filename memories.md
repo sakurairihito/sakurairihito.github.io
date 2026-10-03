@@ -15,7 +15,7 @@
     </figure>
     <div class="memory-story">
       <p class="memory-status">2022</p>
-      <h2 id="impurity-memory-title">From a material to an impurity model</h2>
+      <h2 id="impurity-memory-title">My first paper!</h2>
       <p>This picture connects a strongly correlated material to a small quantum impurity model and its surrounding bath. In this work, we explored a hybrid quantum–classical approach to computing the impurity model’s imaginary-time Green’s function.</p>
       <p class="memory-reference">R. Sakurai, W. Mizukami, and H. Shinaoka,<br>
         <a href="https://doi.org/10.1103/PhysRevResearch.4.023219">Hybrid quantum-classical algorithm for computing imaginary-time correlation functions</a>.<br>
