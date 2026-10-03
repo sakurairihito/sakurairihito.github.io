@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Black–Scholesのオプション価格を株価とボラティリティの2変数で立体的に描き、SVDとmatrix cross interpolationで低ランク近似を試します。">
+  <meta name="description" content="A visual experiment: compress a Black–Scholes price surface using low rank and low-degree Chebyshev polynomials.">
   <meta name="author" content="Rihito Sakurai">
    <link rel="stylesheet" href="/libs/katex/katex.min.css">
      
@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/css/franklin.css">
   <link rel="stylesheet" href="/css/basic.css">
   <link rel="icon" href="/assets/favicon.png">
-  <title>滑らかな価格曲面は、低ランクで近似できる？ | Rihito Sakurai</title>
+  <title>Can a smooth price surface be compressed? | Rihito Sakurai</title>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -31,94 +31,76 @@
   <main id="main-content">
 
 <!-- Content appended here -->
-<div class="franklin-content"><div class="explainer"><h1 id="滑らかな価格曲面は低ランクで近似できる"><a href="#滑らかな価格曲面は低ランクで近似できる" class="header-anchor">滑らかな価格曲面は、低ランクで近似できる？</a></h1>
-<div class="article-lead">Black–Scholesの価格関数を、少数の成分で表してみる</div>
-<p>株価とボラティリティを変えると、オプション価格はどう変わるでしょうか。1資産のBlack–Scholesモデルで、ヨーロピアン・コールの価格を計算してみます。横の2軸は<strong>現在の株価 \(S\) とボラティリティ \(\sigma\)</strong>、高さは<strong>オプション価格 \(C(S,\sigma)\)</strong>です。</p>
+<div class="franklin-content"><div class="explainer"><h1 id="can_a_smooth_price_surface_be_compressed"><a href="#can_a_smooth_price_surface_be_compressed" class="header-anchor">Can a smooth price surface be compressed?</a></h1>
+<div class="article-lead">One price surface. Two ways to make it smaller.</div>
+<p>Change the stock price and volatility, and a Black–Scholes call price traces out a smooth surface. Looking at it, can you tell how much information we need to describe it?</p>
 
 <figure>
   <a href="/assets/compression/bs1d-surface.png">
-    <img src="/assets/compression/bs1d-surface.png" alt="株価50から150、ボラティリティ5から60パーセントに対するコール価格の3D曲面。株価とボラティリティが大きくなるにつれて、価格が滑らかに上昇する。" width="1238" height="1316" fetchpriority="high">
+    <img src="/assets/compression/bs1d-surface.png" alt="Three-dimensional Black–Scholes call price surface over stock price and volatility. The price rises smoothly along both axes." width="1238" height="1316" fetchpriority="high">
   </a>
-  <figcaption>図1：Black–Scholesの価格曲面。行使価格100、満期まで1年、年率金利3%、配当なし。図をクリックすると拡大できます。</figcaption>
+  <figcaption>Stock price: 50–150. Volatility: 5–60%. Strike: 100. Time to maturity: 1 year. Interest rate: 3%. No dividends. Click any figure to enlarge it.</figcaption>
 </figure>
 
-<p>なめらかな一枚の曲面です。しかし、眺めただけでは、これが少数の成分に分けられるかどうかは分かりません。<strong>この曲面を、少ない情報で近似できるでしょうか？</strong></p>
-<h2 id="2変数の関数を行列として見る"><a href="#2変数の関数を行列として見る" class="header-anchor">2変数の関数を、行列として見る</a></h2>
-<p>株価を50〜150、ボラティリティを5〜60&#37;の範囲で、それぞれ端点を含む128点の等間隔格子に取ります。全組合せで計算した価格は、次の行列になります。</p>
+<h2 id="how_many_components"><a href="#how_many_components" class="header-anchor">How many components?</a></h2>
+<p>Sample the surface on a 128 × 128 grid. Low rank means approximating this table by a few products of one-variable functions:</p>
 \[
-A_{ij}=C(S_i,\sigma_j),\qquad A\in\mathbb R^{128\times128}.
+C(S,\sigma)\approx\sum_{\alpha=1}^{r}u_\alpha(S)v_\alpha(\sigma).
 \]
-<p>つまり16,384個の価格です。ここでは、1資産という意味でモデルは「1d」ですが、変化させる入力は株価とボラティリティの2つです。</p>
-<p>低ランク近似で探すのは、</p>
-\[
-C(S_i,\sigma_j)\approx\sum_{\alpha=1}^{r}
- u_\alpha(S_i)v_\alpha(\sigma_j)
-\]
-<p>という表現です。<strong>株価だけの関数と、ボラティリティだけの関数の積を、少数足し合わせて曲面を表せるか</strong>、という問いになります。これは単に「滑らかかどうか」とは別の性質です。</p>
-<h2 id="必要な成分数を調べる"><a href="#必要な成分数を調べる" class="header-anchor">必要な成分数を調べる</a></h2>
-<p>まず行列全体を特異値分解（SVD）し、成分の大きさを調べます。大きい特異値に対応する成分から \(r\) 個を残すと、この格子上でフロベニウス誤差が最小のランク \(r\) 以下の近似が得られます。</p>
+<p>The singular values fall quickly. <strong>Only a few components carry most of the information.</strong></p>
 
 <figure>
   <a href="/assets/compression/bs1d-rank.png">
-    <img src="/assets/compression/bs1d-rank.png" alt="左は急速に減衰する価格行列の特異値。右はランクを増やしたときのSVDとMCIの相対誤差で、どちらも小さくなる。" width="2000" height="866" loading="lazy">
+    <img src="/assets/compression/bs1d-rank.png" alt="Rapid singular-value decay and decreasing approximation error as the rank increases, comparing SVD and matrix cross interpolation." width="2000" height="866" loading="lazy">
   </a>
-  <figcaption>図2：左は最大値で規格化した特異値、右は低ランク近似の相対フロベニウス誤差。緑がSVD、橙が次節のMCI。縦軸は対数目盛です。</figcaption>
+  <figcaption>SVD gives the best approximation of each rank on this grid. Cross interpolation follows a similar error trend.</figcaption>
 </figure>
 
-<p>この条件では、特異値は急速に小さくなっています。<strong>ランク8のSVD近似で、相対誤差は約 \(3.5\times10^{-6}\)。</strong> 曲面を格子点ごとに保存する代わりに、少数の分離した成分でよく近似できることが分かりました。</p>
-<p>ここで相対誤差は、全格子点の誤差をまとめた</p>
-\[
-\frac{\|A-\widehat A\|_F}{\|A\|_F}
-\]
-<p>です。各点での相対誤差を保証する指標ではないため、後で最大絶対誤差も確認します。</p>
-<h2 id="少数の断面から曲面を再構成する"><a href="#少数の断面から曲面を再構成する" class="header-anchor">少数の断面から、曲面を再構成する</a></h2>
-<p>次に、<strong>matrix cross interpolation（行列クロス補間、MCI）</strong>を使います。選んだボラティリティでの価格曲線と、選んだ株価での価格曲線を組み合わせ、全体を近似する方法です。&#91;2&#93;</p>
-<p>選ぶ行・列の添字を \(I,J\) とすると、</p>
-\[
-\widehat A=A_{:,J}\,(A_{I,J})^{-1}\,A_{I,:}
-\]
-<p>と書けます。交差部分 \(A_{I,J}\) が正則であることが必要で、選び方や数値的な安定性が精度に関わります。実装では逆行列を作らず、線形方程式を解きます。</p>
+<h2 id="rebuild_the_surface_from_a_few_slices"><a href="#rebuild_the_surface_from_a_few_slices" class="header-anchor">Rebuild the surface from a few slices</a></h2>
+<p>Matrix cross interpolation &#40;MCI&#41; combines selected rows and columns. Here, <strong>8 rows and 8 columns</strong> reconstruct the surface with a relative error of about <strong>0.0010&#37;</strong>.</p>
 
 <figure>
   <a href="/assets/compression/bs1d-cross.png">
-    <img src="/assets/compression/bs1d-cross.png" alt="上段は元の価格曲面とランク8のMCI近似を同じ軸で比較。下段は選んだ8行と8列、および全格子点の絶対誤差。最大絶対誤差は約0.0017。" width="1999" height="1710" loading="lazy">
+    <img src="/assets/compression/bs1d-cross.png" alt="Original and rank-8 reconstructed surfaces look nearly identical. Below are the selected rows and columns and the absolute error." width="1999" height="1710" loading="lazy">
   </a>
-  <figcaption>図3：8行・8列から再構成した曲面は、元の曲面と見た目ではほぼ区別できません。左下の灰色部分は再構成に使わない要素です。右下は別の色尺度で誤差を拡大して示しています。</figcaption>
+  <figcaption>The selected slices contain 1,984 of the 16,384 entries. The maximum absolute price error is about 0.0017. The error panel uses its own color scale.</figcaption>
 </figure>
 
-<table><tr><th align="right">ランク \(r\)</th><th align="right">SVDの相対誤差</th><th align="right">MCIの相対誤差</th><th align="right">MCIの最大絶対誤差</th></tr><tr><td align="right">1</td><td align="right">\(1.10\times10^{-1}\)</td><td align="right">\(2.38\times10^{-1}\)</td><td align="right">\(17.4\)</td></tr><tr><td align="right">2</td><td align="right">\(1.29\times10^{-2}\)</td><td align="right">\(4.00\times10^{-2}\)</td><td align="right">\(2.48\)</td></tr><tr><td align="right">4</td><td align="right">\(6.98\times10^{-4}\)</td><td align="right">\(2.66\times10^{-3}\)</td><td align="right">\(0.327\)</td></tr><tr><td align="right">8</td><td align="right">\(3.48\times10^{-6}\)</td><td align="right">\(1.04\times10^{-5}\)</td><td align="right">\(0.00167\)</td></tr><tr><td align="right">12</td><td align="right">\(1.27\times10^{-8}\)</td><td align="right">\(6.07\times10^{-8}\)</td><td align="right">\(0.0000132\)</td></tr></table>
-<p>ランク8のMCIでは、相対誤差は約 <strong>0.0010&#37;</strong>、最大絶対誤差は価格の単位で約 <strong>0.0017</strong> でした。再構成に必要な行列要素は、交差部分の重複を除くと</p>
-\[
-8\times(128+128)-8^2=1,984
-\]
-<p>で、元の16,384要素の<strong>約12.1&#37;</strong>です。添字などの付加情報はこの数に含めていません。</p>
-<p>今回の説明用コードは、全格子点を計算し、残差が最大の点を順に探して行・列を選んでいます。1,984は選択後の再構成に使う要素数であり、「1,984回の価格計算だけで構築できた」という意味ではありません。</p>
-<h2 id="この実験から分かること"><a href="#この実験から分かること" class="header-anchor">この実験から分かること</a></h2>
-<p><strong>この範囲のBlack–Scholes価格曲面は、株価とボラティリティの間で低ランク近似できました。</strong> 滑らかな見た目から予想するだけでなく、特異値と再構成誤差で確認した結果です。</p>
-<p>必要なランクは、パラメータの範囲、満期までの時間、要求する精度によって変わります。ここで確かめたのは128×128の格子上の価格です。格子の間の値や、価格の微分であるGreeksの精度は別に検証する必要があります。</p>
-<p>フーリエ展開も関数を成分に分ける方法ですが、ここでは株価とボラティリティへの依存性を分離しています。1変数の少数フーリエ成分から導くランクの議論とは区別して、実際の2変数関数で圧縮可能性を調べました。</p>
-<p>Black–Scholesのコールには解析式があるため、この例の目的は価格計算の高速化ではなく、関数の圧縮を具体的に見ることです。この考え方を、多資産や多くのパラメータに依存する関数へ広げると、テンソルトレインによる表現につながります。&#91;3&#93;</p>
-<h2 id="計算式と再現用コード"><a href="#計算式と再現用コード" class="header-anchor">計算式と再現用コード</a></h2>
-<p>価格には、配当なしのヨーロピアン・コールのBlack–Scholes式を使いました。&#91;1&#93;</p>
-\[
-C(S,\sigma)=S\Phi(d_1)-Ke^{-r_f\tau}\Phi(d_2),
-\]
-\[
-d_1=\frac{\log(S/K)+(r_f+\sigma^2/2)\tau}{\sigma\sqrt{\tau}},
-\qquad d_2=d_1-\sigma\sqrt{\tau}.
-\]
-<p>\(\Phi\) は標準正規分布の累積分布関数、\(K=100\)、\(r_f=0.03\)、\(\tau=1\) です。ボラティリティは計算では \(0.05\leq\sigma\leq0.60\)、図では&#37;で表示しています。</p>
-<p><a href="/assets/scripts/bs1d_demo.py">図を生成するPythonコード</a>と<a href="/assets/compression/bs1d-results.json">特異値・誤差・選択点の数値データ</a>を公開しています。計算式は割引ペイオフの数値積分とも照合しています。</p>
-<h2 id="参考文献"><a href="#参考文献" class="header-anchor">参考文献</a></h2>
-<ol>
-<li><p>M. Haugh, <a href="https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf">The Black–Scholes Model</a>, Columbia University, 2016.</p>
-</li>
-<li><p>Y. Núñez Fernández et al., <a href="https://scipost.org/10.21468/SciPostPhys.18.3.104">Learning tensor networks with tensor cross interpolation: New algorithms and libraries</a>, SciPost Phys. 18, 104 &#40;2025&#41;. 第3節の行列クロス補間。</p>
-</li>
-<li><p>R. Sakurai, H. Takahashi, K. Miyamoto, <a href="https://www.mdpi.com/2227-7390/13/11/1828">Learning parameter dependence for Fourier-based option pricing with tensor trains</a>, Mathematics 13&#40;11&#41;, 1828 &#40;2025&#41;.</p>
-</li>
-</ol>
-<p><a href="/">ホームへ戻る</a></p></div>
+<h2 id="how_much_detail_along_each_axis"><a href="#how_much_detail_along_each_axis" class="header-anchor">How much detail along each axis?</a></h2>
+<p>Now expand each direction in Chebyshev polynomials. Higher degrees describe finer detail. <strong>Their coefficients get small quickly</strong>, so we can drop the high-degree terms.</p>
+
+<figure>
+  <a href="/assets/compression/bs1d-chebyshev-spectrum.png">
+    <img src="/assets/compression/bs1d-chebyshev-spectrum.png" alt="Chebyshev coefficients decay in both directions, faster for volatility in this example. A heatmap shows the two-dimensional coefficients and the retained low-degree block." width="1999" height="902" loading="lazy">
+  </a>
+  <figcaption>Left: coefficient norms grouped by degree in each direction. Right: individual coefficients. Both are normalized by the full coefficient norm; the dashed box retains degrees 0–32 in stock price and 0–24 in volatility.</figcaption>
+</figure>
+
+<h2 id="low_rank_low_degree"><a href="#low_rank_low_degree" class="header-anchor">Low rank &#43; low degree</a></h2>
+<p>Rank counts the products we add together. Degree controls the detail within each one-variable function. <strong>This example allows both to stay modest.</strong></p>
+<p>Keep degree <strong>32 in stock price</strong>, degree <strong>24 in volatility</strong>, and compress the coefficient matrix to <strong>rank 8</strong>. The result needs <strong>464 coefficients</strong>, with relative error <strong>\(3.9\times10^{-6}\)</strong> at new test points.</p>
+
+<figure>
+  <a href="/assets/compression/bs1d-chebyshev-convergence.png">
+    <img src="/assets/compression/bs1d-chebyshev-convergence.png" alt="Error decreases as the polynomial degree grows. Increasing rank at fixed degrees eventually reaches the error floor from degree truncation." width="2000" height="884" loading="lazy">
+  </a>
+  <figcaption>Increasing rank eventually stops helping if the polynomial degrees stay fixed. Both choices matter.</figcaption>
+</figure>
+
+<p>A smooth appearance is a starting point. Here, the spectra and reconstruction errors show which structure we can actually use.</p>
+
+<details>
+  <summary>Methods, accuracy, and reproducibility</summary>
+  <p>The first experiment uses the <a href="https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf">Black–Scholes formula</a> on a uniform 128 × 128 grid. All relative errors are Frobenius errors, not pointwise relative errors. The teaching MCI implementation searches the full residual: 1,984 counts retained entries, not function evaluations. Its reconstruction solves a linear system with the selected intersection matrix.</p>
+  <p>The Chebyshev experiment separately evaluates a full 129 × 129 Chebyshev–Lobatto grid. Coordinates are mapped as S = 100 + 50x and σ = 0.325 + 0.275y. A type-I discrete cosine transform gives standard, unnormalized Chebyshev coefficients through degree 128 in both directions. Coefficients are checked against a 193 × 193 construction.</p>
+  <p>Truncation to degrees 32 and 24 leaves 33 × 25 = 825 coefficients. Its relative error is 3.94 × 10⁻⁷. A separate SVD of this coefficient matrix gives rank-8 factors with 8(33 + 25) = 464 stored coefficients, including singular values absorbed into one factor. This coefficient-space SVD is not the optimal SVD for a uniform price grid.</p>
+  <p>Both polynomial errors are measured against exact prices at a disjoint 192 × 190 uniform midpoint grid. The combined degree/rank approximation has relative error 3.91 × 10⁻⁶ and maximum absolute error 5.46 × 10⁻⁴. Storage counts exclude metadata and do not describe construction costs. These are sampled checks, not bounds over the entire domain or guarantees for Greeks.</p>
+  <p>Low degree bounds the possible separation rank, but the two measures are different: a degree-32/24 coefficient matrix has rank at most 25, and here rank 8 suffices at the reported accuracy. Conversely, a product of two degree-100 polynomials can have rank 1. Results depend on the domain, model parameters, and requested accuracy.</p>
+  <p>Reproduce the figures: <a href="/assets/scripts/bs1d_demo.py">price surface and MCI code</a> · <a href="/assets/scripts/bs1d_chebyshev.py">Chebyshev code</a>. Keep both scripts in the same folder. Download <a href="/assets/compression/bs1d-results.json">grid results</a> or <a href="/assets/compression/bs1d-chebyshev-results.json">Chebyshev spectra, errors, and factor coefficients</a>.</p>
+  <p>Further reading: <a href="https://scipost.org/10.21468/SciPostPhys.18.3.104">Núñez Fernández et al., tensor cross interpolation (2025)</a>; <a href="https://www.chebfun.org/publications/Chebfun2paper.pdf">Townsend &amp; Trefethen, Chebfun2 (2013)</a>; <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.dct.html">SciPy’s DCT definition</a>. For the connection to parameter-dependent option pricing: <a href="https://www.mdpi.com/2227-7390/13/11/1828">Sakurai, Takahashi &amp; Miyamoto (2025)</a>.</p>
+</details>
+
+<p><a href="/">Back to home</a></p></div>
 <div class="page-foot">
     <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 03, 2026.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
