@@ -1,5 +1,5 @@
 @def website_title = "Rihito Sakurai's website" 
-@def website_descr = "Rihito Sakurai is interested in applying methods from physics to practical problems, particularly in finance. Researcher at BlocQ, Inc. and Visiting Researcher at the University of Tokyo."
+@def website_descr = "Rihito Sakurai is interested in applying methods from physics to practical problems, particularly in finance. Lead Researcher at BlocQ, Inc. and Visiting Researcher at the University of Tokyo."
 @def website_url = "https://sakurairihito.github.io"
 
 @def author = "Rihito Sakurai"

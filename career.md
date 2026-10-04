@@ -5,7 +5,7 @@
 
 ~~~
 <ul class="career-list">
-  <li><strong>Researcher</strong>, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
+  <li><strong>Lead Researcher</strong>, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
     <span class="since">January 2026 – present</span></li>
   <li><strong>Visiting Researcher</strong>, <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">University of Tokyo</a><br>
     <span class="since">January 2026 – present</span></li>
