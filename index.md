@@ -27,12 +27,6 @@
 I’m interested in quantum computing, tensor networks, and post-processing methods for reducing the effects of noise.
 @@
 
-## Recent publications
-
-{{recent_publications}}
-
-[All publications →](/menu2/)
-
 ## Career
 
 ~~~
@@ -49,3 +43,9 @@ I’m interested in quantum computing, tensor networks, and post-processing meth
     <span class="since">January 2026 – present</span></li>
 </ul>
 ~~~
+
+## Recent publications
+
+{{recent_publications}}
+
+[All publications →](/menu2/)
