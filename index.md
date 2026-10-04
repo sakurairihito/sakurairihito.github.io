@@ -4,7 +4,7 @@
 <section class="profile" aria-labelledby="profile-name">
   <div>
     <h1 id="profile-name">Rihito Sakurai</h1>
-    <p class="research-interests">Quantum computing and tensor networks are rooted in quantum mechanics. I’m interested in combining them with classical algorithms to find smarter ways to solve practical problems.</p>
+    <p class="research-interests">Quantum computing and tensor networks are rooted in quantum mechanics. I’m interested in combining these ideas with other computational methods to find smarter ways to solve practical problems.</p>
     <div class="profile-links">
       <a href="/memories/">Research memories</a>
       <a href="/research/">Research notes</a>
