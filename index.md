@@ -4,7 +4,7 @@
 <section class="profile" aria-labelledby="profile-name">
   <div>
     <h1 id="profile-name">Rihito Sakurai</h1>
-    <p class="research-interests">Quantum physics has given rise to a wide range of technologies and computational methods, from quantum computing to quantum-inspired approaches such as tensor networks. I’m interested in applying these developments to real-world problems, combining them with other computational methods to turn ideas from quantum physics into practical tools.</p>
+    <p class="research-interests">Physics has developed through the effort to understand nature. Along the way, it has also given us new technologies and ways to compute. Quantum computing and tensor networks are examples of ideas that grew out of quantum physics.</p>
     <div class="profile-links">
       <a href="/memories/">Research memories</a>
       <a href="/research/">Research notes</a>
@@ -22,9 +22,9 @@
 ## About me
 
 @@about-me
-I work on both tensor networks and quantum computing. I’m now implementing quantum error correction to help quantum computers run complex calculations reliably.
+My goal has been to bring these ideas into practical use. By working on both tensor networks and quantum computing, I want to understand what each can do, where their limits are, and how they can help solve real problems.
 
-I want to understand which problems tensor networks can solve efficiently, and where quantum computers could do better. I’d like to see these methods become useful for real problems, even with imperfect models and noisy data.
+I’m now working on implementing quantum error correction as a step toward making quantum computers reliable enough for that purpose.
 @@
 
 ## Recent publications
