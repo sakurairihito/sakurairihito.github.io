@@ -19,6 +19,10 @@
 </section>
 ~~~
 
+@@site-intro
+A small collection of my research, notes, and memories.
+@@
+
 ## Career
 
 ~~~
