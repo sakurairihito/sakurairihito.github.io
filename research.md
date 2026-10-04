@@ -3,16 +3,14 @@
 
 # Research notes
 
-Short visual notes on research ideas and numerical experiments.
-
 ## Numerical notes
 
-- [Asian barrier option: a price surface](/asian-barrier/) — Price, Gamma, and Chebyshev spectra before and after degree truncation.
+- [Asian barrier option](/asian-barrier/)
 
-- [Fourier pricing](/fourier-pricing/) — From a distribution of future prices to option prices in frequency space.
+- [Fourier pricing](/fourier-pricing/)
 
-- [Can a smooth price surface be compressed?](/compression/) — Exploring low rank and low-degree Chebyshev approximations through a Black–Scholes price surface.
+- [Compressing a smooth price surface](/compression/)
 
 ## Ideas
 
-[Ideas 🔒](/ideas/) — Research ideas in progress. Password required.
+[Ideas 🔒](/ideas/) — Password required.

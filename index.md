@@ -3,7 +3,6 @@
 ~~~
 <section class="profile" aria-labelledby="profile-name">
   <div>
-    <p class="eyebrow">Quantum computing · Tensor networks</p>
     <h1 id="profile-name">Rihito Sakurai</h1>
     <p class="affiliations">
       Researcher, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
@@ -25,7 +24,7 @@
 ~~~
 
 @@home-intro
-A few things I’ve been working on, and notes along the way.
+I’m interested in quantum computing, tensor networks, and post-processing methods for reducing the effects of noise.
 @@
 
 ## Recent publications
@@ -50,5 +49,3 @@ A few things I’ve been working on, and notes along the way.
     <span class="since">January 2026 – present</span></li>
 </ul>
 ~~~
-
-Also a current member of [Sustainable Quantum AI](https://sqai.jp).

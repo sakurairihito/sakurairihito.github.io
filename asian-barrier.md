@@ -9,23 +9,23 @@
 # Asian barrier option: a price surface
 
 @@article-lead
-A smooth-looking price surface. More structure in its second derivative.
+A smooth price surface, a more delicate Gamma.
 @@
 
-These plots evaluate a saved tensor train over moneyness $m=S_0/K$ and volatility $\sigma$. The degree-truncated approximation (labelled **ME** in the figures) retains degrees **26 and 7**, with **TT bond dimension 3**.
+A saved tensor train over moneyness $m=S_0/K$ and volatility $\sigma$. **ME** retains degrees **26 and 7**, with **rank 3**.
 
 ~~~
 <figure>
   <a href="/assets/asian-barrier/asian_price_surface.png">
     <img src="/assets/asian-barrier/asian_price_surface.png" alt="Three-dimensional Asian barrier option price surface over moneyness and volatility, evaluated from the degree-truncated tensor train." width="2106" height="1494" decoding="async">
   </a>
-  <figcaption>The saved price surface. Click any figure to enlarge it.</figcaption>
+  <figcaption>The degree-truncated price surface.</figcaption>
 </figure>
 ~~~
 
 ## Price and Gamma
 
-Truncation changes the price by at most **0.00111 on the plotted grid**. The Gamma surface looks smoother after truncation. A matched reference is still needed to assess accuracy.
+Truncation changes plotted prices by at most **0.00111** and makes Gamma look smoother. **Accuracy still needs a matched reference.**
 
 ~~~
 <figure>
@@ -38,28 +38,24 @@ Truncation changes the price by at most **0.00111 on the plotted grid**. The Gam
 
 ## Which degrees remain?
 
-The marginal Chebyshev coefficient amplitudes decay before reaching a small tail. The cutoffs retain degrees through **26 in moneyness** and **7 in volatility**.
+Chebyshev amplitudes decay to a small tail. Cutoffs: **26 in moneyness**, **7 in volatility**.
 
 ~~~
 <figure>
   <a href="/assets/asian-barrier/asian_tt_spectra.png">
     <img src="/assets/asian-barrier/asian_tt_spectra.png" alt="Marginal Chebyshev coefficient spectra for moneyness and volatility, comparing the raw tensor train with truncation at degrees 26 and 7." width="1872" height="1040" loading="lazy" decoding="async">
   </a>
-  <figcaption>Both spectra come from the saved TT. Isolating how TCI changes Monte Carlo noise would require full-grid MC values using the same samples.</figcaption>
+  <figcaption>Saved-TT spectra. Measuring TCI’s effect on noise requires same-sample full-grid Monte Carlo.</figcaption>
 </figure>
 ~~~
 
 ## Why so few coefficients?
 
-What I find striking is that a calculation involving **365 path steps and a barrier** can end up with such a compact representation. The paths are complicated, yet their average may have a much simpler shape.
-
-Averaging over paths can smooth the price's dependence on its inputs. Smooth variation can make high-degree Chebyshev coefficients small. **Low rank describes something else: a simple coupling between variables.** Smoothness alone does not guarantee low rank. Here, the saved approximation combines modest polynomial degrees with rank 3.
-
-When does this simplicity break down? Near the barrier, close to maturity, or over a wider parameter range? That is something I'd like to explore.
+**365 path steps and a barrier, yet a compact surface.** Averaging can smooth prices and reduce high-degree coefficients. Low rank reflects simple coupling between variables; smoothness alone does not guarantee it.
 
 ~~~
 <details>
-  <summary>Calculation settings and source</summary>
+  <summary>Settings &amp; sources</summary>
   <p>Risk-neutral model: μ = r = 0.05, strike K = 110, barrier B = 100, maturity T = 1. There are 365 monitoring steps and 10<sup>6</sup> antithetic pairs, with seed 1.</p>
   <p>Plotted interior domain: m ∈ [0.93, 1.17], σ ∈ [0.16, 0.24]. These are saved TT evaluations; no new sampling or reference comparison was performed for these plots.</p>
   <p>Source: the 3 October 2026 report, <i>Asian barrier: saved TT surfaces</i> (final version).</p>
