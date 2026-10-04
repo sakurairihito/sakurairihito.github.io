@@ -24,9 +24,9 @@
 @@about-me
 I’m currently working on implementing quantum error correction.
 
-My earlier work explored hybrid quantum–classical algorithms for quantum impurity models. I later worked on tensor-network methods for function compression and financial option pricing.
+My earlier research focused on applying quantum algorithms to condensed matter and quantum many-body systems. I later explored tensor-network methods for function compression and financial option pricing.
 
-The common thread is an interest in making ideas from physics useful for practical problems.
+My goal is to develop practical computational tools that use ideas from physics to solve difficult problems more efficiently.
 @@
 
 ## Recent publications
