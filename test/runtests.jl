@@ -33,3 +33,23 @@ include(joinpath(@__DIR__, "..", "utils.jl"))
         @test recent_publications("## Preprints\n1. Only one paper") == "- Only one paper"
     end
 end
+
+@testset "Full publications preserve sections and linked entries" begin
+    source = """
+    ## In Preparation
+    1. Hidden draft
+    ## Preprints
+    1. A. Author, [Preprint](https://example.org/preprint)
+    ## Journal articles
+    1. B. Author, [Paper](https://example.org/paper), Journal (2025)
+    ## Japanese articles
+    1. 著者, "[日本語の記事](https://example.org/japanese)", 会誌 (2024)
+    """
+    full = full_publications(source)
+    @test count(line -> startswith(line, "## "), split(full, '\n')) == 3
+    @test count(line -> startswith(line, "- ["), split(full, '\n')) == 3
+    @test occursin("著者 · 会誌 (2024)", full)
+    @test occursin("B. Author · Journal (2025)", full)
+    @test !occursin("Hidden draft", full)
+    @test !occursin("In Preparation", full)
+end

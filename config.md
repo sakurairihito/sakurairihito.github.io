@@ -6,6 +6,6 @@
 
 @def mintoclevel = 2
 
-@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md", "Project.toml", "Manifest.toml", "test/", "menu1_copy.md", "menu4_copy.md", "password/"]
+@def ignore = ["node_modules/", "franklin", "franklin.pub", "README.md", "Project.toml", "Manifest.toml", "test/", "_data/", "menu1_copy.md", "menu4_copy.md", "password/"]
 
 \newcommand{\R}{\mathbb R} \newcommand{\scal}[1]{\langle #1 \rangle}

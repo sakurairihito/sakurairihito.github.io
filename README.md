@@ -16,15 +16,15 @@ Open the local URL printed by Franklin. If Julia 1.13 is already your default, `
 
 ## Editing content
 
-- `index.md`: research interests beneath the name, followed by Career and recent publications. Current affiliations and Sustainable Quantum AI membership appear in Career. Career begins with the April 2024 JSPS postdoctoral fellowship at the University of Tokyo. Education and earlier appointments are omitted. The former `/career/` address redirects to `/#career`.
+- `index.md`: research interests beneath the name, followed by Career and recent publications. Current affiliations and Sustainable Quantum AI membership appear in Career. Career lists current appointments first and goes back to the April 2024 JSPS postdoctoral fellowship at the University of Tokyo. Education and earlier appointments are omitted. The former `/career/` address redirects to `/#career`.
 - `software.md`: software and resources, linked from the main navigation.
 - `memories.md`: public research memories, with one figure and a short reflection or research introduction per entry. Images live in `_assets/memories/`. Additional entries can repeat the `memory-entry` article structure with unique IDs, descriptive alt text, a short caption, and a paper link with attribution. Dates are optional. Personal recollections should come from the author.
-- `menu2.md`: complete publication list. Keep each publication on one numbered Markdown line, newest first within each section. On each full build, the home page automatically shows the first four entries from **Preprints**, followed by **Journal articles**. Work in preparation is not included in this summary.
+- `_data/publications.md`: shared bibliography for the home page and `menu2.md` (Publications). Keep each publication on one numbered Markdown line, newest first within each section. Both pages display linked titles above authors and venues. The home page shows the first four entries from **Preprints**, followed by **Journal articles**. Work in preparation is kept outside the public repository. The `_data/` directory is excluded from the generated site.
 - `_layout/` and `_css/`: shared page structure and styling.
 
 The existing `menu1_copy.md` and `menu4_copy.md` drafts and the local `password/` directory are excluded from site generation. The full CV and presentation list are kept outside this public repository; their old `/menu1/` and `/menu3/` pages have been withdrawn. The home page lists current affiliations and career history from the postdoctoral fellowship onward. Earlier versions of these pages remain in Git history.
 
-During `serve()`, editing `menu2.md` refreshes Publications only. Save `index.md` as well, or restart the preview, to refresh the home page's summary. Publishing always runs a full build and includes the latest entries.
+After editing `_data/publications.md`, restart the preview or run a full build to refresh both publication lists. Publishing always runs a full build.
 
 ## Verify and build
 

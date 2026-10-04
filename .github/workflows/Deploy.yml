@@ -47,7 +47,7 @@ jobs:
           test -f __site/ideas/index.html
           grep -q 'staticryptEncryptedMsgUniqueVariableName' __site/ideas/index.html
           test ! -f ideas.md
-          for path in menu1 menu3 password menu1_copy menu4_copy; do
+          for path in menu1 menu3 password menu1_copy menu4_copy _data; do
             if [ -e "__site/$path" ]; then
               echo "Refusing to publish private content: $path"
               exit 1

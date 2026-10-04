@@ -57,16 +57,18 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-
 .profile h1 { font-size: 28px; font-weight: 600; margin-bottom: 24px; letter-spacing: 0; }
 .profile .research-interests { color: var(--muted); font-size: 16px; line-height: 1.75; margin-bottom: 28px; }
 .since { color: var(--muted); font-size: 13px; }
+.franklin-content .career-list { list-style: none; padding-left: 0; font-size: 15px; line-height: 1.5; }
+.franklin-content .career-list li { padding-left: 0; margin-bottom: 12px; }
 .profile-photo { margin: 0; }
 .franklin-content .profile-photo img { display: block; width: 100%; padding: 0; border-radius: 12px; }
 .profile-photo figcaption { margin-top: 8px; color: var(--muted); font-size: 11px; text-align: center; }
 .profile-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .profile-links a { border: 1px solid var(--line); border-radius: 6px; padding: 8px 15px; font-size: 14px; font-weight: 600; }
 .profile-links a:hover { background: var(--surface); }
-.franklin-content .recent-publications { max-width: 800px; }
-.franklin-content .recent-publications ul { list-style: none; padding: 0; margin: 0; }
-.franklin-content .recent-publications li { padding: 0; margin-bottom: 28px; line-height: 1.55; }
-.franklin-content .recent-publications li p { margin: 0; }
+.franklin-content .publication-list { max-width: 800px; }
+.franklin-content .publication-list ul { list-style: none; padding: 0; margin: 0; }
+.franklin-content .publication-list li { padding: 0; margin-bottom: 28px; line-height: 1.55; }
+.franklin-content .publication-list li p { margin: 0; }
 .publication-meta { display: block; margin-top: 7px; color: var(--muted); font-size: 14px; line-height: 1.7; }
 .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .research-grid section { border-top: 3px solid var(--accent); padding-top: 14px; }
