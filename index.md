@@ -22,9 +22,9 @@
 ## About me
 
 @@about-me
-I work on both tensor networks and quantum computing. I have applied methods from quantum field theory to finance, and I’m now implementing quantum error correction to help quantum computers run complex calculations reliably.
+I work on both tensor networks and quantum computing. I’m now implementing quantum error correction to help quantum computers run complex calculations reliably.
 
-I want to understand which problems tensor networks can solve efficiently, and where quantum computers could do better.
+I want to understand which problems tensor networks can solve efficiently, and where quantum computers could do better. I’d like to see these methods become useful for real problems, even with imperfect models and noisy data.
 @@
 
 ## Recent publications
