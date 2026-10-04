@@ -22,9 +22,9 @@
 ## About me
 
 @@about-me
-My earlier research focused on applying quantum algorithms to condensed matter and quantum many-body systems. I later explored tensor-network methods for function compression and financial option pricing.
+I work on both tensor networks and quantum computing. I have applied methods from quantum field theory to finance, and I’m now implementing quantum error correction to help quantum computers run complex calculations reliably.
 
-I’m currently working on implementing quantum error correction.
+I want to understand which problems tensor networks can solve efficiently, and where quantum computers could do better.
 @@
 
 ## Recent publications
