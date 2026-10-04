@@ -4,11 +4,7 @@
 <section class="profile" aria-labelledby="profile-name">
   <div>
     <h1 id="profile-name">Rihito Sakurai</h1>
-    <p class="affiliations">
-      Researcher, <a href="https://www.blocqinc.com/">BlocQ, Inc.</a><br>
-      <a href="https://exa.phys.s.u-tokyo.ac.jp/ja">Visiting Researcher, University of Tokyo</a><br>
-      Member, <a href="https://sqai.jp">Sustainable Quantum AI</a>
-    </p>
+    <p class="research-interests">I’m interested in quantum computing, tensor networks, and post-processing methods for reducing the effects of noise.</p>
     <div class="profile-links">
       <a href="/memories/">Research memories</a>
       <a href="/research/">Research notes</a>
@@ -22,10 +18,6 @@
   </figure>
 </section>
 ~~~
-
-@@home-intro
-I’m interested in quantum computing, tensor networks, and post-processing methods for reducing the effects of noise.
-@@
 
 ## Career
 
@@ -43,6 +35,8 @@ I’m interested in quantum computing, tensor networks, and post-processing meth
     <span class="since">January 2026 – present</span></li>
 </ul>
 ~~~
+
+Member, [Sustainable Quantum AI](https://sqai.jp).
 
 ## Recent publications
 

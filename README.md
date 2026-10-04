@@ -16,7 +16,7 @@ Open the local URL printed by Franklin. If Julia 1.13 is already your default, `
 
 ## Editing content
 
-- `index.md`: current affiliations, a brief career history followed by recent publications. Career begins with the April 2024 JSPS postdoctoral fellowship at the University of Tokyo. Education and earlier appointments are omitted. The former `/career/` address redirects to `/#career`.
+- `index.md`: research interests beneath the name, followed by Career and recent publications. Current affiliations and Sustainable Quantum AI membership appear in Career. Career begins with the April 2024 JSPS postdoctoral fellowship at the University of Tokyo. Education and earlier appointments are omitted. The former `/career/` address redirects to `/#career`.
 - `software.md`: software and resources, linked from the main navigation.
 - `memories.md`: public research memories, with one figure and a short reflection or research introduction per entry. Images live in `_assets/memories/`. Additional entries can repeat the `memory-entry` article structure with unique IDs, descriptive alt text, a short caption, and a paper link with attribution. Dates are optional. Personal recollections should come from the author.
 - `menu2.md`: complete publication list. Keep each publication on one numbered Markdown line, newest first within each section. On each full build, the home page automatically shows the first four entries from **Preprints**, followed by **Journal articles**. Work in preparation is not included in this summary.
