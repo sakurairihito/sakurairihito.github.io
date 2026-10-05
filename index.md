@@ -22,9 +22,9 @@
 ## About me
 
 @@about-me
-My goal has been to bring these ideas into practical use. By working on both tensor networks and quantum computing, I want to understand what each can do, where their limits are, and how they can help solve real problems.
+I use tensor networks to find compact representations of complex systems and functions. I want to understand which problems we can solve efficiently this way, and where quantum computers could do better.
 
-I’m now working on implementing quantum error correction as a step toward making quantum computers reliable enough for that purpose.
+I’m currently implementing quantum error correction to help quantum computers carry out long calculations reliably. My goal is to turn these ideas into useful tools for problems that are difficult to solve today.
 @@
 
 ## Recent publications
