@@ -16,14 +16,14 @@ Open the local URL printed by Franklin. If Julia 1.13 is already your default, `
 
 ## Editing content
 
-- `index.md`: research interests beneath the name, a short personal introduction, and recent publications.
+- `index.md`: a short invitation to research collaborations beneath the name, profile links and photo, and recent publications.
 - `career.md`: current appointments first, followed by research positions back to the April 2024 JSPS postdoctoral fellowship at the University of Tokyo, plus Sustainable Quantum AI membership. Education and earlier appointments are omitted. Linked from the main navigation at `/career/`.
 - `software.md`: software and resources, linked from the main navigation.
 - `memories.md`: public research memories, with one figure and a short reflection or research introduction per entry. Images live in `_assets/memories/`. Additional entries can repeat the `memory-entry` article structure with unique IDs, descriptive alt text, a short caption, and a paper link with attribution. Dates are optional. Personal recollections should come from the author.
 - `_data/publications.md`: shared bibliography for the home page and `menu2.md` (Publications). Keep each publication on one numbered Markdown line, newest first within each section. Both pages display linked titles above authors and venues. The home page shows the first four entries from **Preprints**, followed by **Journal articles**. Work in preparation is kept outside the public repository. The `_data/` directory is excluded from the generated site.
 - `_layout/` and `_css/`: shared page structure and styling.
 
-The existing `menu1_copy.md` and `menu4_copy.md` drafts and the local `password/` directory are excluded from site generation. The full CV and presentation list are kept outside this public repository; their old `/menu1/` and `/menu3/` pages have been withdrawn. The home page has a brief introduction; career history from the postdoctoral fellowship onward is on `/career/`. Earlier versions of these pages remain in Git history.
+The existing `menu1_copy.md` and `menu4_copy.md` drafts and the local `password/` directory are excluded from site generation. The full CV and presentation list are kept outside this public repository; their old `/menu1/` and `/menu3/` pages have been withdrawn. The home page has a brief invitation to research collaborations; career history from the postdoctoral fellowship onward is on `/career/`. Earlier versions of these pages remain in Git history.
 
 After editing `_data/publications.md`, restart the preview or run a full build to refresh both publication lists. Publishing always runs a full build.
 
