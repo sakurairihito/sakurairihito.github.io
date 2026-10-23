@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A short reading note on Gaß et al. (2018): precompute option prices, interpolate across parameters, and reuse the approximation for fast evaluation.">
+  <meta name="author" content="Rihito Sakurai">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <title>Chebyshev interpolation for option pricing | Rihito Sakurai</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+  <div class="blog-name"><a href="/">Research &amp; notes</a></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/career/" >Career</a></li>
+      <li><a href="/memories/" >Memories</a></li>
+      <li><a href="/menu2/" >Publications</a></li>
+      <li><a href="/software/" >Software &amp; resources</a></li>
+      <li><a href="/research/" >Research notes</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main id="main-content">
+
+<!-- Content appended here -->
+<div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
+<h1 id="chebyshev_interpolation_for_option_pricing"><a href="#chebyshev_interpolation_for_option_pricing" class="header-anchor">Chebyshev interpolation for option pricing</a></h1>
+<div class="article-lead">Precompute a price surface for fast repeated evaluation.</div>
+<p>Calibration and risk calculations require prices at many parameter settings. <strong>Gaß, Glau, Mahlstedt and Mair &#40;2018&#41;</strong> approximate the dependence of the price on those parameters with Chebyshev polynomials, so the expensive pricing calculation can be reused. <a href="https://link.springer.com/article/10.1007/s00780-018-0361-y">Original paper</a>.</p>
+<h2 id="offline_and_online"><a href="#offline_and_online" class="header-anchor">Offline and online</a></h2>
+<ol>
+<li><p><strong>Offline:</strong> choose a parameter box, evaluate prices at Chebyshev nodes, and construct the interpolating polynomial. The node values can come from Monte Carlo, Fourier integration, or a PDE solver.</p>
+</li>
+<li><p><strong>Online:</strong> evaluate this polynomial at new parameters inside the box.</p>
+</li>
+</ol>
+<p>After rescaling the parameters to \(p\in[-1,1]^D\), the approximation is</p>
+\[
+V(p)\approx\sum_{j_1=0}^{n_1}\cdots\sum_{j_D=0}^{n_D}
+c_{j_1,\ldots,j_D}\prod_{i=1}^{D}T_{j_i}(p_i),
+\]
+<p>where \(T_j\) is a Chebyshev polynomial and \(D\) counts the varying parameters.</p>
+<h2 id="why_it_works"><a href="#why_it_works" class="header-anchor">Why it works</a></h2>
+<p>A payoff may have kinks even when its expected value is analytic in the parameters. The paper gives sufficient conditions for this analyticity: interpolation errors then decrease exponentially with polynomial degree. In terms of the total number of nodes \(N\), the tensor construction gives an error of order \(\rho^{-N^{1/D}}\) for some \(\rho>1\). It also establishes convergence results for price sensitivities. <a href="https://link.springer.com/article/10.1007/s00780-018-0361-y#Sec2">Sections 2–3</a>.</p>
+<p>Errors in the precomputed prices also propagate through the interpolation. Increasing the degree alone cannot remove Monte Carlo noise; node accuracy and interpolation accuracy must be balanced. <a href="https://link.springer.com/article/10.1007/s00780-018-0361-y#Sec5">Section 2.3</a>.</p>
+<h2 id="what_section_4_demonstrates"><a href="#what_section_4_demonstrates" class="header-anchor">What Section 4 demonstrates</a></h2>
+<p>The experiments include basket and path-dependent options under Black–Scholes, Heston and Merton models, and an American put priced by finite differences. These extend beyond the scope of the analyticity results.</p>
+<p>For a <strong>five-asset Heston lookback option</strong>, the efficiency study varies <strong>two model parameters</strong>, using \(7\times7=49\) interpolation nodes. At roughly comparable accuracy, the reported cost for <strong>10,000 parameter pairs</strong> is:</p>
+<table><tr><th align="right">Method</th><th align="right">Time</th></tr><tr><td align="right">Monte Carlo at every pair</td><td align="right">About 39 days, extrapolated from a single evaluation</td></tr><tr><td align="right">Chebyshev interpolation, including offline construction</td><td align="right">About 23 hours</td></tr><tr><td align="right">Online evaluation alone</td><td align="right">About 7 seconds</td></tr></table>
+<p>Including construction, the methods break even at roughly 225 price evaluations in this implementation. These timings describe the paper&#39;s particular benchmark. <a href="https://link.springer.com/article/10.1007/s00780-018-0361-y#Sec14">Section 4.2</a>.</p>
+<h2 id="connection_to_compression"><a href="#connection_to_compression" class="header-anchor">Connection to compression</a></h2>
+<p>The full grid still needs \(\prod_i(n_i+1)\) nodes: <strong>five assets do not mean five interpolated parameters</strong>. More varying parameters make tensor compression or sparse grids attractive, as discussed in the paper&#39;s outlook. Analyticity alone does not establish a small tensor rank.</p>
+<p>The <a href="/compression/">price-surface compression example</a> illustrates the complementary roles: low polynomial degree limits detail along each axis, while low rank compresses the coupling between axes.</p>
+<p>Two reproduced numerical notes make the distinction concrete: <a href="/chebfun-spread/">a spread option with Chebfun3</a> builds a three-parameter Tucker approximation, while <a href="/chebyshev-spline/">interpolation across a kink</a> compares one polynomial with two pieces joined at a known exercise boundary.</p>
+<p><a href="/option-maturity/">Option prices near expiry</a> shows how a smooth Black–Scholes price approaches a kinked payoff, and why a domain extending to zero remaining maturity needs separate treatment.</p>
+
+<details>
+  <summary>Paper</summary>
+  <p>Maximilian Gaß, Kathrin Glau, Mirco Mahlstedt and Maximilian Mair, <a href="https://doi.org/10.1007/s00780-018-0361-y">Chebyshev interpolation for parametric option pricing</a>, <em>Finance and Stochastics</em> 22, 701–731 (2018).</p>
+  <p>The article is available under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. This note summarizes its ideas and reported experiments.</p>
+</details>
+
+<p><a href="/research/">Back to research notes</a></p></div>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 23, 2026.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+  </main>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>

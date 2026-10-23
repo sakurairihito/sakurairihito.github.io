@@ -87,6 +87,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-
 .explainer figcaption { font-size: 14px; line-height: 1.7; color: var(--muted); margin-top: 12px; }
 .explainer .katex-display { overflow-x: auto; overflow-y: hidden; padding: 0.5em 0; }
 .explainer .katex-display .katex { white-space: nowrap; }
+.explainer pre { max-width: 100%; overflow-x: auto; }
 .explainer blockquote { margin: 24px 0; border-left: 3px solid var(--accent); padding: 16px 20px; background: var(--surface); font-style: normal; }
 .explainer blockquote p { display: block; }
 .explainer blockquote p:last-child { margin-bottom: 0; }

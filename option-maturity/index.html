@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A visual Black-Scholes example showing how a smooth call-price curve approaches a kinked payoff as maturity shrinks, and what this means for polynomial approximation.">
+  <meta name="author" content="Rihito Sakurai">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <title>Option prices near expiry | Rihito Sakurai</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+  <div class="blog-name"><a href="/">Research &amp; notes</a></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/career/" >Career</a></li>
+      <li><a href="/memories/" >Memories</a></li>
+      <li><a href="/menu2/" >Publications</a></li>
+      <li><a href="/software/" >Software &amp; resources</a></li>
+      <li><a href="/research/" >Research notes</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main id="main-content">
+
+<!-- Content appended here -->
+<div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
+<h1 id="option_prices_near_expiry"><a href="#option_prices_near_expiry" class="header-anchor">Option prices near expiry</a></h1>
+<div class="article-lead">A smooth price curve can still become difficult to resolve near expiry.</div>
+<p>An option payoff and its price before expiry need not have the same smoothness. This note varies the remaining maturity of a European call while keeping all other inputs fixed. The resulting curves show where the smoothing disappears, and why the approximation domain matters when choosing a basis.</p>
+
+<figure>
+  <a href="/assets/option-maturity/results/call-maturity.png">
+    <img src="/assets/option-maturity/results/call-maturity.png" alt="Black-Scholes call prices for one year, three months, thirty days and one day of remaining maturity approach the dashed expiry payoff. A close-up shows the shrinking rounded region near strike 100." width="2280" height="1045" fetchpriority="high">
+  </a>
+  <figcaption>Left: spot prices from 60 to 140. Right: a close-up near the strike. Markers give the price at S = 100. These are theoretical curves at fixed model inputs, not the trajectory of a traded option.</figcaption>
+</figure>
+
+<h2 id="a_controlled_maturity_comparison"><a href="#a_controlled_maturity_comparison" class="header-anchor">A controlled maturity comparison</a></h2>
+<p>Write \(\tau=T-t\) for the time remaining until expiry. We use strike \(K=100\), volatility \(\sigma=0.2\), and zero interest rate and dividend yield. For \(S>0\) and \(\tau>0\), the Black–Scholes call price is</p>
+\[
+C(S,\tau)=S\Phi(d_1)-K\Phi(d_2),\qquad
+d_1=\frac{\log(S/K)+\sigma^2\tau/2}{\sigma\sqrt{\tau}},\qquad
+d_2=d_1-\sigma\sqrt{\tau},
+\]
+<p>where \(\Phi\) is the standard normal cumulative distribution function. At expiry we evaluate the payoff directly:</p>
+\[
+C(S,0)=(S-K)_+.
+\]
+<table><tr><th align="right">Remaining maturity</th><th align="right">Years</th><th align="right">Price at \(S=K=100\)</th></tr><tr><td align="right">1 year</td><td align="right">1</td><td align="right">7.965567</td></tr><tr><td align="right">3 months</td><td align="right">0.25</td><td align="right">3.987761</td></tr><tr><td align="right">30 days</td><td align="right">\(30/365\)</td><td align="right">2.287151</td></tr><tr><td align="right">1 day</td><td align="right">\(1/365\)</td><td align="right">0.417630</td></tr><tr><td align="right">Expiry</td><td align="right">0</td><td align="right">0</td></tr></table>
+<p>Days use a 365-day year; three months means exactly 0.25 years. <strong>In this zero-rate, zero-dividend model, holding spot and volatility fixed, the price decreases as the remaining time shrinks.</strong> This is not a claim about every option or about market prices along a changing spot path.</p>
+<p>At the strike, the formula simplifies to</p>
+\[
+C(K,\tau)=K\left[2\Phi\!\left(\frac{\sigma\sqrt{\tau}}{2}\right)-1\right]
+\sim\frac{K\sigma\sqrt{\tau}}{\sqrt{2\pi}}
+\quad(\tau\downarrow0).
+\]
+<p>Thus the at-the-money price approaches zero like \(\sqrt{\tau}\), rather than linearly in remaining time.</p>
+<h2 id="smooth_prices_concentrated_curvature"><a href="#smooth_prices_concentrated_curvature" class="header-anchor">Smooth prices, concentrated curvature</a></h2>
+<p>For every positive \(\tau\), the price is smooth in positive spot. Its spot derivatives are</p>
+\[
+\Delta=\Phi(d_1),\qquad
+\Gamma=\frac{\phi(d_1)}{S\sigma\sqrt{\tau}},
+\]
+<p>where \(\phi\) is the standard normal density. Near expiry, Delta changes rapidly from approximately zero to approximately one around the strike. At \(S=K\),</p>
+\[
+\Gamma(K,\tau)\sim\frac{1}{K\sigma\sqrt{2\pi\tau}}.
+\]
+<p>The region where Delta changes has a characteristic spot width of order \(K\sigma\sqrt{\tau}\). This scale follows from the standardized log-moneyness in \(d_1\); it is not a sharp boundary. The transition becomes narrower while Gamma grows. At expiry the payoff has a kink, and its ordinary Delta and Gamma are undefined at the strike.</p>
+<h2 id="implications_for_an_approximation_basis"><a href="#implications_for_an_approximation_basis" class="header-anchor">Implications for an approximation basis</a></h2>
+<p><a href="https://link.springer.com/article/10.1007/s00780-018-0361-y">Gaß, Glau, Mahlstedt and Mair &#40;2018&#41;</a> give analyticity conditions and error bounds for Chebyshev interpolation of parametric option prices. Their bounds depend on the domain of analytic extension and the size of the function there; the paper also discusses piecewise Chebyshev approximation. See the <a href="/chebyshev-pricing/">paper note</a> for the offline/online construction.</p>
+<p>The present example explains why positive-time smoothness alone is not enough to choose a fixed polynomial degree for all maturities. A joint spot–maturity domain that includes \(\tau=0\) contains the payoff kink; at the strike it also contains the square-root dependence on \(\tau\). One cannot simply extend a positive-maturity analyticity argument through that boundary.</p>
+<p>Two structural choices are relevant. First, local refinement near the strike can resolve a narrow transition without refining the whole spot interval equally. At positive maturity, splitting exactly at the strike does not make either price branch linear: the rounded transition remains. At expiry, however, the two payoff branches are linear, as in the <a href="/chebyshev-spline/">piecewise interpolation example</a>.</p>
+<p>Second, remove redundant scales before approximating. In the zero-rate setting here,</p>
+\[
+x=\frac{S}{K},\qquad w=\sigma\sqrt{\tau},\qquad C=K\,G(x,w),
+\]
+\[
+G(x,w)=x\Phi\!\left(\frac{\log x}{w}+\frac{w}{2}\right)
+-\Phi\!\left(\frac{\log x}{w}-\frac{w}{2}\right),\qquad w>0.
+\]
+<p>At \(w=0\), define \(G(x,0)=(x-1)_+\). Total volatility \(w\) absorbs the separate volatility and maturity inputs, but does not remove the kink at \((x,w)=(1,0)\).</p>
+<p>For tensor cross interpolation &#40;TCI&#41;, the coordinate domain and its resolution therefore deserve attention alongside the tensor rank. <strong>This figure does not measure interpolation errors, TT ranks, or sampling costs.</strong> Whether a coordinate change or local partition improves those quantities requires a separate comparison at matched accuracy, including Delta and Gamma if they are outputs of interest.</p>
+<h2 id="reproduce_the_figure"><a href="#reproduce_the_figure" class="header-anchor">Reproduce the figure</a></h2>
+<p>Download the <a href="/assets/option-maturity/plot_maturity.py">Python script</a>, then run it with NumPy, SciPy and Matplotlib installed:</p>
+<pre><code class="language-bash">python3 -B plot_maturity.py new_results</code></pre>
+<p>Use a new output-directory name. The script exports both figure formats, all five price curves on 3,201 spot points, and a numerical-check summary.</p>
+<p>The saved run checks four prices against independent integration of the terminal payoff over a truncated standard-normal interval; their maximum discrepancy is below \(10^{-10}\). It also checks price bounds, maturity monotonicity on the sampled grid, the expiry limit, and centered finite-difference checks of Delta and Gamma. These are numerical consistency checks, not certified error bounds.</p>
+<p>Downloads: <a href="/assets/option-maturity/results/call-maturity.png">PNG</a> · <a href="/assets/option-maturity/results/call-maturity.svg">SVG</a> · <a href="/assets/option-maturity/results/call-maturity.csv">Price data</a> · <a href="/assets/option-maturity/results/checks.json">Checks and package versions</a>.</p>
+<p><a href="/research/">Back to research notes</a></p></div>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 23, 2026.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+  </main>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+        <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reproduced Python experiment comparing one Chebyshev polynomial with two pieces joined at a known kink, including value and Delta errors.">
+  <meta name="author" content="Rihito Sakurai">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <title>Chebyshev interpolation across a kink | Rihito Sakurai</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+  <div class="blog-name"><a href="/">Research &amp; notes</a></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/career/" >Career</a></li>
+      <li><a href="/memories/" >Memories</a></li>
+      <li><a href="/menu2/" >Publications</a></li>
+      <li><a href="/software/" >Software &amp; resources</a></li>
+      <li><a href="/research/" >Research notes</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main id="main-content">
+
+<!-- Content appended here -->
+<div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
+<h1 id="chebyshev_interpolation_across_a_kink"><a href="#chebyshev_interpolation_across_a_kink" class="header-anchor">Chebyshev interpolation across a kink</a></h1>
+<div class="article-lead">Split at the kink, then approximate each smooth piece.</div>
+<p>The supplied <code>cheb_spline_demo.py</code> compares a single Chebyshev polynomial with two polynomial pieces. Both use Chebyshev–Lobatto nodes. Re-running the script shows how strongly a known kink can affect the accuracy of the value and its derivative.</p>
+
+<figure>
+  <a href="/assets/chebyshev-spline/results/spline-boundary.png">
+    <img src="/assets/chebyshev-spline/results/spline-boundary.png" alt="An exercise value has a kink at spot 89.4953. A degree-32 polynomial oscillates around its Delta jump, while two degree-16 pieces follow the one-sided derivatives." width="1980" height="774" fetchpriority="high">
+  </a>
+  <figcaption>33 distinct interpolation nodes in each representation. The split location is known before interpolation.</figcaption>
+</figure>
+
+<h2 id="two_examples"><a href="#two_examples" class="header-anchor">Two examples</a></h2>
+<p>For \(f(x)=|x-0.3|\) on \([-1,1]\), splitting at \(x=0.3\) leaves two linear functions. Each piece can therefore be represented exactly in exact arithmetic; the observed errors are around floating-point roundoff.</p>
+<p>The second example makes one exercise decision:</p>
+\[
+V(S)=\max\{100-S,\;P_{\mathrm{European}}(S)\}.
+\]
+<p>The continuation value is a Black–Scholes European put with strike 100, rate 5&#37;, volatility 20&#37;, and maturity one year. The spot interval is \([50,150]\). Solving \(100-S=P_{\mathrm{European}}(S)\) gives</p>
+\[
+S^\star=89.4952812319501.
+\]
+<p>The left Delta is \(-1\); its right-hand limit is approximately \(-0.581183\). <strong>Delta is undefined at the boundary.</strong> This is a two-date exercise example, with exercise now or at maturity. The script does not perform backward induction over multiple exercise dates.</p>
+<h2 id="reproduced_errors"><a href="#reproduced_errors" class="header-anchor">Reproduced errors</a></h2>
+
+<figure>
+  <a href="/assets/chebyshev-spline/results/spline-convergence.png">
+    <img src="/assets/chebyshev-spline/results/spline-convergence.png" alt="Three convergence plots compare one polynomial with two pieces: absolute-value error, exercise-value error, and Delta error. Splitting sharply reduces all three errors." width="2340" height="774" loading="lazy">
+  </a>
+  <figcaption>Maximum absolute errors sampled on 4,001 uniform points. Delta excludes points within 10⁻⁶ of the exercise boundary. These are sampled errors, not uniform error bounds.</figcaption>
+</figure>
+
+<p>For the exercise example:</p>
+<div style="overflow-x:auto">
+<table><tr><th align="right">Distinct nodes</th><th align="right">Value: one polynomial</th><th align="right">Value: two pieces</th><th align="right">Delta: one polynomial</th><th align="right">Delta: two pieces</th></tr><tr><td align="right">17</td><td align="right">\(3.14\times10^{-1}\)</td><td align="right">\(8.07\times10^{-5}\)</td><td align="right">\(2.16\times10^{-1}\)</td><td align="right">\(5.25\times10^{-5}\)</td></tr><tr><td align="right">33</td><td align="right">\(1.44\times10^{-1}\)</td><td align="right">\(7.06\times10^{-11}\)</td><td align="right">\(2.25\times10^{-1}\)</td><td align="right">\(7.09\times10^{-11}\)</td></tr><tr><td align="right">65</td><td align="right">\(1.30\times10^{-1}\)</td><td align="right">\(1.49\times10^{-13}\)</td><td align="right">\(2.30\times10^{-1}\)</td><td align="right">\(2.22\times10^{-12}\)</td></tr></table>
+</div>
+<p>A single polynomial must approximate both sides of the kink. Its sampled Delta error remains about 0.2 over the tested degrees. Each split piece instead approximates a smooth branch. Increasing the degree eventually reaches a numerical error floor, especially after differentiation.</p>
+<h2 id="what_is_counted"><a href="#what_is_counted" class="header-anchor">What is counted?</a></h2>
+<p>A global degree-\(N\) polynomial uses \(N+1\) nodes. For even \(N\), two degree-\(N/2\) pieces have \(N+2\) node slots, but share the boundary: <strong>there are also \(N+1\) distinct nodes</strong>.</p>
+<p>The supplied implementation evaluates the shared boundary twice, so it performs \(N+2\) sample evaluations. Finding the boundary with Brent&#39;s method is an additional cost, excluded from the plot. The comparison matches distinct-node counts; it is not an equal-runtime experiment.</p>
+<p>Here “Chebyshev spline” means a piecewise polynomial joined continuously in value. No continuity of the first or second derivative is imposed. At the exercise boundary, enforcing a continuous Delta would remove a real feature of the function.</p>
+<p>The <a href="/chebyshev-pricing/">parametric-pricing note</a> explains why smooth price dependence supports fast polynomial approximation. This example illustrates the complementary case: when the target retains a kink, the interval partition matters.</p>
+
+<details>
+  <summary>Reproduction, checks &amp; downloads</summary>
+  <p>The <a href="/assets/chebyshev-spline/cheb_spline_demo.py">supplied script</a> is preserved unchanged. The <a href="/assets/chebyshev-spline/reproduce_cheb_spline.py">reproduction wrapper</a> exports its tables and draws the figures above. Download the <a href="/assets/chebyshev-spline/reproduction.zip">complete reproduction bundle</a>.</p>
+  <p>Run <code>python3 -B cheb_spline_demo.py</code> for the original plot, or <code>python3 -B reproduce_cheb_spline.py new_results</code> for the tables, checks, and revised figures. Keep both scripts together. Dependencies: NumPy, SciPy, and Matplotlib. The saved run used Python 3.10.0, NumPy 1.26.4, SciPy 1.15.3, and Matplotlib 3.10.8.</p>
+  <p>Checks include the boundary equation, interpolation at the nodes, continuity of the two pieces, and comparison with an independent barycentric evaluation. A separate 16,001-point grid confirms the displayed degree-32 error scale. The exact derivative at the kink is never used as a reference.</p>
+  <p>Data: <a href="/assets/chebyshev-spline/results/absolute_value.csv">absolute-value errors</a> · <a href="/assets/chebyshev-spline/results/exercise_value.csv">exercise-value and Delta errors</a> · <a href="/assets/chebyshev-spline/results/summary.json">parameters, source hash, and validation results</a>.</p>
+  <p><a href="https://numpy.org/doc/stable/reference/generated/numpy.polynomial.chebyshev.Chebyshev.fit.html">NumPy's Chebyshev.fit</a> solves a least-squares problem; here the degree and number of distinct nodes make it the square interpolation problem, up to floating-point error. The boundary uses <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.brentq.html">SciPy's brentq</a>.</p>
+</details>
+
+<p><a href="/research/">Back to research notes</a></p></div>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 23, 2026.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+  </main>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>

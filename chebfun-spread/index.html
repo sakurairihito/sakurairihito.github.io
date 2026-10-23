@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reproducing Chebfun's 2017 spread-option example: a three-parameter Tucker approximation, fast evaluation, and an independent check of quadrature error.">
+  <meta name="author" content="Rihito Sakurai">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <title>A spread option with Chebfun3 | Rihito Sakurai</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+  <div class="blog-name"><a href="/">Research &amp; notes</a></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/career/" >Career</a></li>
+      <li><a href="/memories/" >Memories</a></li>
+      <li><a href="/menu2/" >Publications</a></li>
+      <li><a href="/software/" >Software &amp; resources</a></li>
+      <li><a href="/research/" >Research notes</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main id="main-content">
+
+<!-- Content appended here -->
+<div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
+<h1 id="a_spread_option_with_chebfun3"><a href="#a_spread_option_with_chebfun3" class="header-anchor">A spread option with Chebfun3</a></h1>
+<div class="article-lead">Two assets. Three parameters. A compact price approximation.</div>
+<p><a href="https://www.chebfun.org/examples/applics/BlackScholes2D.html">Glau, Hashemi, Mahlstedt and Poetz &#40;2017&#41;</a> use Chebfun3 to approximate a spread-option price as maturity \(T\), strike \(K\), and correlation \(\rho\) vary. The reproduction below recovers the article&#39;s reported ranks and interpolation error, then checks the underlying numerical integral independently.</p>
+
+<figure>
+  <a href="/assets/chebfun-spread/analysis/spread-slices.png">
+    <img src="/assets/chebfun-spread/analysis/spread-slices.png" alt="Three slices of the reproduced spread-option price over maturity, strike, and correlation, at T=2, K=0.3, and rho=-0.9." width="2340" height="737" fetchpriority="high">
+  </a>
+  <figcaption>Slices of the reproduced classic Chebfun3 approximation. Both initial asset prices are 1, both volatilities are 0.3, and the risk-free rate is zero.</figcaption>
+</figure>
+
+<h2 id="from_an_expectation_to_a_function_of_parameters"><a href="#from_an_expectation_to_a_function_of_parameters" class="header-anchor">From an expectation to a function of parameters</a></h2>
+<p>The model and payoff are</p>
+\[
+\frac{dS_i}{S_i}=r\,dt+\sigma_i\,dW_i,\qquad
+dW_1\,dW_2=\rho\,dt,
+\]
+\[
+V(T,K,\rho)=e^{-rT}\mathbb{E}\!\left[(S_1(T)-S_2(T)-K)_+\right].
+\]
+<p>The log return \(X_i=\log(S_i(T)/S_i(0))\) has mean \((r-\sigma_i^2/2)T\). The article&#39;s opening SDE appears to place this log-price drift in the equation for \(dS_i/S_i\); its integration code uses the appropriate log-return distribution.</p>
+<p>Each price evaluation uses <strong>150 × 150 Clenshaw–Curtis nodes</strong> on \([-10,10]^2\) in log-return coordinates. Chebfun3 then approximates the resulting function on</p>
+\[
+[0.3,2]\times[0.3,2]\times[-0.9,0.9]
+\]
+<p>in \((T,K,\rho)\). The two integration dimensions and the three interpolation dimensions have different meanings.</p>
+<h2 id="a_tucker_representation"><a href="#a_tucker_representation" class="header-anchor">A Tucker representation</a></h2>
+<p>Chebfun3 represents the function as</p>
+\[
+\widetilde V(T,K,\rho)=
+\sum_{i=1}^{r_T}\sum_{j=1}^{r_K}\sum_{\ell=1}^{r_\rho}
+G_{ij\ell}\,a_i(T)b_j(K)c_\ell(\rho).
+\]
+<p>The core couples three families of one-dimensional functions. Their Chebyshev lengths control resolution within each parameter; the core dimensions describe the Tucker ranks. See the <a href="https://www.chebfun.org/docs/guide/guide18.html">Chebfun3 guide</a>.</p>
+<p>The guide identifies <code>classic</code> as the original construction algorithm. Using it with <code>eps &#61; 1e-5</code> reproduces the 2017 example:</p>
+<table><tr><th align="right">Quantity</th><th align="right">Article</th><th align="right">Local reproduction</th></tr><tr><td align="right">Tucker ranks</td><td align="right">5, 10, 7</td><td align="right">5, 10, 7</td></tr><tr><td align="right">Chebyshev lengths</td><td align="right">10, 42, 13</td><td align="right">10, 42, 13</td></tr><tr><td align="right">Maximum error against the 150-point price routine</td><td align="right">\(2.5650\times10^{-4}\)</td><td align="right">\(2.56498685\times10^{-4}\)</td></tr></table>
+<p>The lengths correspond to maximum degrees 9, 41, and 12. Errors are measured at the same \(15^3=3375\) uniformly spaced parameter combinations.</p>
+<p>In this Octave run, construction took <strong>78.95 seconds</strong>, direct evaluation at the test grid took <strong>3.72 seconds</strong>, and evaluation of the approximation took <strong>0.00592 seconds</strong> &#40;median of five warmed evaluations&#41;. Construction called the scalar price routine 62,667 times, including repeated calls; this is not a count of unique parameter points. These timings depend on the machine, runtime, and measurement procedure.</p>
+<h2 id="interpolation_error_and_pricing_error"><a href="#interpolation_error_and_pricing_error" class="header-anchor">Interpolation error and pricing error</a></h2>
+<p>An accurate approximation to a numerical integral can still inherit the integral&#39;s error. We independently condition on the second asset, evaluate the conditional call expectation analytically, and integrate only one standard normal variable.</p>
+
+<figure>
+  <a href="/assets/chebfun-spread/analysis/spread-errors.png">
+    <img src="/assets/chebfun-spread/analysis/spread-errors.png" alt="The 150-point quadrature error is larger than the interpolation error. A separate refinement check at 27 parameter points reduces quadrature error as the nodes per axis increase from 150 to 1200." width="1980" height="774" loading="lazy">
+  </a>
+  <figcaption>Left: the article's 3,375-point test grid. Right: a separate 27-point quadrature study; its maximum is over a different set of points.</figcaption>
+</figure>
+
+<table><tr><th align="right">Comparison on the 3,375-point grid</th><th align="right">Maximum absolute error</th></tr><tr><td align="right">Classic Chebfun3 vs. 150-point quadrature</td><td align="right">\(2.5650\times10^{-4}\)</td></tr><tr><td align="right">150-point quadrature vs. conditional reference</td><td align="right">\(5.5339\times10^{-3}\)</td></tr><tr><td align="right">Classic Chebfun3 vs. conditional reference</td><td align="right">\(5.5689\times10^{-3}\)</td></tr></table>
+<p>The largest quadrature discrepancy occurs at \((T,K,\rho)=(0.3,0.42142857,-0.9)\): the original quadrature gives <strong>0.01986727</strong>, while the conditional reference gives <strong>0.01433340</strong>. Tightening the approximation alone does not resolve this discrepancy. Increasing quadrature resolution improves the separate 27-point check.</p>
+<p>An additional 500 random parameter points give a maximum interpolation error of \(2.281\times10^{-4}\) and a maximum total discrepancy of \(1.015\times10^{-3}\) for the classic construction. All these checks are sampled comparisons, not error bounds over the parameter box.</p>
+<h2 id="reproduce_the_calculation"><a href="#reproduce_the_calculation" class="header-anchor">Reproduce the calculation</a></h2>
+<p>Download the <a href="/assets/chebfun-spread/reproduction.zip">complete bundle</a>, containing code, numerical outputs, figures, and checks. It uses Chebfun revision <a href="https://github.com/chebfun/chebfun/tree/7574c77680d7e82b79626300bf255498271a72df"><code>7574c77680d7e82b79626300bf255498271a72df</code></a>.</p>
+<pre><code class="language-matlab">run_chebfun_spread&#40;&#39;/path/to/chebfun&#39;, &#39;new_results&#39;&#41;</code></pre>
+<pre><code class="language-bash">python3 -B test_reference.py
+python3 -B analyse_spread.py new_results new_analysis</code></pre>
+<p>The saved run used GNU Octave 11.3.0. A small, tested adapter supplies the two-input page-matrix multiplication used by this Chebfun revision; the library itself was not edited. This verifies the exercised example, not general Octave compatibility or a MATLAB timing result.</p>
+
+<details>
+  <summary>Independent reference and validation details</summary>
+  <p>For a standard normal value z of the second asset, let m = −σ₁²T/2 + ρσ₁√T z, v = σ₁²T(1−ρ²), and L = exp(−σ₂²T/2 + σ₂√T z) + K. The conditional payoff expectation is exp(m + v/2) Φ((m + v − log L)/√v) − L Φ((m − log L)/√v). Integrating this expression against the standard normal density gives the reference for the zero-rate, unit-spot setting used here.</p>
+  <p>The one-dimensional integration uses SciPy quad_vec on [−12,12] with absolute and relative tolerance 10⁻¹². A separate [−10,10] calculation with tolerance 10⁻¹¹ changes the grid prices by at most 1.39 × 10⁻¹⁶. These are numerical consistency checks, not certified tail or roundoff bounds. At zero strike, the reference also agrees with the exchange-option formula at nine maturity/correlation combinations.</p>
+  <p>We independently reproduce the Clenshaw–Curtis nodes, weights, and selected prices in Python. Exported Tucker factors reproduce all saved Chebfun grid and random evaluations within 3.4 × 10⁻¹⁶. The export includes the endpoint values that Chebfun stores separately from its polynomial coefficients.</p>
+  <p>The current default constructor at the pinned revision is also recorded: ranks (5,10,7), lengths (10,29,12), and maximum grid discrepancy 6.0012 × 10⁻⁴ against the same quadrature. The constructor's tolerance is not an absolute price-error guarantee.</p>
+  <p>Download <a href="/assets/chebfun-spread/run_chebfun_spread.m">the MATLAB/Octave driver</a>, <a href="/assets/chebfun-spread/analyse_spread.py">the independent analysis</a>, <a href="/assets/chebfun-spread/analysis/summary.json">the full numerical summary</a>, <a href="/assets/chebfun-spread/analysis/grid_comparison.csv">grid prices</a>, <a href="/assets/chebfun-spread/analysis/random_comparison.csv">random-point prices</a>, or <a href="/assets/chebfun-spread/provenance.json">source hashes</a>.</p>
+</details>
+
+<p>Related: <a href="/chebyshev-pricing/">Gaß et al. &#40;2018&#41;, parametric option pricing</a> · <a href="/compression/">Low rank and low polynomial degree</a> · <a href="/chebyshev-spline/">Piecewise approximation at a kink</a>.</p>
+<p><a href="/research/">Back to research notes</a></p></div>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 23, 2026.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+  </main>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+        <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+  </body>
+</html>
