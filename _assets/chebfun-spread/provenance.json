@@ -1,0 +1,20 @@
+{
+  "commit": "7574c77680d7e82b79626300bf255498271a72df",
+  "source": "https://github.com/chebfun/chebfun",
+  "library_files_sha256": {
+    "@chebfun3/chebfun3.m": "0132235c9929b88c44e4fe5ab5476bb7cee071c63413a97a65fc00f0d221fb31",
+    "@chebfun3/chebfun3classic.m": "e2643a69c6787fee4d02cb4a7f053da751c4eb9f45b5e1e2e18c9809836aeebb",
+    "@chebfun3/chebfun3f.m": "caf3a64341eba8617ed9ee57143264605b6ccda434ff1fec78c57beeb341b1c8",
+    "@chebfun3/feval.m": "3b8cc4c685ec1a0eeecfa9df4759031fb9e52ffb232017e6a28037cc3c5bcd21",
+    "@chebfun/feval.m": "e631fe0234de819a8dc0f6846424121808dc52d54d5a483ad6e998cf9ce452a6",
+    "chebpts.m": "250cd977b1740fb332795a2afdb89f0bf6a86758861a89019acc0cbfbcae81ad"
+  },
+  "adapter": "octave_compat/pagemtimes.m; library files were not edited",
+  "scripts_sha256": {
+    "test_reference.py": "b80f2da903008c76fbe595c28beb7b92990ef6e543ab2fb64ec1ea10e2eab6d1",
+    "test_compat.m": "0810d9d1e1aed832ebb69b6d7693386013ea4aef1dcadfc3aa894f861317e673",
+    "run_chebfun_spread.m": "6e25ebbdd7331e2884a897fab000f57915e49151c30e1f5730d3cf2ef42b5d8d",
+    "analyse_spread.py": "72a2bd7af2ad9a9eba9dc77cdb2a3495e8d2c1bdbd0272f72a4b134f4f95ff49",
+    "octave_compat/pagemtimes.m": "2e11752b51eb4345f43364a74aaa76facf52b17ed7cf4da91b1c848c705efbc2"
+  }
+}

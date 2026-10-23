@@ -1,0 +1,81 @@
+{
+  "source_sha256": "9d78b2d73bafe619cbd6a914173837ad2657aba0039c9b8571028cb2eadaba1d",
+  "environment": {
+    "python": "3.10.0 (default, Apr  3 2026, 14:56:05) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.8",
+    "platform": "macOS-15.6.1-arm64-arm-64bit"
+  },
+  "parameters": {
+    "K": 100.0,
+    "r": 0.05,
+    "sigma": 0.2,
+    "T": 1.0,
+    "spot_domain": [
+      50,
+      150
+    ]
+  },
+  "exercise_boundary": 89.4952812319501,
+  "boundary_residual": 7.105427357601002e-15,
+  "left_delta_at_boundary": -1.0,
+  "right_delta_at_boundary": -0.5811832436446273,
+  "validation_points": 4001,
+  "delta_exclusion_radius": 1e-06,
+  "counts": {
+    "single_unique_nodes": "N+1",
+    "piecewise_unique_nodes": "N+1",
+    "single_sample_evaluations": "N+1",
+    "piecewise_sample_evaluations": "N+2",
+    "boundary_search_cost_included": false
+  },
+  "checks": {
+    "barycentric_vs_fitted_degree32": 4.1966430330830917e-13,
+    "piecewise_node_residual_degree16": 9.237055564881302e-14,
+    "piecewise_join_gap_degree16": 7.460698725481052e-14
+  },
+  "degree32_refined_grid_16001": {
+    "single_price": 0.14442534421689146,
+    "piecewise_price": 7.063838403098543e-11,
+    "single_delta": 0.2253142009107566,
+    "piecewise_delta": 7.086406461631611e-11
+  },
+  "selected_rows": [
+    {
+      "unique_nodes": 9.0,
+      "single_price": 1.2959969949263055,
+      "piecewise_price": 0.02342146451876781,
+      "single_delta": 0.253019488570681,
+      "piecewise_delta": 0.010530099249574487
+    },
+    {
+      "unique_nodes": 17.0,
+      "single_price": 0.3144191721021876,
+      "piecewise_price": 8.070595254494606e-05,
+      "single_delta": 0.21582088462344418,
+      "piecewise_delta": 5.246738038167109e-05
+    },
+    {
+      "unique_nodes": 33.0,
+      "single_price": 0.1444244649035511,
+      "piecewise_price": 7.063727380796081e-11,
+      "single_delta": 0.2253142009107566,
+      "piecewise_delta": 7.086406461631611e-11
+    },
+    {
+      "unique_nodes": 65.0,
+      "single_price": 0.1302295292932545,
+      "piecewise_price": 1.4921397450962104e-13,
+      "single_delta": 0.2303592759195744,
+      "piecewise_delta": 2.2173374247813626e-12
+    },
+    {
+      "unique_nodes": 129.0,
+      "single_price": 0.0733610180716866,
+      "piecewise_price": 2.7355895326763857e-13,
+      "single_delta": 0.2254006107826041,
+      "piecewise_delta": 4.940492459581947e-12
+    }
+  ]
+}

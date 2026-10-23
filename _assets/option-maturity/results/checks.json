@@ -1,0 +1,40 @@
+{
+  "model": "Black-Scholes European call",
+  "strike": 100.0,
+  "volatility": 0.2,
+  "rate": 0,
+  "dividend_yield": 0,
+  "day_convention": "365 days/year; three months = 0.25 years",
+  "quadrature_max_abs_discrepancy": 7.549516567451064e-15,
+  "expiry_limit_grid_max_abs_error_at_1e-12_years": 7.978845601996909e-06,
+  "delta_finite_difference_max_abs_discrepancy": 1.2440412588965444e-09,
+  "gamma_finite_difference_max_abs_discrepancy": 3.562424299996536e-08,
+  "atm_prices": [
+    {
+      "remaining_years": 1.0,
+      "price": 7.965567455405804
+    },
+    {
+      "remaining_years": 0.25,
+      "price": 3.987761167674492
+    },
+    {
+      "remaining_years": 0.0821917808219178,
+      "price": 2.2871506280449694
+    },
+    {
+      "remaining_years": 0.0027397260273972603,
+      "price": 0.41762995960262117
+    },
+    {
+      "remaining_years": 0,
+      "price": 0.0
+    }
+  ],
+  "versions": {
+    "python": "3.10.0",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "matplotlib": "3.10.8"
+  }
+}

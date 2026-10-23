@@ -1,0 +1,204 @@
+{
+  "chebfun": {
+    "runtime": "11.3.0",
+    "domain": [
+      0.3,
+      2,
+      0.3,
+      2,
+      -0.9,
+      0.9
+    ],
+    "quadrature_nodes": 150,
+    "tolerance": 1e-05,
+    "construction_rng_seed": 0,
+    "validation_rng_seed": 20261020,
+    "direct_grid_seconds": 3.720360040664673,
+    "classic": {
+      "ranks": [
+        5,
+        10,
+        7
+      ],
+      "lengths": [
+        10,
+        42,
+        13
+      ],
+      "construction_seconds": 78.94830012321472,
+      "construction_price_calls": 62667,
+      "grid_evaluation_seconds": 0.00591588020324707,
+      "grid_evaluation_repeats_seconds": [
+        0.008466005325317383,
+        0.00591588020324707,
+        0.005692958831787109,
+        0.005508899688720703,
+        0.006413936614990234
+      ],
+      "grid_max_abs_vs_quadrature": 0.00025649868500346104,
+      "random_max_abs_vs_quadrature": 0.00022806159159613482
+    },
+    "default": {
+      "ranks": [
+        5,
+        10,
+        7
+      ],
+      "lengths": [
+        10,
+        29,
+        12
+      ],
+      "construction_seconds": 29.889967918395996,
+      "construction_price_calls": 20137,
+      "grid_evaluation_seconds": 0.012093067169189453,
+      "grid_evaluation_repeats_seconds": [
+        0.011070966720581055,
+        0.009425878524780273,
+        0.012618780136108398,
+        0.012213945388793945,
+        0.012093067169189453
+      ],
+      "grid_max_abs_vs_quadrature": 0.0006001187758139931,
+      "random_max_abs_vs_quadrature": 0.0003825085306250371
+    }
+  },
+  "environment": {
+    "python": "3.10.0 (default, Apr  3 2026, 14:56:05) [Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "platform": "macOS-15.6.1-arm64-arm-64bit"
+  },
+  "chebfun_commit": "7574c77680d7e82b79626300bf255498271a72df",
+  "grid": {
+    "points": 3375,
+    "reference_error_estimate": 1.0123623806050283e-13,
+    "reference_check_error_estimate": 3.21674499332307e-13,
+    "reference_limit10_vs12_max": 1.3877787807814457e-16,
+    "quadrature_vs_reference": {
+      "max_absolute": 0.00553387163685742,
+      "rmse": 0.0002572388030612161,
+      "worst_index": 15
+    },
+    "classic": {
+      "vs_quadrature": {
+        "max_absolute": 0.00025649868500346104,
+        "rmse": 4.561523599618597e-05,
+        "worst_index": 47
+      },
+      "vs_reference": {
+        "max_absolute": 0.0055689221165921045,
+        "rmse": 0.0002646208414401841,
+        "worst_index": 15
+      },
+      "coefficient_reconstruction_max": 3.0568014330753245e-16
+    },
+    "default": {
+      "vs_quadrature": {
+        "max_absolute": 0.0006001187758139931,
+        "rmse": 8.031801521424136e-05,
+        "worst_index": 74
+      },
+      "vs_reference": {
+        "max_absolute": 0.005545503328359649,
+        "rmse": 0.00024060422192374314,
+        "worst_index": 15
+      },
+      "coefficient_reconstruction_max": 3.330854725885288e-16
+    },
+    "quadrature_worst_point": [
+      0.3,
+      0.42142857142857143,
+      -0.9
+    ],
+    "quadrature_worst_values": [
+      0.019867271195614072,
+      0.014333399558756652
+    ]
+  },
+  "random": {
+    "points": 500,
+    "reference_error_estimate": 2.393522535358449e-14,
+    "reference_check_error_estimate": 1.234637404560045e-12,
+    "reference_limit10_vs12_max": 1.1102230246251565e-16,
+    "quadrature_vs_reference": {
+      "max_absolute": 0.0010700350164998436,
+      "rmse": 0.00015942409006708928,
+      "worst_index": 447
+    },
+    "classic": {
+      "vs_quadrature": {
+        "max_absolute": 0.00022806159159613482,
+        "rmse": 4.096755657952044e-05,
+        "worst_index": 8
+      },
+      "vs_reference": {
+        "max_absolute": 0.0010150138829453526,
+        "rmse": 0.0001656411416231754,
+        "worst_index": 447
+      },
+      "coefficient_reconstruction_max": 1.9439475144603329e-16
+    },
+    "default": {
+      "vs_quadrature": {
+        "max_absolute": 0.0003825085306250371,
+        "rmse": 6.709057656631604e-05,
+        "worst_index": 293
+      },
+      "vs_reference": {
+        "max_absolute": 0.0010634578590596015,
+        "rmse": 0.00014658898023222757,
+        "worst_index": 447
+      },
+      "coefficient_reconstruction_max": 2.914339037207608e-16
+    },
+    "quadrature_worst_point": [
+      0.3120389532956279,
+      0.4474317330877554,
+      -0.7064421344704719
+    ],
+    "quadrature_worst_values": [
+      0.011708527688401842,
+      0.010638492671901999
+    ]
+  },
+  "quadrature_refinement": [
+    {
+      "nodes_per_axis": 150,
+      "max_absolute": 0.000991489647016567,
+      "rmse": 0.00028729025682294474,
+      "worst_index": 0
+    },
+    {
+      "nodes_per_axis": 300,
+      "max_absolute": 0.00028454989373309647,
+      "rmse": 5.776138587488134e-05,
+      "worst_index": 0
+    },
+    {
+      "nodes_per_axis": 600,
+      "max_absolute": 7.929218405023503e-06,
+      "rmse": 2.1229005152044165e-06,
+      "worst_index": 0
+    },
+    {
+      "nodes_per_axis": 1200,
+      "max_absolute": 2.3618115420794006e-06,
+      "rmse": 5.191784672935524e-07,
+      "worst_index": 0
+    }
+  ],
+  "input_sha256": {
+    "chebfun_results.json": "db60dd79dc140d5610e637e649cf075ede12e071a5f3d290411ae4d442c613f7",
+    "classic_coefficients.mat": "97618f80907755ac857820d85fb04cf3e2841a615a9d9c14473e6aff9f1966b0",
+    "classic_grid.csv": "84cf87ebd89520b89bb2ef4d5c72c32c78a5ae4fecb7b1fe3406853a464cd07c",
+    "classic_random.csv": "b25b34cff3663b5244211d77e32ac06e33689990b582415c3f73f6ecd1e6ec65",
+    "default_coefficients.mat": "c3b683168b1a850645f6e9fe8f3cab9a94142dc36039faa45abf3edcf9cd2436",
+    "default_grid.csv": "93d3d6f0fa2625d6bcb59284f9938247cb69f698d8d31667e04da9c57a64a2bd",
+    "default_random.csv": "5aaa89b7e9d3ec3178ab49eb3ed122a5c9b964eb9e14bc9c493d8f8976d0c9a2",
+    "grid_direct.csv": "c0782f9aac34dfe2a4d50d8b2826f19868fe30d0c9fa4ab31a9dcb37c2859343",
+    "quadrature.csv": "7c4114cb471175679cc8b0fecfe17c49ca162c0b2ab30336918e3917103ebf2b",
+    "random_direct.csv": "e708880ca8155549756cd2aa11745b7bdde826004a4a23df87633fb76c2882b8",
+    "run.txt": "0b32b78155db162a8e90f448176749b21afcbc6744bf74724831fb902420068f"
+  }
+}

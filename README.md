@@ -44,7 +44,11 @@ The optional GitLab workflow uses the same Julia version and build command.
 
 ## Research notes
 
-Numerical research notes are public at `/research/`, linked from the home page and navigation without a password. Edit `research.md` for the index and `compression.md`, `fourier-pricing.md`, or `asian-barrier.md` for the numerical notes. Their figures, data, PDF, and reproduction scripts are in the corresponding `_assets/` directories.
+Research notes are public at `/research/`, linked from the home page and navigation without a password. Edit `research.md` for the index and `compression.md`, `fourier-pricing.md`, or `asian-barrier.md` for the numerical notes. Their figures, data, PDF, and reproduction scripts are in the corresponding `_assets/` directories. `chebyshev-pricing.md` is a short paper note on Gaß et al. (2018).
+
+`chebfun-spread.md` reproduces the 2017 Chebfun spread-option example and independently checks its quadrature accuracy. `chebyshev-spline.md` reproduces the supplied Python comparison of global and piecewise Chebyshev interpolation. Their self-contained code, CSV/JSON results, figures, and download bundles are in `_assets/chebfun-spread/` and `_assets/chebyshev-spline/`. Use new result-directory names when rerunning either experiment; see the page's reproduction instructions. The spline demo source is preserved unchanged.
+
+`option-maturity.md` compares Black–Scholes call prices at shrinking remaining maturities and explains the resulting curvature near the strike. Its figure, price data, numerical checks, and reproduction script are in `_assets/option-maturity/`. Run `python3 -B _assets/option-maturity/plot_maturity.py new_results` with a new output-directory name to reproduce the calculation.
 
 Research ideas are password-encrypted at `/ideas/`, linked as **Ideas 🔒** from the notes index. Only the generated StatiCrypt HTML belongs in this repository. Edit `source/ideas.md` in the external private-notes workspace, build that snapshot, and run its `protect_ideas.py` with the existing password. Deployment checks that the encrypted page exists and no `ideas.md` is present here. Previously published ideas remain in Git history.
 
