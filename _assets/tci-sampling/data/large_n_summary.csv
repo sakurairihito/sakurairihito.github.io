@@ -1,0 +1,9 @@
+batches,mode,tolerance,n_evals,max_rank,iterations,last_error,converged
+1,scaled,0.000117,6315,4,5,0.0,true
+1,fixed,0.000117,6315,4,5,0.0,true
+10,scaled,3.699864862397003e-5,5474,4,4,0.0,true
+10,fixed,0.000117,4560,3,3,0.0,true
+100,scaled,1.17e-5,5980,5,3,0.0,true
+100,fixed,0.000117,4107,3,3,0.0,true
+1000,scaled,3.6998648623970037e-6,5590,5,3,0.0,true
+1000,fixed,0.000117,3880,3,3,0.0,true
