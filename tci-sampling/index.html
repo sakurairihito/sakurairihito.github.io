@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tensor cross interpolation of a fixed-seed Monte Carlo Asian barrier price grid: how the evaluated points, pivots and rank change with the Monte Carlo sample size.">
+  <meta name="author" content="Rihito Sakurai">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <title>Where does TCI sample a noisy price surface? | Rihito Sakurai</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+  <div class="blog-name"><a href="/">Research &amp; notes</a></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/career/" >Career</a></li>
+      <li><a href="/memories/" >Memories</a></li>
+      <li><a href="/menu2/" >Publications</a></li>
+      <li><a href="/software/" >Software &amp; resources</a></li>
+      <li><a href="/research/" >Research notes</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main id="main-content">
+
+<!-- Content appended here -->
+<div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
+<h1 id="where_does_tci_sample_a_noisy_price_surface"><a href="#where_does_tci_sample_a_noisy_price_surface" class="header-anchor">Where does TCI sample a noisy price surface?</a></h1>
+<div class="article-lead">Fewer Monte Carlo samples, a looser tolerance, fewer pivots.</div>
+<p>Tensor cross interpolation &#40;TCI&#41; builds a low-rank approximation from a small set of function values. When the function values are Monte Carlo &#40;MC&#41; prices, they carry sampling noise. This note asks where TCI evaluates a noisy price grid, and where it places its pivots, as the number of MC samples changes.</p>
+<p>The example is an Asian barrier call over moneyness \(m=S_0/K\in[0.9,1.2]\) and volatility \(\sigma\in[0.15,0.25]\), on a \(100\times100\) Chebyshev–Lobatto grid. All grid points use the same random numbers &#40;a fixed seed&#41;. The barrier lies at \(m=B/K\approx0.909\), just inside the lower end of the interval.</p>
+<h2 id="setup"><a href="#setup" class="header-anchor">Setup</a></h2>
+<p>The grid prices come from saved batches of \(10^6\) antithetic pairs that share their random numbers across the grid. Averaging the first \(k\) batches gives a fixed-seed grid with \(k\times10^6\) pairs. Smaller sample sizes use the first \(n\) pairs of one batch, so all grids are nested prefixes of the same random stream. At \(10^6\) pairs, the recomputed grid matches the saved batch exactly.</p>
+<p>TCI uses rook pivoting, at most 20 sweeps and a relative error criterion. The tolerance follows the rule</p>
+\[
+\varepsilon_{\rm TCI}=\frac{\mathrm{SE}_{\max}}{2\hat V_{\max}},
+\]
+<p>where the largest standard error \(\mathrm{SE}_{\max}\) and the largest price \(\hat V_{\max}\) are estimated from the same samples at 100 random parameter points. Fewer samples therefore give a looser tolerance.</p>
+<h2 id="fewer_samples_a_coarser_cross"><a href="#fewer_samples_a_coarser_cross" class="header-anchor">Fewer samples: a coarser cross</a></h2>
+
+<figure>
+  <a href="/assets/tci-sampling/samples-small-n.png">
+    <img src="/assets/tci-sampling/samples-small-n.png" alt="Four price surfaces over moneyness and volatility for 2 thousand, 10 thousand, 100 thousand and one million Monte Carlo pairs. Red dots mark the pivots, light red lines the rows and columns through them, and small dark dots the evaluated grid points. The number of pivots grows from 4 to 16." width="2283" height="599" fetchpriority="high">
+  </a>
+  <figcaption>Evaluated grid points (dark), pivots (red dots), the rows and columns through them (light red), and the barrier (dashed). The tolerance follows the rule above for each sample size.</figcaption>
+</figure>
+
+<table><tr><th align="right">MC pairs</th><th align="right">\(\varepsilon_{\rm TCI}\)</th><th align="right">Rank</th><th align="right">Evaluated points</th><th align="right">Pivot \(m\) values</th></tr><tr><td align="right">\(2\times10^3\)</td><td align="right">\(2.75\times10^{-3}\)</td><td align="right">2</td><td align="right">4330</td><td align="right">0.99, 1.20</td></tr><tr><td align="right">\(10^4\)</td><td align="right">\(1.23\times10^{-3}\)</td><td align="right">3</td><td align="right">4930</td><td align="right">0.99, 1.11, 1.20</td></tr><tr><td align="right">\(10^5\)</td><td align="right">\(3.89\times10^{-4}\)</td><td align="right">3</td><td align="right">4424</td><td align="right">0.99, 1.10, 1.20</td></tr><tr><td align="right">\(10^6\)</td><td align="right">\(1.23\times10^{-4}\)</td><td align="right">4</td><td align="right">6315</td><td align="right">0.90, 0.99, 1.10, 1.20</td></tr></table>
+<p><strong>With fewer samples, TCI keeps only the coarse shape of the surface and stops.</strong> The main pivots stay near \(m\approx0.99\), \(1.10\) and \(1.20\) at every sample size. TCI evaluates 40–60&#37; of the grid. Rook search and the initial pivot search scan whole rows and columns, not only the points near the pivots.</p>
+<h2 id="more_samples_pivots_move_toward_the_barrier"><a href="#more_samples_pivots_move_toward_the_barrier" class="header-anchor">More samples: pivots move toward the barrier</a></h2>
+
+<figure>
+  <a href="/assets/tci-sampling/samples-large-n.png">
+    <img src="/assets/tci-sampling/samples-large-n.png" alt="Three price surfaces: one million pairs with rank 4, one billion pairs at the same tolerance with rank 3, and one billion pairs at a tighter tolerance with rank 5 and an extra pivot just above the barrier." width="1966" height="563" decoding="async">
+  </a>
+  <figcaption>(a) $10^6$ pairs. (b) $10^9$ pairs at the same tolerance as (a). (c) $10^9$ pairs with the tolerance tightened by $\sqrt{1000}$.</figcaption>
+</figure>
+
+<p>At \(10^6\) pairs, one pivot sits at \(m=0.90\), below the barrier, where the price is almost zero. With \(10^9\) pairs and the same tolerance, this pivot disappears and the rank drops to 3. <strong>It was spent on MC noise rather than on the price.</strong> With a tighter tolerance, a new pivot appears at \(m\approx0.93\), just above the barrier, where the price rises steeply. The rank becomes 5.</p>
+<h2 id="matrix_cross_interpolation"><a href="#matrix_cross_interpolation" class="header-anchor">Matrix cross interpolation</a></h2>
+<p>With two variables, the grid values form a matrix \(F\) with rows indexed by \(m\) and columns by \(\sigma\). TCI is then a matrix cross interpolation,</p>
+\[
+F\approx F[:,J]\;F[I,J]^{-1}\;F[I,:],
+\]
+<p>where \(I\) are the pivot rows &#40;fixed \(m\)&#41; and \(J\) the pivot columns &#40;fixed \(\sigma\)&#41;. The pivots are the grid points \(I\times J\). The approximation uses the full rows and columns through them.</p>
+
+<figure>
+  <a href="/assets/tci-sampling/matrix-cross.png">
+    <img src="/assets/tci-sampling/matrix-cross.png" alt="The 100 by 100 grid-value matrix with four colored pivot columns and four colored pivot rows equals a 100 by 4 matrix of columns, times the inverse of the 4 by 4 pivot matrix, times a 4 by 100 matrix of rows. Below, the reconstruction error and the singular values of the grid matrix, which level off after the fourth." width="2368" height="1368" decoding="async">
+  </a>
+  <figcaption>(a) The cross interpolation at $10^6$ pairs, drawn as matrices. Matching colors trace each pivot column and row of $F$ to the factors. The $4\times4$ pivot values are prices. (b) Reconstruction error. (c) Singular values of $F$.</figcaption>
+</figure>
+
+<p>At \(10^6\) pairs, the \(10\,000\) grid values are represented by \(100\times4+4\times4+4\times100\) numbers. The largest reconstruction error is \(6.8\times10^{-5}\) of \(\max|F|\), below the tolerance \(1.23\times10^{-4}\). The singular values of \(F\) fall as \(1\), \(2.9\times10^{-2}\), \(6.9\times10^{-4}\) and \(2.4\times10^{-5}\), then level off near \(3\times10^{-6}\)–\(5\times10^{-6}\). This flat tail is the MC noise floor, and the rank-4 cross stops just before it. TCI stops on the maximum error, so its tolerance is not a threshold on singular values.</p>
+<h2 id="caveats"><a href="#caveats" class="header-anchor">Caveats</a></h2>
+<ul>
+<li><p>One random stream only. The random numbers differ from the production fixed seed, so the rank at \(10^6\) pairs &#40;4&#41; differs from the production TT &#40;3&#41;.</p>
+</li>
+<li><p>The note looks at sample locations and pivots, not at the accuracy of prices or Greeks.</p>
+</li>
+</ul>
+<h2 id="files"><a href="#files" class="header-anchor">Files</a></h2>
+<ul>
+<li><p><a href="/assets/tci-sampling/asian-tci-sampling-note-ja.pdf">Note with details &#40;Japanese, PDF&#41;</a></p>
+</li>
+<li><p><a href="/assets/tci-sampling/data/small_n_summary.csv">Small sample sizes: summary</a> and <a href="/assets/tci-sampling/data/tolerance.csv">tolerances</a></p>
+</li>
+<li><p><a href="/assets/tci-sampling/data/large_n_summary.csv">Large sample sizes: summary</a></p>
+</li>
+</ul>
+<p><a href="/research/">Back to research notes</a></p></div>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 30, 2026.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+  </main>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>
