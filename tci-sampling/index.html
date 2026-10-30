@@ -45,16 +45,6 @@
 </figure>
 
 <p><strong>With fewer samples, TCI keeps only the coarse shape.</strong> The main pivots stay near \(m\approx0.99\), \(1.10\) and \(1.20\).</p>
-<h2 id="more_samples"><a href="#more_samples" class="header-anchor">More samples</a></h2>
-
-<figure>
-  <a href="/assets/tci-sampling/samples-large-n.png">
-    <img src="/assets/tci-sampling/samples-large-n.png" alt="Three price surfaces: one million pairs with rank 4, one billion pairs at the same tolerance with rank 3, and one billion pairs at a tighter tolerance with rank 5." width="1966" height="563" decoding="async">
-  </a>
-  <figcaption>(a) $10^6$ pairs. (b) $10^9$ pairs, same tolerance. (c) $10^9$ pairs, tighter tolerance.</figcaption>
-</figure>
-
-<p>The pivot at \(m=0.90\) in &#40;a&#41;, where the price is almost zero, disappears in &#40;b&#41;: it was fitting noise. With a tighter tolerance &#40;c&#41;, a new pivot appears just above the barrier.</p>
 <h2 id="a_matrix_cross_interpolation"><a href="#a_matrix_cross_interpolation" class="header-anchor">A matrix cross interpolation</a></h2>
 <p>With two variables, TCI is a matrix cross interpolation, \(F\approx F[:,J]\,F[I,J]^{-1}\,F[I,:]\).</p>
 
