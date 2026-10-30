@@ -26,19 +26,6 @@ An Asian barrier call on a $100\times100$ grid in moneyness $m$ and volatility $
 
 **With fewer samples, TCI keeps only the coarse shape.** The main pivots stay near $m\approx0.99$, $1.10$ and $1.20$.
 
-## More samples
-
-~~~
-<figure>
-  <a href="/assets/tci-sampling/samples-large-n.png">
-    <img src="/assets/tci-sampling/samples-large-n.png" alt="Three price surfaces: one million pairs with rank 4, one billion pairs at the same tolerance with rank 3, and one billion pairs at a tighter tolerance with rank 5." width="1966" height="563" decoding="async">
-  </a>
-  <figcaption>(a) $10^6$ pairs. (b) $10^9$ pairs, same tolerance. (c) $10^9$ pairs, tighter tolerance.</figcaption>
-</figure>
-~~~
-
-The pivot at $m=0.90$ in (a), where the price is almost zero, disappears in (b): it was fitting noise. With a tighter tolerance (c), a new pivot appears just above the barrier.
-
 ## A matrix cross interpolation
 
 With two variables, TCI is a matrix cross interpolation, $F\approx F[:,J]\,F[I,J]^{-1}\,F[I,:]$.
