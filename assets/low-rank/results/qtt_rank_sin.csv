@@ -1,8 +1,8 @@
-omega,uniform_max_rank,chebyshev_max_rank
-1,2,7
-2,2,8
-5,2,8
-10,2,10
-20,2,12
-50,2,16
-100,2,16
+omega,chebyshev_degree,uniform_max_rank,chebyshev_max_rank
+1,9,2,7
+2,13,2,8
+5,19,2,8
+10,27,2,10
+20,41,2,12
+50,79,2,16
+100,135,2,16
