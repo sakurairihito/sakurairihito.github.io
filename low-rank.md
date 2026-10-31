@@ -24,15 +24,9 @@ A function $f(x,y)$ is low rank if $f(x,y)\approx\sum_{k=1}^{r} g_k(x)\,h_k(y)$ 
 </figure>
 ~~~
 
-**Sums give exact low rank.** $e^{x+y}=e^xe^y$ has rank 1, and $\sin(x+y)=\sin x\cos y+\cos x\sin y$ has rank 2. $\sin(xy)$ has no finite rank, but its singular values decay fast. Independent noise is full rank.
+$\sin(x+y)=\sin x\cos y+\cos x\sin y$ has rank exactly 2. Smooth functions such as $\sin(xy)$ are low rank up to a small error. Noise is full rank.
 
-## What theory guarantees
-
-Expand $f(x,y)=\sum_j a_j(y)\,T_j(x)$ in Chebyshev polynomials. Truncating at degree $p$ gives rank $p+1$ with error at most $\sum_{j>p}\max_y|a_j(y)|$. Analytic functions therefore have rank-$r$ errors that fall like $\rho^{-r}$. Theory gives this upper bound. The actual rank at a given tolerance is found numerically.
-
-## One variable: $\sin x$
-
-A single-variable function has no rank in the usual sense. Its counterpart is the Chebyshev degree. Splitting the grid index into binary digits turns it into a tensor (quantics TT). On a uniform grid $x_i$ is a sum of the digits, so $\sin x_i$ has rank exactly 2 at any resolution. Chebyshev points are not a sum of digits, and the rank is only numerically small.
+For one variable, write the grid index in binary digits. On a uniform grid $\sin x$ then has rank exactly 2.
 
 [Details (Japanese, PDF)](/assets/low-rank/low-rank-note-ja.pdf) · [Data](/assets/low-rank/results/summary.json) · [Script](/assets/low-rank/low_rank.py)
 
