@@ -1,7 +1,7 @@
 @def title = "Option prices near expiry"
 @def page_language = "en"
 @def hasmath = true
-@def description = "A visual Black-Scholes example showing how a smooth call-price curve approaches a kinked payoff as maturity shrinks, and what this means for polynomial approximation."
+@def description = "Black–Scholes call prices at shrinking maturities, the curvature that builds up near the strike, and what it means for polynomial approximation."
 
 @@explainer
 
@@ -9,24 +9,20 @@
 
 # Option prices near expiry
 
-@@article-lead
-A smooth price curve can still become difficult to resolve near expiry.
-@@
-
-An option payoff and its price before expiry need not have the same smoothness. This note varies the remaining maturity of a European call while keeping all other inputs fixed. The resulting curves show where the smoothing disappears, and why the approximation domain matters when choosing a basis.
+A call price is smooth in the spot before expiry, but at expiry it is the kinked payoff. I wanted to see how fast it gets there, so I shortened the maturity of a European call and kept everything else fixed.
 
 ~~~
 <figure>
   <a href="/assets/option-maturity/results/call-maturity.png">
     <img src="/assets/option-maturity/results/call-maturity.png" alt="Black-Scholes call prices for one year, three months, thirty days and one day of remaining maturity approach the dashed expiry payoff. A close-up shows the shrinking rounded region near strike 100." width="2280" height="1045" fetchpriority="high">
   </a>
-  <figcaption>Left: spot prices from 60 to 140. Right: a close-up near the strike. Markers give the price at S = 100. These are theoretical curves at fixed model inputs, not the trajectory of a traded option.</figcaption>
+  <figcaption>Left: spot prices from 60 to 140. Right: close-up near the strike. Markers give the price at S = 100.</figcaption>
 </figure>
 ~~~
 
-## A controlled maturity comparison
+## Setting
 
-Write $\tau=T-t$ for the time remaining until expiry. We use strike $K=100$, volatility $\sigma=0.2$, and zero interest rate and dividend yield. For $S>0$ and $\tau>0$, the Black–Scholes call price is
+Write $\tau=T-t$ for the remaining maturity. Strike $K=100$, volatility $\sigma=0.2$, and the interest rate and dividend yield are zero. For $S>0$ and $\tau>0$ the Black–Scholes call price is
 
 $$
 C(S,\tau)=S\Phi(d_1)-K\Phi(d_2),\qquad
@@ -34,7 +30,7 @@ d_1=\frac{\log(S/K)+\sigma^2\tau/2}{\sigma\sqrt{\tau}},\qquad
 d_2=d_1-\sigma\sqrt{\tau},
 $$
 
-where $\Phi$ is the standard normal cumulative distribution function. At expiry we evaluate the payoff directly:
+with $\Phi$ the standard normal distribution function. At expiry the price is the payoff,
 
 $$
 C(S,0)=(S-K)_+.
@@ -48,44 +44,38 @@ $$
 | 1 day | $1/365$ | 0.417630 |
 | Expiry | 0 | 0 |
 
-Days use a 365-day year; three months means exactly 0.25 years. **In this zero-rate, zero-dividend model, holding spot and volatility fixed, the price decreases as the remaining time shrinks.** This is not a claim about every option or about market prices along a changing spot path.
-
-At the strike, the formula simplifies to
+Days are counted with a 365-day year. With zero rates and fixed spot and volatility, the price falls as the maturity shrinks. At the strike the formula reduces to
 
 $$
 C(K,\tau)=K\left[2\Phi\!\left(\frac{\sigma\sqrt{\tau}}{2}\right)-1\right]
 \sim\frac{K\sigma\sqrt{\tau}}{\sqrt{2\pi}}
-\quad(\tau\downarrow0).
+\quad(\tau\downarrow0),
 $$
 
-Thus the at-the-money price approaches zero like $\sqrt{\tau}$, rather than linearly in remaining time.
+so the at-the-money price goes to zero like $\sqrt{\tau}$.
 
-## Smooth prices, concentrated curvature
+## Curvature near the strike
 
-For every positive $\tau$, the price is smooth in positive spot. Its spot derivatives are
+For $\tau>0$ the price is smooth in $S$, with
 
 $$
 \Delta=\Phi(d_1),\qquad
 \Gamma=\frac{\phi(d_1)}{S\sigma\sqrt{\tau}},
 $$
 
-where $\phi$ is the standard normal density. Near expiry, Delta changes rapidly from approximately zero to approximately one around the strike. At $S=K$,
+where $\phi$ is the standard normal density. Near expiry, Delta goes from about 0 to about 1 over a spot range of width roughly $K\sigma\sqrt{\tau}$ around the strike. At the strike,
 
 $$
-\Gamma(K,\tau)\sim\frac{1}{K\sigma\sqrt{2\pi\tau}}.
+\Gamma(K,\tau)\sim\frac{1}{K\sigma\sqrt{2\pi\tau}},
 $$
 
-The region where Delta changes has a characteristic spot width of order $K\sigma\sqrt{\tau}$. This scale follows from the standardized log-moneyness in $d_1$; it is not a sharp boundary. The transition becomes narrower while Gamma grows. At expiry the payoff has a kink, and its ordinary Delta and Gamma are undefined at the strike.
+which grows without bound. At expiry the payoff has a kink and Delta and Gamma are not defined at the strike.
 
-## Implications for an approximation basis
+## Consequences for approximation
 
-[Gaß, Glau, Mahlstedt and Mair (2018)](https://link.springer.com/article/10.1007/s00780-018-0361-y) give analyticity conditions and error bounds for Chebyshev interpolation of parametric option prices. Their bounds depend on the domain of analytic extension and the size of the function there; the paper also discusses piecewise Chebyshev approximation. See the [paper note](/chebyshev-pricing/) for the offline/online construction.
+[Gaß, Glau, Mahlstedt and Mair (2018)](https://link.springer.com/article/10.1007/s00780-018-0361-y) give analyticity conditions and error bounds for Chebyshev interpolation of option prices in their parameters (see the [paper note](/chebyshev-pricing/)). Their bounds depend on how far the function extends analytically. Smoothness at each positive maturity is therefore not enough to fix one polynomial degree for all maturities. A spot–maturity domain that includes $\tau=0$ contains the payoff kink and, at the strike, the $\sqrt{\tau}$ behaviour.
 
-The present example explains why positive-time smoothness alone is not enough to choose a fixed polynomial degree for all maturities. A joint spot–maturity domain that includes $\tau=0$ contains the payoff kink; at the strike it also contains the square-root dependence on $\tau$. One cannot simply extend a positive-maturity analyticity argument through that boundary.
-
-Two structural choices are relevant. First, local refinement near the strike can resolve a narrow transition without refining the whole spot interval equally. At positive maturity, splitting exactly at the strike does not make either price branch linear: the rounded transition remains. At expiry, however, the two payoff branches are linear, as in the [piecewise interpolation example](/chebyshev-spline/).
-
-Second, remove redundant scales before approximating. In the zero-rate setting here,
+Two things I can think of. One is local refinement near the strike. Splitting exactly at the strike does not make the price linear on either side for $\tau>0$, but at expiry the two branches are linear, as in the [piecewise interpolation example](/chebyshev-spline/). The other is to remove redundant scales first. With zero rates,
 
 $$
 x=\frac{S}{K},\qquad w=\sigma\sqrt{\tau},\qquad C=K\,G(x,w),
@@ -93,24 +83,22 @@ $$
 
 $$
 G(x,w)=x\Phi\!\left(\frac{\log x}{w}+\frac{w}{2}\right)
--\Phi\!\left(\frac{\log x}{w}-\frac{w}{2}\right),\qquad w>0.
+-\Phi\!\left(\frac{\log x}{w}-\frac{w}{2}\right),\qquad w>0,
 $$
 
-At $w=0$, define $G(x,0)=(x-1)_+$. Total volatility $w$ absorbs the separate volatility and maturity inputs, but does not remove the kink at $(x,w)=(1,0)$.
+and $G(x,0)=(x-1)_+$. The total volatility $w$ combines volatility and maturity into one input, but the kink at $(x,w)=(1,0)$ remains.
 
-For tensor cross interpolation (TCI), the coordinate domain and its resolution therefore deserve attention alongside the tensor rank. **This figure does not measure interpolation errors, TT ranks, or sampling costs.** Whether a coordinate change or local partition improves those quantities requires a separate comparison at matched accuracy, including Delta and Gamma if they are outputs of interest.
+For tensor cross interpolation (TCI), the choice of coordinates and domain matters as much as the rank. This figure does not measure interpolation errors or TT ranks. That would need a separate comparison at the same accuracy, including Delta and Gamma.
 
-## Reproduce the figure
+## Reproducing the figure
 
-Download the [Python script](/assets/option-maturity/plot_maturity.py), then run it with NumPy, SciPy and Matplotlib installed:
+Download the [Python script](/assets/option-maturity/plot_maturity.py) and run it with NumPy, SciPy and Matplotlib:
 
 ```bash
 python3 -B plot_maturity.py new_results
 ```
 
-Use a new output-directory name. The script exports both figure formats, all five price curves on 3,201 spot points, and a numerical-check summary.
-
-The saved run checks four prices against independent integration of the terminal payoff over a truncated standard-normal interval; their maximum discrepancy is below $10^{-10}$. It also checks price bounds, maturity monotonicity on the sampled grid, the expiry limit, and centered finite-difference checks of Delta and Gamma. These are numerical consistency checks, not certified error bounds.
+Use a new output directory. The script writes the figure as PNG and SVG, the five price curves on 3,201 spot points, and a summary of checks. In the saved run, four prices agree with direct integration of the payoff to within $10^{-10}$. The run also checks price bounds, monotonicity in maturity, the expiry limit, and Delta and Gamma by finite differences.
 
 Downloads: [PNG](/assets/option-maturity/results/call-maturity.png) · [SVG](/assets/option-maturity/results/call-maturity.svg) · [Price data](/assets/option-maturity/results/call-maturity.csv) · [Checks and package versions](/assets/option-maturity/results/checks.json).
 

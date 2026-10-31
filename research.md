@@ -1,23 +1,23 @@
 @def title = "Research notes"
-@def description = "Short visual notes on numerical methods, function compression, and applications in finance."
+@def description = "Short notes on numerical methods, function compression, and option pricing."
 
 # Research notes
 
 ## Numerical notes
 
-- [Option prices near expiry](/option-maturity/) — Maturity, curvature, and approximation bases
+- [Option prices near expiry](/option-maturity/)
 
-- [Chebyshev interpolation across a kink](/chebyshev-spline/) — Reproduced Python demo
+- [Chebyshev interpolation across a kink](/chebyshev-spline/)
 
-- [A spread option with Chebfun3](/chebfun-spread/) — Reproduction of Glau et al. (2017)
+- [A spread option with Chebfun3](/chebfun-spread/) (reproducing Glau et al. 2017)
 
 - [Asian barrier option](/asian-barrier/)
 
-- [Where does TCI sample a noisy price surface?](/tci-sampling/) — Monte Carlo sample size and matrix cross interpolation
+- [Where does TCI sample a noisy price surface?](/tci-sampling/)
 
-- [Kinks in option prices](/option-kink/) — Barriers, Gamma, and Monte Carlo paths
+- [Kinks in option prices](/option-kink/)
 
-- [What does low rank mean?](/low-rank/) — Matrices, functions, tensor trains, and sin x on a grid
+- [What does low rank mean?](/low-rank/)
 
 - [Fourier pricing](/fourier-pricing/)
 
@@ -25,8 +25,8 @@
 
 ## Paper notes
 
-- [Chebyshev interpolation for option pricing](/chebyshev-pricing/) — Gaß et al. (2018)
+- [Chebyshev interpolation for option pricing](/chebyshev-pricing/) (Gaß et al. 2018)
 
 ## Ideas
 
-[Ideas 🔒](/ideas/) — Password required.
+[Ideas 🔒](/ideas/) (password required)

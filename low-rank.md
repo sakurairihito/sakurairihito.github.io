@@ -9,9 +9,7 @@
 
 # What does low rank mean?
 
-@@article-lead
-A table of numbers that splits into a few products.
-@@
+Notes to myself on what "low rank" means, with $\sin$ as the running example.
 
 ## Two variables
 
@@ -31,7 +29,7 @@ $$
 
 The matrix has rank 2. For $n=100$, its $10\,000$ entries are described by $400$ numbers.
 
-In general, $f$ is **low rank** if
+In general, $f$ is low rank if
 
 $$ f(x,y)\approx\sum_{k=1}^{r} g_k(x)\,h_k(y) $$
 
@@ -68,12 +66,12 @@ Each $2\times2$ factor depends on one binary digit. This is a tensor train in th
 
 A polynomial of degree $p$ has small QTT rank:
 
-- **Uniform grid.** At a cut, $x=x_{\rm L}+x_{\rm R}$, where $x_{\rm L}$ comes from the low digits and $x_{\rm R}$ from the high ones. Expanding $(x_{\rm L}+x_{\rm R})^k$ leaves only $1,x_{\rm L},\dots,x_{\rm L}^{p}$, so the rank is at most $p+1$.
-- **Chebyshev grid** $x_j=\cos\theta_j$, $\theta_j=\pi j/N$. Here $T_k(x_j)=\cos(k\theta_j)$ and $\theta_j=\theta_{\rm L}+\theta_{\rm R}$, so
+- Uniform grid: At a cut, $x=x_{\rm L}+x_{\rm R}$, where $x_{\rm L}$ comes from the low digits and $x_{\rm R}$ from the high ones. Expanding $(x_{\rm L}+x_{\rm R})^k$ leaves only $1,x_{\rm L},\dots,x_{\rm L}^{p}$, so the rank is at most $p+1$.
+- Chebyshev grid, $x_j=\cos\theta_j$, $\theta_j=\pi j/N$. Here $T_k(x_j)=\cos(k\theta_j)$ and $\theta_j=\theta_{\rm L}+\theta_{\rm R}$, so
   $$ \cos k\theta=\cos k\theta_{\rm L}\cos k\theta_{\rm R}-\sin k\theta_{\rm L}\sin k\theta_{\rm R}. $$
   The rank is at most $2p+1$.
 
-A function whose Chebyshev coefficients fall below $\varepsilon$ after degree $p$ therefore has QTT rank at most $p+1$ or $2p+1$ at that accuracy. Fast coefficient decay means low QTT rank. The bound can be loose:
+So if the Chebyshev coefficients drop below $\varepsilon$ after degree $p$, the QTT rank at that accuracy is at most $p+1$ or $2p+1$. Fast coefficient decay means low QTT rank. The bound is pretty loose though:
 
 | $\omega$ | Chebyshev degree $p$ | QTT rank, uniform | QTT rank, Chebyshev | bound $2p+1$ |
 |---:|---:|---:|---:|---:|
