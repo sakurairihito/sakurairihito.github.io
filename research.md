@@ -15,6 +15,8 @@
 
 - [Where does TCI sample a noisy price surface?](/tci-sampling/) — Monte Carlo sample size and matrix cross interpolation
 
+- [Kinks in option prices](/option-kink/) — Barriers, Gamma, and Monte Carlo paths
+
 - [What does low rank mean?](/low-rank/) — Matrices, functions, tensor trains, and sin x on a grid
 
 - [Fourier pricing](/fourier-pricing/)
