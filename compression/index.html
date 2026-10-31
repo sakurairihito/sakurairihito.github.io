@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A visual experiment: compress a Black–Scholes price surface using low rank and low-degree Chebyshev polynomials.">
+  <meta name="description" content="Compressing a Black–Scholes price surface with low rank and low-degree Chebyshev polynomials.">
   <meta name="author" content="Rihito Sakurai">
    <link rel="stylesheet" href="/libs/katex/katex.min.css">
      
@@ -34,18 +34,17 @@
 <!-- Content appended here -->
 <div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
 <h1 id="can_a_smooth_price_surface_be_compressed"><a href="#can_a_smooth_price_surface_be_compressed" class="header-anchor">Can a smooth price surface be compressed?</a></h1>
-<div class="article-lead">Low rank. Low polynomial degree.</div>
-<p>A Black–Scholes call price as stock price and volatility vary.</p>
+<p>A Black–Scholes call price as a function of stock price and volatility. How few numbers can describe it?</p>
 
 <figure>
   <a href="/assets/compression/bs1d-surface.png">
     <img src="/assets/compression/bs1d-surface.png" alt="Three-dimensional Black–Scholes call price surface over stock price and volatility. The price rises smoothly along both axes." width="1238" height="1316" fetchpriority="high">
   </a>
-  <figcaption>Stock price 50–150; volatility 5–60%. Strike 100, maturity 1 year, rate 3%, no dividends.</figcaption>
+  <figcaption>Stock price 50 to 150, volatility 5 to 60%. Strike 100, maturity 1 year, rate 3%, no dividends.</figcaption>
 </figure>
 
-<h2 id="how_many_components"><a href="#how_many_components" class="header-anchor">How many components?</a></h2>
-<p>On a 128 × 128 grid, a few separable terms suffice:</p>
+<h2 id="rank"><a href="#rank" class="header-anchor">Rank</a></h2>
+<p>On a 128 × 128 grid, a few separable terms are enough:</p>
 \[
 C(S,\sigma)\approx\sum_{\alpha=1}^{r}u_\alpha(S)v_\alpha(\sigma).
 \]
@@ -54,50 +53,50 @@ C(S,\sigma)\approx\sum_{\alpha=1}^{r}u_\alpha(S)v_\alpha(\sigma).
   <a href="/assets/compression/bs1d-rank.png">
     <img src="/assets/compression/bs1d-rank.png" alt="Rapid singular-value decay and decreasing approximation error as the rank increases, comparing SVD and matrix cross interpolation." width="2000" height="866" loading="lazy">
   </a>
-  <figcaption>Rapid singular-value decay. Cross interpolation follows the SVD error trend.</figcaption>
+  <figcaption>The singular values drop fast. Cross interpolation roughly follows the SVD error.</figcaption>
 </figure>
 
-<h2 id="a_few_slices"><a href="#a_few_slices" class="header-anchor">A few slices</a></h2>
-<p>Matrix cross interpolation uses <strong>8 rows and 8 columns</strong> for <strong>0.0010&#37; relative error</strong> here.</p>
+<h2 id="rows_and_columns"><a href="#rows_and_columns" class="header-anchor">Rows and columns</a></h2>
+<p>Matrix cross interpolation with 8 rows and 8 columns gets 0.0010&#37; relative error.</p>
 
 <figure>
   <a href="/assets/compression/bs1d-cross.png">
     <img src="/assets/compression/bs1d-cross.png" alt="Original and rank-8 reconstructed surfaces look nearly identical. Below are the selected rows and columns and the absolute error." width="1999" height="1710" loading="lazy">
   </a>
-  <figcaption>1,984 retained entries out of 16,384. Maximum absolute error: 0.0017. Separate error color scale.</figcaption>
+  <figcaption>1,984 of 16,384 entries kept. Maximum absolute error 0.0017. The error has its own color scale.</figcaption>
 </figure>
 
-<h2 id="detail_along_each_axis"><a href="#detail_along_each_axis" class="header-anchor">Detail along each axis</a></h2>
-<p>High-degree Chebyshev coefficients are small: <strong>fine detail can be dropped</strong>.</p>
+<h2 id="degree"><a href="#degree" class="header-anchor">Degree</a></h2>
+<p>The high-degree Chebyshev coefficients are small, so the fine detail can be dropped.</p>
 
 <figure>
   <a href="/assets/compression/bs1d-chebyshev-spectrum.png">
     <img src="/assets/compression/bs1d-chebyshev-spectrum.png" alt="Chebyshev coefficients decay in both directions, faster for volatility in this example. A heatmap shows the two-dimensional coefficients and the retained low-degree block." width="1999" height="902" loading="lazy">
   </a>
-  <figcaption>Left: norms by degree. Right: coefficients. Both normalized by the full coefficient norm. Box: degrees 0–32 and 0–24.</figcaption>
+  <figcaption>Left: norm per degree. Right: the coefficients. Both divided by the full coefficient norm. Box: degrees 0 to 32 and 0 to 24.</figcaption>
 </figure>
 
-<h2 id="low_rank_low_degree"><a href="#low_rank_low_degree" class="header-anchor">Low rank &#43; low degree</a></h2>
-<p>Degrees <strong>32 and 24</strong>, with coefficient-matrix <strong>rank 8</strong>: <strong>464 coefficients</strong> and <strong>\(3.9\times10^{-6}\) relative error</strong> at new test points.</p>
+<h2 id="both_together"><a href="#both_together" class="header-anchor">Both together</a></h2>
+<p>Degrees 32 and 24 with rank 8 in the coefficient matrix: 464 coefficients, \(3.9\times10^{-6}\) relative error at new test points.</p>
 
 <figure>
   <a href="/assets/compression/bs1d-chebyshev-convergence.png">
     <img src="/assets/compression/bs1d-chebyshev-convergence.png" alt="Error decreases as the polynomial degree grows. Increasing rank at fixed degrees eventually reaches the error floor from degree truncation." width="2000" height="884" loading="lazy">
   </a>
-  <figcaption>At fixed degree, increasing rank eventually stops helping.</figcaption>
+  <figcaption>At fixed degree, more rank stops helping at some point.</figcaption>
 </figure>
 
-<p>Low degree describes detail within each variable; low rank describes their coupling. Here, both are small.</p>
+<p>Degree is about detail along each variable, rank is about how the variables couple. Here both are small.</p>
 
 <details>
   <summary>Methods &amp; code</summary>
-  <p>The first experiment uses the <a href="https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf">Black–Scholes formula</a> on a uniform 128 × 128 grid. All relative errors are Frobenius errors, not pointwise relative errors. The teaching MCI implementation searches the full residual: 1,984 counts retained entries, not function evaluations. Its reconstruction solves a linear system with the selected intersection matrix.</p>
-  <p>The Chebyshev experiment separately evaluates a full 129 × 129 Chebyshev–Lobatto grid. Coordinates are mapped as S = 100 + 50x and σ = 0.325 + 0.275y. A type-I discrete cosine transform gives standard, unnormalized Chebyshev coefficients through degree 128 in both directions. Coefficients are checked against a 193 × 193 construction.</p>
-  <p>Truncation to degrees 32 and 24 leaves 33 × 25 = 825 coefficients. Its relative error is 3.94 × 10⁻⁷. A separate SVD of this coefficient matrix gives rank-8 factors with 8(33 + 25) = 464 stored coefficients, including singular values absorbed into one factor. This coefficient-space SVD is not the optimal SVD for a uniform price grid.</p>
-  <p>Both polynomial errors are measured against exact prices at a disjoint 192 × 190 uniform midpoint grid. The combined degree/rank approximation has relative error 3.91 × 10⁻⁶ and maximum absolute error 5.46 × 10⁻⁴. Storage counts exclude metadata and do not describe construction costs. These are sampled checks, not bounds over the entire domain or guarantees for Greeks.</p>
-  <p>Low degree bounds the possible separation rank, but the two measures are different: a degree-32/24 coefficient matrix has rank at most 25, and here rank 8 suffices at the reported accuracy. Conversely, a product of two degree-100 polynomials can have rank 1. Results depend on the domain, model parameters, and requested accuracy.</p>
-  <p>Reproduce the figures: <a href="/assets/scripts/bs1d_demo.py">price surface and MCI code</a> · <a href="/assets/scripts/bs1d_chebyshev.py">Chebyshev code</a>. Keep both scripts in the same folder. Download <a href="/assets/compression/bs1d-results.json">grid results</a> or <a href="/assets/compression/bs1d-chebyshev-results.json">Chebyshev spectra, errors, and factor coefficients</a>.</p>
-  <p>Further reading: <a href="https://scipost.org/10.21468/SciPostPhys.18.3.104">Núñez Fernández et al., tensor cross interpolation (2025)</a>; <a href="https://www.chebfun.org/publications/Chebfun2paper.pdf">Townsend &amp; Trefethen, Chebfun2 (2013)</a>; <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.dct.html">SciPy’s DCT definition</a>. For the connection to parameter-dependent option pricing: <a href="https://www.mdpi.com/2227-7390/13/11/1828">Sakurai, Takahashi &amp; Miyamoto (2025)</a>.</p>
+  <p>The first part uses the <a href="https://www.columbia.edu/~mh2078/FoundationsFE/BlackScholes.pdf">Black–Scholes formula</a> on a uniform 128 × 128 grid. Relative errors are Frobenius errors. The simple MCI code searches the full residual, so 1,984 is the number of kept entries, not of function evaluations. The reconstruction solves a linear system with the pivot matrix.</p>
+  <p>The Chebyshev part evaluates a separate 129 × 129 Chebyshev–Lobatto grid, with S = 100 + 50x and σ = 0.325 + 0.275y. A type-I DCT gives the usual unnormalized Chebyshev coefficients up to degree 128 in both directions. I checked them against a 193 × 193 grid.</p>
+  <p>Keeping degrees 32 and 24 leaves 33 × 25 = 825 coefficients, with relative error 3.94 × 10⁻⁷. An SVD of this coefficient matrix at rank 8 stores 8(33 + 25) = 464 numbers (singular values folded into one factor). This SVD is in coefficient space, so it is not the best rank-8 fit on a uniform grid.</p>
+  <p>Polynomial errors are measured on a separate 192 × 190 uniform midpoint grid against exact prices. Degree plus rank gives relative error 3.91 × 10⁻⁶ and maximum absolute error 5.46 × 10⁻⁴. Storage counts leave out metadata and construction cost.</p>
+  <p>Low degree bounds the rank, but they are different things. A degree-32/24 coefficient matrix has rank at most 25, and rank 8 is enough here. On the other hand, a product of two degree-100 polynomials has rank 1.</p>
+  <p>Code: <a href="/assets/scripts/bs1d_demo.py">price surface and MCI</a> · <a href="/assets/scripts/bs1d_chebyshev.py">Chebyshev</a> (keep both in the same folder). Data: <a href="/assets/compression/bs1d-results.json">grid results</a> · <a href="/assets/compression/bs1d-chebyshev-results.json">Chebyshev spectra, errors and factors</a>.</p>
+  <p>Further reading: <a href="https://scipost.org/10.21468/SciPostPhys.18.3.104">Núñez Fernández et al., tensor cross interpolation (2025)</a>; <a href="https://www.chebfun.org/publications/Chebfun2paper.pdf">Townsend &amp; Trefethen, Chebfun2 (2013)</a>; <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.dct.html">SciPy's DCT definition</a>; <a href="https://www.mdpi.com/2227-7390/13/11/1828">Sakurai, Takahashi &amp; Miyamoto (2025)</a>.</p>
 </details>
 
 <p><a href="/research/">Back to research notes</a></p></div>

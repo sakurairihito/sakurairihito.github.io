@@ -34,28 +34,27 @@
 <!-- Content appended here -->
 <div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
 <h1 id="where_does_tci_sample_a_noisy_price_surface"><a href="#where_does_tci_sample_a_noisy_price_surface" class="header-anchor">Where does TCI sample a noisy price surface?</a></h1>
-<div class="article-lead">Fewer Monte Carlo samples, fewer pivots.</div>
-<p>An Asian barrier call on a \(100\times100\) grid in moneyness \(m\) and volatility \(\sigma\), priced by fixed-seed Monte Carlo &#40;MC&#41;. Tensor cross interpolation &#40;TCI&#41; uses the tolerance \(\varepsilon_{\rm TCI}=\mathrm{SE}_{\max}/(2\hat V_{\max})\), so fewer samples give a looser tolerance.</p>
+<p>An Asian barrier call on a \(100\times100\) grid in moneyness \(m\) and volatility \(\sigma\), priced by fixed-seed Monte Carlo &#40;MC&#41;. I wanted to see which points tensor cross interpolation &#40;TCI&#41; actually looks at. The tolerance is \(\varepsilon_{\rm TCI}=\mathrm{SE}_{\max}/(2\hat V_{\max})\), so with fewer samples the tolerance is looser.</p>
 
 <figure>
   <a href="/assets/tci-sampling/samples-small-n.png">
     <img src="/assets/tci-sampling/samples-small-n.png" alt="Four price surfaces over moneyness and volatility for 2 thousand, 10 thousand, 100 thousand and one million Monte Carlo pairs. Red dots mark the pivots; the rank grows from 2 to 4." width="2283" height="599" fetchpriority="high">
   </a>
-  <figcaption>Pivots (red dots) and evaluated grid points (dark) for $2\times10^3$ to $10^6$ MC pairs. The rank grows from 2 to 4.</figcaption>
+  <figcaption>Pivots (red) and evaluated grid points (dark) for $2\times10^3$ to $10^6$ MC pairs. The rank goes from 2 to 4.</figcaption>
 </figure>
 
-<p><strong>With fewer samples, TCI keeps only the coarse shape.</strong> The main pivots stay near \(m\approx0.99\), \(1.10\) and \(1.20\).</p>
-<h2 id="a_matrix_cross_interpolation"><a href="#a_matrix_cross_interpolation" class="header-anchor">A matrix cross interpolation</a></h2>
-<p>With two variables, TCI is a matrix cross interpolation, \(F\approx F[:,J]\,F[I,J]^{-1}\,F[I,:]\).</p>
+<p>With fewer samples TCI only picks up the rough shape. The main pivots stay near \(m\approx0.99\), \(1.10\) and \(1.20\).</p>
+<h2 id="as_a_matrix_cross"><a href="#as_a_matrix_cross" class="header-anchor">As a matrix cross</a></h2>
+<p>With two variables, TCI is just a matrix cross interpolation, \(F\approx F[:,J]\,F[I,J]^{-1}\,F[I,:]\).</p>
 
 <figure>
   <a href="/assets/tci-sampling/matrix-cross.png">
     <img src="/assets/tci-sampling/matrix-cross.png" alt="The grid-value matrix with four colored pivot columns and rows equals a 100 by 4 matrix of columns, times the inverse of the 4 by 4 pivot matrix, times a 4 by 100 matrix of rows. Below, the reconstruction error and the singular values, which level off after the fourth." width="2368" height="1368" decoding="async">
   </a>
-  <figcaption>$10^6$ pairs, rank 4. Matching colors trace each pivot column and row to the factors.</figcaption>
+  <figcaption>$10^6$ pairs, rank 4. Same colors mark the same pivot column or row in each factor.</figcaption>
 </figure>
 
-<p>The singular values level off after the fourth, at the MC noise floor. The rank-4 cross stops just before it.</p>
+<p>The singular values flatten out after the fourth one, at the MC noise level, and the rank-4 cross stops right there.</p>
 <p><a href="/assets/tci-sampling/asian-tci-sampling-note-ja.pdf">Details &#40;Japanese, PDF&#41;</a> · <a href="/assets/tci-sampling/data/small_n_summary.csv">Data</a></p>
 <p><a href="/research/">Back to research notes</a></p></div>
 <div class="page-foot">

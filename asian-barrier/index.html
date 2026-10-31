@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A saved tensor-train price surface, Gamma, and Chebyshev coefficient spectra.">
+  <meta name="description" content="A saved tensor-train price surface of an Asian barrier option, its Gamma, and Chebyshev coefficient spectra.">
   <meta name="author" content="Rihito Sakurai">
    <link rel="stylesheet" href="/libs/katex/katex.min.css">
      
@@ -34,48 +34,46 @@
 <!-- Content appended here -->
 <div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
 <h1 id="asian_barrier_option_a_price_surface"><a href="#asian_barrier_option_a_price_surface" class="header-anchor">Asian barrier option: a price surface</a></h1>
-<div class="article-lead">A smooth price surface, a more delicate Gamma.</div>
-<p>A saved tensor train over moneyness \(m=S_0/K\) and volatility \(\sigma\). <strong>ME</strong> retains degrees <strong>26 and 7</strong>, with <strong>rank 3</strong>.</p>
+<p>Plots of a saved tensor train for an Asian barrier call, over moneyness \(m=S_0/K\) and volatility \(\sigma\). After degree truncation &#40;ME&#41; it keeps degree 26 in \(m\) and 7 in \(\sigma\), with rank 3.</p>
 
 <figure>
   <a href="/assets/asian-barrier/asian_price_surface.png">
     <img src="/assets/asian-barrier/asian_price_surface.png" alt="Three-dimensional Asian barrier option price surface over moneyness and volatility, evaluated from the degree-truncated tensor train." width="2106" height="1494" decoding="async">
   </a>
-  <figcaption>The degree-truncated price surface.</figcaption>
+  <figcaption>Price surface after degree truncation.</figcaption>
 </figure>
 
 <h2 id="price_and_gamma"><a href="#price_and_gamma" class="header-anchor">Price and Gamma</a></h2>
-<p>Truncation changes plotted prices by at most <strong>0.00111</strong> and makes Gamma look smoother. <strong>Accuracy still needs a matched reference.</strong></p>
+<p>Truncation moves the plotted prices by at most 0.00111, but Gamma looks much smoother afterwards. Whether it is also more accurate needs a reference, which I haven&#39;t compared here.</p>
 
 <figure>
   <a href="/assets/asian-barrier/asian_price_gamma_comparison.png">
     <img src="/assets/asian-barrier/asian_price_gamma_comparison.png" alt="Raw and degree-truncated tensor-train predictions: similar price surfaces above, and a visibly smoother Gamma surface after truncation below. Each row uses the same vertical scale." width="2080" height="1680" loading="lazy" decoding="async">
   </a>
-  <figcaption>Price above; Gamma below. Each row uses a shared vertical scale.</figcaption>
+  <figcaption>Price on top, Gamma below. Same vertical scale within each row.</figcaption>
 </figure>
 
-<h2 id="which_degrees_remain"><a href="#which_degrees_remain" class="header-anchor">Which degrees remain?</a></h2>
-<p>Chebyshev amplitudes decay to a small tail. Cutoffs: <strong>26 in moneyness</strong>, <strong>7 in volatility</strong>.</p>
+<h2 id="chebyshev_coefficients"><a href="#chebyshev_coefficients" class="header-anchor">Chebyshev coefficients</a></h2>
+<p>The coefficients decay down to a small flat tail. The cutoffs are 26 in \(m\) and 7 in \(\sigma\).</p>
 
 <figure>
   <a href="/assets/asian-barrier/asian_tt_spectra.png">
     <img src="/assets/asian-barrier/asian_tt_spectra.png" alt="Marginal Chebyshev coefficient spectra for moneyness and volatility, comparing the raw tensor train with truncation at degrees 26 and 7." width="1872" height="1040" loading="lazy" decoding="async">
   </a>
-  <figcaption>Saved-TT spectra. Measuring TCI’s effect on noise requires same-sample full-grid Monte Carlo.</figcaption>
+  <figcaption>Spectra of the saved TT. To see what TCI does to the noise, one would compare with the full Monte Carlo grid on the same samples.</figcaption>
 </figure>
 
-<h2 id="why_so_few_coefficients"><a href="#why_so_few_coefficients" class="header-anchor">Why so few coefficients?</a></h2>
-<p><strong>365 path steps and a barrier, yet a compact surface.</strong> Averaging can smooth prices and reduce high-degree coefficients. Low rank reflects simple coupling between variables; smoothness alone does not guarantee it.</p>
+<p>There are 365 monitoring steps and a barrier, and still the surface needs few coefficients. My guess is that the averaging smooths the price. Low rank is a separate thing &#40;how the two variables couple&#41;, and smoothness alone doesn&#39;t give it.</p>
 
 <details>
   <summary>Settings &amp; sources</summary>
-  <p>Risk-neutral model: μ = r = 0.05, strike K = 110, barrier B = 100, maturity T = 1. There are 365 monitoring steps and 10<sup>6</sup> antithetic pairs, with seed 1.</p>
-  <p>Plotted interior domain: m ∈ [0.93, 1.17], σ ∈ [0.16, 0.24]. These are saved TT evaluations; no new sampling or reference comparison was performed for these plots.</p>
-  <p>Source: the 3 October 2026 report, <i>Asian barrier: saved TT surfaces</i> (final version).</p>
-  <p>Related reading: <a href="https://arxiv.org/abs/1505.04648">Chebyshev Interpolation for Parametric Option Pricing</a> and <a href="https://www.chebfun.org/docs/guide/guide04.html">Chebfun and Approximation Theory</a>.</p>
+  <p>Risk-neutral model: μ = r = 0.05, strike K = 110, barrier B = 100, maturity T = 1. 365 monitoring steps, 10<sup>6</sup> antithetic pairs, seed 1.</p>
+  <p>Plotted domain: m ∈ [0.93, 1.17], σ ∈ [0.16, 0.24]. These are evaluations of the saved TT. No new sampling and no reference comparison for these plots.</p>
+  <p>Source: report of 3 October 2026, <i>Asian barrier: saved TT surfaces</i> (final version).</p>
+  <p>Related: <a href="https://arxiv.org/abs/1505.04648">Chebyshev Interpolation for Parametric Option Pricing</a>, <a href="https://www.chebfun.org/docs/guide/guide04.html">Chebfun and Approximation Theory</a>.</p>
 </details>
 
-<p><a href="/assets/asian-barrier/asian_barrier_3d.pdf">Download the full PDF</a></p></div>
+<p><a href="/assets/asian-barrier/asian_barrier_3d.pdf">Full PDF</a></p></div>
 <div class="page-foot">
     <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 31, 2026.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
