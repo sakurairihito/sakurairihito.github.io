@@ -15,6 +15,8 @@
 
 - [Where does TCI sample a noisy price surface?](/tci-sampling/) — Monte Carlo sample size and matrix cross interpolation
 
+- [What does low rank mean?](/low-rank/) — Matrices, functions, tensor trains, and sin x on a grid
+
 - [Fourier pricing](/fourier-pricing/)
 
 - [Compressing a smooth price surface](/compression/)
