@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Where an Asian barrier option price bends sharply, what this does to a Chebyshev tensor train, and where the kinks of a Monte Carlo estimate come from.">
+  <meta name="author" content="Rihito Sakurai">
+   <link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+  <title>Kinks in option prices | Rihito Sakurai</title>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+  <div class="blog-name"><a href="/">Research &amp; notes</a></div>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/career/" >Career</a></li>
+      <li><a href="/memories/" >Memories</a></li>
+      <li><a href="/menu2/" >Publications</a></li>
+      <li><a href="/software/" >Software &amp; resources</a></li>
+      <li><a href="/research/" >Research notes</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main id="main-content">
+
+<!-- Content appended here -->
+<div class="franklin-content"><div class="explainer"><p><a href="/research/">← Research notes</a></p>
+<h1 id="kinks_in_option_prices"><a href="#kinks_in_option_prices" class="header-anchor">Kinks in option prices</a></h1>
+<div class="article-lead">A barrier bends the price sharply, and Gamma feels it first.</div>
+<p>An Asian barrier call over moneyness \(m=S_0/K\) and volatility \(\sigma\), with the barrier at \(m=B/K\approx0.909\). Here the tensor train is built on \(m\in[0.8,1.2]\), so the barrier lies inside the domain.</p>
+<h2 id="a_barrier_inside_the_domain"><a href="#a_barrier_inside_the_domain" class="header-anchor">A barrier inside the domain</a></h2>
+
+<figure>
+  <a href="/assets/option-kink/barrier-inside-surface.png">
+    <img src="/assets/option-kink/barrier-inside-surface.png" alt="Price and Gamma surfaces of an Asian barrier option for m up to 1. The price rises steeply just above the barrier. Gamma has a sharp peak there without truncation and with Chebyshev degree 56 in m, but becomes a smooth wave with degree 13." width="1950" height="1170" fetchpriority="high">
+  </a>
+  <figcaption>Price (top) and Gamma (bottom) for $m\le1$. Left: no degree truncation. Middle and right: degrees in $m$ selected by the truncation rule for two Monte Carlo seeds. The red line marks the barrier.</figcaption>
+</figure>
+
+<p>The price rises steeply just above the barrier, and Gamma has a sharp peak there. <strong>With degree 13 in \(m\), the peak is smeared into a wave.</strong> The truncation rule picks such a low degree for some seeds when the barrier lies inside the domain.</p>
+
+<figure>
+  <a href="/assets/option-kink/barrier-inside-slice.png">
+    <img src="/assets/option-kink/barrier-inside-slice.png" alt="Delta and Gamma along m at sigma 0.20. A single domain with low degree misses the Gamma peak near the barrier; splitting the domain at the barrier follows the reference." width="1560" height="546" decoding="async">
+  </a>
+  <figcaption>Delta and Gamma at $\sigma=0.20$. Splitting the domain at the barrier follows the reference.</figcaption>
+</figure>
+
+<p>Splitting the domain at the barrier puts the steep part at the edge of each piece, and the peak is recovered.</p>
+<h2 id="where_the_kinks_come_from"><a href="#where_the_kinks_come_from" class="header-anchor">Where the kinks come from</a></h2>
+<p>In a Monte Carlo estimate, each path pays \(mA-1\) when \(m\) exceeds its own threshold \(\max(b/L,\,1/A)\). Here \(A\) is the path&#39;s average, \(L\) its lowest running average, and \(b=B/K\). At \(m=1/A\) the path starts to finish in the money, which gives a kink. At \(m=b/L\) the path stops being knocked out and pays at once, which gives a small jump.</p>
+
+<figure>
+  <a href="/assets/option-kink/mc-kinks.png">
+    <img src="/assets/option-kink/mc-kinks.png" alt="Left: a fixed-seed Monte Carlo price with 2 thousand pairs is jagged near the barrier, while one million pairs give a smooth line. Right: histogram of path thresholds; barrier jumps cluster just above the barrier and exercise kinks spread over the whole domain." width="1785" height="714" decoding="async">
+  </a>
+  <figcaption>(a) Fixed-seed Monte Carlo prices near the barrier. (b) Positions of the exercise kinks and barrier jumps of $2\times10^4$ paths.</figcaption>
+</figure>
+
+<p><strong>The barrier jumps crowd just above the barrier, and the exercise kinks spread over the whole domain.</strong> With few samples, the price is visibly jagged. With many, the kinks average into a smooth curve.</p>
+<p>See also: <a href="/option-maturity/">Option prices near expiry</a> · <a href="/chebyshev-spline/">Chebyshev interpolation across a kink</a> · <a href="/tci-sampling/">Where does TCI sample a noisy price surface?</a></p>
+<p><a href="/research/">Back to research notes</a></p></div>
+<div class="page-foot">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 31, 2026.
+    Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+</div>
+</div><!-- CONTENT ENDS HERE -->
+  </main>
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>
