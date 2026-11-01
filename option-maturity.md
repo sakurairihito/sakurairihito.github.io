@@ -71,36 +71,30 @@ $$
 
 which grows without bound. At expiry the payoff has a kink and Delta and Gamma are not defined at the strike.
 
-## Consequences for approximation
+## What this means for approximation
 
-[Gaß, Glau, Mahlstedt and Mair (2018)](https://link.springer.com/article/10.1007/s00780-018-0361-y) give analyticity conditions and error bounds for Chebyshev interpolation of option prices in their parameters (see the [paper note](/chebyshev-pricing/)). Their bounds depend on how far the function extends analytically. Smoothness at each positive maturity is therefore not enough to fix one polynomial degree for all maturities. A spot–maturity domain that includes $\tau=0$ contains the payoff kink and, at the strike, the $\sqrt{\tau}$ behaviour.
+If I want one Chebyshev approximation over spot and maturity, $\tau=0$ is the problem. The bounds in [Gaß et al. (2018)](https://link.springer.com/article/10.1007/s00780-018-0361-y) (my [note](/chebyshev-pricing/)) depend on how far the price extends analytically, and near $\tau=0$ that shrinks to nothing. The kink and the $\sqrt{\tau}$ at the strike are both there.
 
-Two things I can think of. One is local refinement near the strike. Splitting exactly at the strike does not make the price linear on either side for $\tau>0$, but at expiry the two branches are linear, as in the [piecewise interpolation example](/chebyshev-spline/). The other is to remove redundant scales first. With zero rates,
+Two things I'd try:
 
-$$
-x=\frac{S}{K},\qquad w=\sigma\sqrt{\tau},\qquad C=K\,G(x,w),
-$$
+- Split near the strike. For $\tau>0$ the price still isn't linear on either side, but at expiry it is, like the [kink example](/chebyshev-spline/).
+- Use better variables. With zero rates, $x=S/K$ and $w=\sigma\sqrt{\tau}$ give $C=K\,G(x,w)$ with
+  $$
+  G(x,w)=x\Phi\!\left(\frac{\log x}{w}+\frac{w}{2}\right)
+  -\Phi\!\left(\frac{\log x}{w}-\frac{w}{2}\right),\qquad G(x,0)=(x-1)_+.
+  $$
+  That merges volatility and maturity into one input. The kink at $(x,w)=(1,0)$ is still there.
 
-$$
-G(x,w)=x\Phi\!\left(\frac{\log x}{w}+\frac{w}{2}\right)
--\Phi\!\left(\frac{\log x}{w}-\frac{w}{2}\right),\qquad w>0,
-$$
+I haven't measured interpolation errors or TT ranks for any of this yet.
 
-and $G(x,0)=(x-1)_+$. The total volatility $w$ combines volatility and maturity into one input, but the kink at $(x,w)=(1,0)$ remains.
-
-For tensor cross interpolation (TCI), the choice of coordinates and domain matters as much as the rank. This figure does not measure interpolation errors or TT ranks. That would need a separate comparison at the same accuracy, including Delta and Gamma.
-
-## Reproducing the figure
-
-Download the [Python script](/assets/option-maturity/plot_maturity.py) and run it with NumPy, SciPy and Matplotlib:
-
-```bash
-python3 -B plot_maturity.py new_results
-```
-
-Use a new output directory. The script writes the figure as PNG and SVG, the five price curves on 3,201 spot points, and a summary of checks. In the saved run, four prices agree with direct integration of the payoff to within $10^{-10}$. The run also checks price bounds, monotonicity in maturity, the expiry limit, and Delta and Gamma by finite differences.
-
-Downloads: [PNG](/assets/option-maturity/results/call-maturity.png) · [SVG](/assets/option-maturity/results/call-maturity.svg) · [Price data](/assets/option-maturity/results/call-maturity.csv) · [Checks and package versions](/assets/option-maturity/results/checks.json).
+~~~
+<details>
+  <summary>Code &amp; checks</summary>
+  <p><a href="/assets/option-maturity/plot_maturity.py">Python script</a> (NumPy, SciPy, Matplotlib). Run <code>python3 -B plot_maturity.py new_results</code> with a new output directory. It writes the figure as PNG and SVG, the five price curves on 3,201 spot points, and a summary of checks.</p>
+  <p>In the saved run, four prices agree with direct integration of the payoff to within 10<sup>−10</sup>. It also checks price bounds, monotonicity in maturity, the expiry limit, and Delta and Gamma by finite differences.</p>
+  <p>Downloads: <a href="/assets/option-maturity/results/call-maturity.png">PNG</a> · <a href="/assets/option-maturity/results/call-maturity.svg">SVG</a> · <a href="/assets/option-maturity/results/call-maturity.csv">price data</a> · <a href="/assets/option-maturity/results/checks.json">checks and package versions</a>.</p>
+</details>
+~~~
 
 [Back to research notes](/research/)
 

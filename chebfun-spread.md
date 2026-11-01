@@ -61,8 +61,6 @@ The Chebyshev lengths of $a_i$, $b_j$, $c_\ell$ set the resolution in each param
 
 The lengths correspond to degrees 9, 41 and 12. Errors are taken over the same $15^3=3375$ uniformly spaced parameter points.
 
-In Octave, construction took 78.95 seconds, direct pricing on the test grid 3.72 seconds, and evaluating the approximation 0.00592 seconds (median of five runs after warm-up). Construction called the price routine 62,667 times, counting repeated calls.
-
 ## Interpolation error and pricing error
 
 The approximation can only be as good as the prices it interpolates. As a reference I condition on the second asset, compute the conditional call expectation in closed form, and integrate over one normal variable.
@@ -82,28 +80,18 @@ The approximation can only be as good as the prices it interpolates. As a refere
 | 150-point quadrature vs. conditional reference | $5.5339\times10^{-3}$ |
 | Classic Chebfun3 vs. conditional reference | $5.5689\times10^{-3}$ |
 
-So the quadrature error is much bigger than the interpolation error. The worst point is $(T,K,\rho)=(0.3,0.42142857,-0.9)$, where the original quadrature gives 0.01986727 and the reference 0.01433340. A tighter Chebfun tolerance does not change this. More quadrature nodes do, as the 27-point check shows.
+So most of the error comes from the quadrature, not from Chebfun. The worst point is $(T,K,\rho)=(0.3,0.42142857,-0.9)$: 0.01986727 from the original quadrature vs 0.01433340 from the reference. Tightening Chebfun won't fix that. More quadrature nodes do (right panel).
 
 At 500 additional random parameter points, the classic construction has a maximum interpolation error of $2.281\times10^{-4}$ and a maximum total error of $1.015\times10^{-3}$.
 
-## Reproducing the calculation
-
-The [bundle](/assets/chebfun-spread/reproduction.zip) contains the code, outputs, figures and checks. It uses Chebfun revision [`7574c77680d7e82b79626300bf255498271a72df`](https://github.com/chebfun/chebfun/tree/7574c77680d7e82b79626300bf255498271a72df).
-
-```matlab
-run_chebfun_spread('/path/to/chebfun', 'new_results')
-```
-
-```bash
-python3 -B test_reference.py
-python3 -B analyse_spread.py new_results new_analysis
-```
-
-The saved run used GNU Octave 11.3.0. Octave lacks the two-input page-matrix multiplication that this Chebfun revision calls, so a small tested adapter supplies it. Chebfun itself is unchanged.
-
 ~~~
 <details>
-  <summary>Reference and checks</summary>
+  <summary>Timings, code &amp; checks</summary>
+  <p>In Octave, construction took 78.95 seconds, direct pricing on the test grid 3.72 seconds, and evaluating the approximation 0.00592 seconds (median of five runs after warm-up). Construction called the price routine 62,667 times, counting repeated calls.</p>
+  <p>The <a href="/assets/chebfun-spread/reproduction.zip">bundle</a> has the code, outputs, figures and checks. Chebfun revision <a href="https://github.com/chebfun/chebfun/tree/7574c77680d7e82b79626300bf255498271a72df"><code>7574c77680d7e82b79626300bf255498271a72df</code></a>, GNU Octave 11.3.0. Octave lacks the two-input page-matrix multiplication this revision calls, so a small tested adapter supplies it. Chebfun itself is unchanged.</p>
+<pre><code>run_chebfun_spread('/path/to/chebfun', 'new_results')   % Octave/MATLAB
+python3 -B test_reference.py
+python3 -B analyse_spread.py new_results new_analysis</code></pre>
   <p>For a standard normal value z of the second asset, let m = −σ₁²T/2 + ρσ₁√T z, v = σ₁²T(1−ρ²) and L = exp(−σ₂²T/2 + σ₂√T z) + K. The conditional expectation of the payoff is exp(m + v/2) Φ((m + v − log L)/√v) − L Φ((m − log L)/√v). Integrating this against the standard normal density gives the reference for zero rates and unit spots.</p>
   <p>The integral uses SciPy quad_vec on [−12,12] with absolute and relative tolerance 10⁻¹². Using [−10,10] and tolerance 10⁻¹¹ instead changes the grid prices by at most 1.39 × 10⁻¹⁶. At zero strike the reference agrees with the exchange-option formula at nine maturity/correlation pairs.</p>
   <p>I also recomputed the Clenshaw–Curtis nodes, weights and selected prices in Python. The exported Tucker factors reproduce all saved Chebfun evaluations to within 3.4 × 10⁻¹⁶. The export includes the endpoint values that Chebfun stores separately from its coefficients.</p>

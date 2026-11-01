@@ -1,4 +1,4 @@
-@def title = "Can a smooth price surface be compressed?"
+@def title = "Compressing a smooth price surface"
 @def page_language = "en"
 @def hasmath = true
 @def description = "Compressing a Black–Scholes price surface with low rank and low-degree Chebyshev polynomials."
@@ -7,7 +7,7 @@
 
 [← Research notes](/research/)
 
-# Can a smooth price surface be compressed?
+# Compressing a smooth price surface
 
 A Black–Scholes call price as a function of stock price and volatility. How few numbers can describe it?
 
