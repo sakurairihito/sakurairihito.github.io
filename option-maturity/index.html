@@ -7,8 +7,7 @@
   <meta name="author" content="Rihito Sakurai">
    <link rel="stylesheet" href="/libs/katex/katex.min.css">
      
-   <link rel="stylesheet" href="/libs/highlight/github.min.css">
-   
+  
   <link rel="stylesheet" href="/css/franklin.css">
   <link rel="stylesheet" href="/css/basic.css">
   <link rel="icon" href="/assets/favicon.png">
@@ -74,26 +73,32 @@ C(K,\tau)=K\left[2\Phi\!\left(\frac{\sigma\sqrt{\tau}}{2}\right)-1\right]
 \Gamma(K,\tau)\sim\frac{1}{K\sigma\sqrt{2\pi\tau}},
 \]
 <p>which grows without bound. At expiry the payoff has a kink and Delta and Gamma are not defined at the strike.</p>
-<h2 id="consequences_for_approximation"><a href="#consequences_for_approximation" class="header-anchor">Consequences for approximation</a></h2>
-<p><a href="https://link.springer.com/article/10.1007/s00780-018-0361-y">Gaß, Glau, Mahlstedt and Mair &#40;2018&#41;</a> give analyticity conditions and error bounds for Chebyshev interpolation of option prices in their parameters &#40;see the <a href="/chebyshev-pricing/">paper note</a>&#41;. Their bounds depend on how far the function extends analytically. Smoothness at each positive maturity is therefore not enough to fix one polynomial degree for all maturities. A spot–maturity domain that includes \(\tau=0\) contains the payoff kink and, at the strike, the \(\sqrt{\tau}\) behaviour.</p>
-<p>Two things I can think of. One is local refinement near the strike. Splitting exactly at the strike does not make the price linear on either side for \(\tau>0\), but at expiry the two branches are linear, as in the <a href="/chebyshev-spline/">piecewise interpolation example</a>. The other is to remove redundant scales first. With zero rates,</p>
+<h2 id="what_this_means_for_approximation"><a href="#what_this_means_for_approximation" class="header-anchor">What this means for approximation</a></h2>
+<p>If I want one Chebyshev approximation over spot and maturity, \(\tau=0\) is the problem. The bounds in <a href="https://link.springer.com/article/10.1007/s00780-018-0361-y">Gaß et al. &#40;2018&#41;</a> &#40;my <a href="/chebyshev-pricing/">note</a>&#41; depend on how far the price extends analytically, and near \(\tau=0\) that shrinks to nothing. The kink and the \(\sqrt{\tau}\) at the strike are both there.</p>
+<p>Two things I&#39;d try:</p>
+<ul>
+<li><p>Split near the strike. For \(\tau>0\) the price still isn&#39;t linear on either side, but at expiry it is, like the <a href="/chebyshev-spline/">kink example</a>.</p>
+</li>
+<li><p>Use better variables. With zero rates, \(x=S/K\) and \(w=\sigma\sqrt{\tau}\) give \(C=K\,G(x,w)\) with</p>
+</li>
+</ul>
 \[
-x=\frac{S}{K},\qquad w=\sigma\sqrt{\tau},\qquad C=K\,G(x,w),
-\]
-\[
-G(x,w)=x\Phi\!\left(\frac{\log x}{w}+\frac{w}{2}\right)
--\Phi\!\left(\frac{\log x}{w}-\frac{w}{2}\right),\qquad w>0,
-\]
-<p>and \(G(x,0)=(x-1)_+\). The total volatility \(w\) combines volatility and maturity into one input, but the kink at \((x,w)=(1,0)\) remains.</p>
-<p>For tensor cross interpolation &#40;TCI&#41;, the choice of coordinates and domain matters as much as the rank. This figure does not measure interpolation errors or TT ranks. That would need a separate comparison at the same accuracy, including Delta and Gamma.</p>
-<h2 id="reproducing_the_figure"><a href="#reproducing_the_figure" class="header-anchor">Reproducing the figure</a></h2>
-<p>Download the <a href="/assets/option-maturity/plot_maturity.py">Python script</a> and run it with NumPy, SciPy and Matplotlib:</p>
-<pre><code class="language-bash">python3 -B plot_maturity.py new_results</code></pre>
-<p>Use a new output directory. The script writes the figure as PNG and SVG, the five price curves on 3,201 spot points, and a summary of checks. In the saved run, four prices agree with direct integration of the payoff to within \(10^{-10}\). The run also checks price bounds, monotonicity in maturity, the expiry limit, and Delta and Gamma by finite differences.</p>
-<p>Downloads: <a href="/assets/option-maturity/results/call-maturity.png">PNG</a> · <a href="/assets/option-maturity/results/call-maturity.svg">SVG</a> · <a href="/assets/option-maturity/results/call-maturity.csv">Price data</a> · <a href="/assets/option-maturity/results/checks.json">Checks and package versions</a>.</p>
+  G(x,w)=x\Phi\!\left(\frac{\log x}{w}+\frac{w}{2}\right)
+  -\Phi\!\left(\frac{\log x}{w}-\frac{w}{2}\right),\qquad G(x,0)=(x-1)_+.
+  \]
+<p>That merges volatility and maturity into one input. The kink at \((x,w)=(1,0)\) is still there.</p>
+<p>I haven&#39;t measured interpolation errors or TT ranks for any of this yet.</p>
+
+<details>
+  <summary>Code &amp; checks</summary>
+  <p><a href="/assets/option-maturity/plot_maturity.py">Python script</a> (NumPy, SciPy, Matplotlib). Run <code>python3 -B plot_maturity.py new_results</code> with a new output directory. It writes the figure as PNG and SVG, the five price curves on 3,201 spot points, and a summary of checks.</p>
+  <p>In the saved run, four prices agree with direct integration of the payoff to within 10<sup>−10</sup>. It also checks price bounds, monotonicity in maturity, the expiry limit, and Delta and Gamma by finite differences.</p>
+  <p>Downloads: <a href="/assets/option-maturity/results/call-maturity.png">PNG</a> · <a href="/assets/option-maturity/results/call-maturity.svg">SVG</a> · <a href="/assets/option-maturity/results/call-maturity.csv">price data</a> · <a href="/assets/option-maturity/results/checks.json">checks and package versions</a>.</p>
+</details>
+
 <p><a href="/research/">Back to research notes</a></p></div>
 <div class="page-foot">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 31, 2026.
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: November 01, 2026.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -104,10 +109,6 @@ G(x,w)=x\Phi\!\left(\frac{\log x}{w}+\frac{w}{2}\right)
 <script>renderMathInElement(document.body)</script>
 
     
-    
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
-
     
   </body>
 </html>

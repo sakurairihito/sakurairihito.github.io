@@ -7,8 +7,7 @@
   <meta name="author" content="Rihito Sakurai">
    <link rel="stylesheet" href="/libs/katex/katex.min.css">
      
-   <link rel="stylesheet" href="/libs/highlight/github.min.css">
-   
+  
   <link rel="stylesheet" href="/css/franklin.css">
   <link rel="stylesheet" href="/css/basic.css">
   <link rel="icon" href="/assets/favicon.png">
@@ -68,7 +67,6 @@ G_{ij\ell}\,a_i(T)b_j(K)c_\ell(\rho).
 <p>The Chebyshev lengths of \(a_i\), \(b_j\), \(c_\ell\) set the resolution in each parameter, and the core sizes are the Tucker ranks &#40;see the <a href="https://www.chebfun.org/docs/guide/guide18.html">Chebfun3 guide</a>&#41;. The <code>classic</code> constructor with <code>eps &#61; 1e-5</code> reproduces the 2017 example:</p>
 <table><tr><th align="right">Quantity</th><th align="right">Article</th><th align="right">My run</th></tr><tr><td align="right">Tucker ranks</td><td align="right">5, 10, 7</td><td align="right">5, 10, 7</td></tr><tr><td align="right">Chebyshev lengths</td><td align="right">10, 42, 13</td><td align="right">10, 42, 13</td></tr><tr><td align="right">Maximum error against the 150-point price routine</td><td align="right">\(2.5650\times10^{-4}\)</td><td align="right">\(2.56498685\times10^{-4}\)</td></tr></table>
 <p>The lengths correspond to degrees 9, 41 and 12. Errors are taken over the same \(15^3=3375\) uniformly spaced parameter points.</p>
-<p>In Octave, construction took 78.95 seconds, direct pricing on the test grid 3.72 seconds, and evaluating the approximation 0.00592 seconds &#40;median of five runs after warm-up&#41;. Construction called the price routine 62,667 times, counting repeated calls.</p>
 <h2 id="interpolation_error_and_pricing_error"><a href="#interpolation_error_and_pricing_error" class="header-anchor">Interpolation error and pricing error</a></h2>
 <p>The approximation can only be as good as the prices it interpolates. As a reference I condition on the second asset, compute the conditional call expectation in closed form, and integrate over one normal variable.</p>
 
@@ -80,17 +78,16 @@ G_{ij\ell}\,a_i(T)b_j(K)c_\ell(\rho).
 </figure>
 
 <table><tr><th align="right">Comparison on the 3,375-point grid</th><th align="right">Maximum absolute error</th></tr><tr><td align="right">Classic Chebfun3 vs. 150-point quadrature</td><td align="right">\(2.5650\times10^{-4}\)</td></tr><tr><td align="right">150-point quadrature vs. conditional reference</td><td align="right">\(5.5339\times10^{-3}\)</td></tr><tr><td align="right">Classic Chebfun3 vs. conditional reference</td><td align="right">\(5.5689\times10^{-3}\)</td></tr></table>
-<p>So the quadrature error is much bigger than the interpolation error. The worst point is \((T,K,\rho)=(0.3,0.42142857,-0.9)\), where the original quadrature gives 0.01986727 and the reference 0.01433340. A tighter Chebfun tolerance does not change this. More quadrature nodes do, as the 27-point check shows.</p>
+<p>So most of the error comes from the quadrature, not from Chebfun. The worst point is \((T,K,\rho)=(0.3,0.42142857,-0.9)\): 0.01986727 from the original quadrature vs 0.01433340 from the reference. Tightening Chebfun won&#39;t fix that. More quadrature nodes do &#40;right panel&#41;.</p>
 <p>At 500 additional random parameter points, the classic construction has a maximum interpolation error of \(2.281\times10^{-4}\) and a maximum total error of \(1.015\times10^{-3}\).</p>
-<h2 id="reproducing_the_calculation"><a href="#reproducing_the_calculation" class="header-anchor">Reproducing the calculation</a></h2>
-<p>The <a href="/assets/chebfun-spread/reproduction.zip">bundle</a> contains the code, outputs, figures and checks. It uses Chebfun revision <a href="https://github.com/chebfun/chebfun/tree/7574c77680d7e82b79626300bf255498271a72df"><code>7574c77680d7e82b79626300bf255498271a72df</code></a>.</p>
-<pre><code class="language-matlab">run_chebfun_spread&#40;&#39;/path/to/chebfun&#39;, &#39;new_results&#39;&#41;</code></pre>
-<pre><code class="language-bash">python3 -B test_reference.py
-python3 -B analyse_spread.py new_results new_analysis</code></pre>
-<p>The saved run used GNU Octave 11.3.0. Octave lacks the two-input page-matrix multiplication that this Chebfun revision calls, so a small tested adapter supplies it. Chebfun itself is unchanged.</p>
 
 <details>
-  <summary>Reference and checks</summary>
+  <summary>Timings, code &amp; checks</summary>
+  <p>In Octave, construction took 78.95 seconds, direct pricing on the test grid 3.72 seconds, and evaluating the approximation 0.00592 seconds (median of five runs after warm-up). Construction called the price routine 62,667 times, counting repeated calls.</p>
+  <p>The <a href="/assets/chebfun-spread/reproduction.zip">bundle</a> has the code, outputs, figures and checks. Chebfun revision <a href="https://github.com/chebfun/chebfun/tree/7574c77680d7e82b79626300bf255498271a72df"><code>7574c77680d7e82b79626300bf255498271a72df</code></a>, GNU Octave 11.3.0. Octave lacks the two-input page-matrix multiplication this revision calls, so a small tested adapter supplies it. Chebfun itself is unchanged.</p>
+<pre><code>run_chebfun_spread('/path/to/chebfun', 'new_results')   % Octave/MATLAB
+python3 -B test_reference.py
+python3 -B analyse_spread.py new_results new_analysis</code></pre>
   <p>For a standard normal value z of the second asset, let m = −σ₁²T/2 + ρσ₁√T z, v = σ₁²T(1−ρ²) and L = exp(−σ₂²T/2 + σ₂√T z) + K. The conditional expectation of the payoff is exp(m + v/2) Φ((m + v − log L)/√v) − L Φ((m − log L)/√v). Integrating this against the standard normal density gives the reference for zero rates and unit spots.</p>
   <p>The integral uses SciPy quad_vec on [−12,12] with absolute and relative tolerance 10⁻¹². Using [−10,10] and tolerance 10⁻¹¹ instead changes the grid prices by at most 1.39 × 10⁻¹⁶. At zero strike the reference agrees with the exchange-option formula at nine maturity/correlation pairs.</p>
   <p>I also recomputed the Clenshaw–Curtis nodes, weights and selected prices in Python. The exported Tucker factors reproduce all saved Chebfun evaluations to within 3.4 × 10⁻¹⁶. The export includes the endpoint values that Chebfun stores separately from its coefficients.</p>
@@ -101,7 +98,7 @@ python3 -B analyse_spread.py new_results new_analysis</code></pre>
 <p>Related: <a href="/chebyshev-pricing/">Gaß et al. &#40;2018&#41;, parametric option pricing</a> · <a href="/compression/">Compressing a smooth price surface</a> · <a href="/chebyshev-spline/">Chebyshev interpolation across a kink</a>.</p>
 <p><a href="/research/">Back to research notes</a></p></div>
 <div class="page-foot">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: October 31, 2026.
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> Rihito Sakurai. Last modified: November 01, 2026.
     Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
 </div>
 </div><!-- CONTENT ENDS HERE -->
@@ -112,10 +109,6 @@ python3 -B analyse_spread.py new_results new_analysis</code></pre>
 <script>renderMathInElement(document.body)</script>
 
     
-    
-        <script src="/libs/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
-
     
   </body>
 </html>
