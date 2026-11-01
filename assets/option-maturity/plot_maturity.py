@@ -98,8 +98,8 @@ def main(output):
     })
     spots = np.linspace(60, 140, 3201)
     fig, axes = plt.subplots(1, 2, figsize=(12, 5.5))
-    fig.subplots_adjust(top=.72, bottom=.19, left=.075, right=.975, wspace=.22)
-    fig.suptitle("As expiry approaches, the price approaches the payoff", x=.075, y=.97,
+    fig.subplots_adjust(top=.72, bottom=.14, left=.075, right=.975, wspace=.22)
+    fig.suptitle("Black–Scholes call at four maturities", x=.075, y=.97,
                  ha="left", fontsize=18)
     fig.text(.075, .89, "European call  |  K = 100  |  volatility = 20%  |  rate = dividend yield = 0", fontsize=11)
     for ax in axes:
@@ -124,7 +124,6 @@ def main(output):
     handles, labels = axes[0].get_legend_handles_labels()
     fig.legend(handles, labels, loc="upper left", bbox_to_anchor=(.065, .855),
                ncol=5, frameon=False, handlelength=2, columnspacing=1.8, fontsize=10)
-    fig.text(.075, .055, "Other inputs are fixed. Every positive-maturity curve is smooth; the kink appears at expiry.", fontsize=10)
     for suffix in ("png", "svg"):
         fig.savefig(output / f"call-maturity.{suffix}", dpi=190, facecolor="white")
     plt.close(fig)
